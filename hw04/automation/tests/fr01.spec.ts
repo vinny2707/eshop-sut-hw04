@@ -39,9 +39,12 @@ test.describe('FR-01 Đăng ký tài khoản', () => {
         }
 
         if (tc.expected.invalidField) {
-          // AP-03 validation HTML5: trình duyệt chặn đúng trường bắt buộc đang trống.
-          const msg = await p.field(tc.expected.invalidField).evaluate((el: HTMLInputElement) => el.validationMessage);
-          expect(msg, `Trường "${tc.expected.invalidField}" phải bị validation HTML5 chặn`).not.toBe('');
+          const field = p.field(tc.expected.invalidField);
+          // AP-03 validation HTML5: trường bắt buộc đang trống không hợp lệ.
+          const msg = await field.evaluate((el: HTMLInputElement) => el.validationMessage);
+          expect(msg, `Trường "${tc.expected.invalidField}" phải bị validation HTML5 đánh dấu không hợp lệ`).not.toBe('');
+          // AP-05 focus: trình duyệt chặn submit và đưa focus về trường lỗi → bằng chứng form không được gửi.
+          await expect(field).toBeFocused();
           // AP-04 số lượng: form không được gửi → ứng dụng không hiện thông báo lỗi nào.
           await expect(p.errorMessage).toHaveCount(0);
         }
