@@ -40,7 +40,10 @@ export class AdminCouponPage {
     this.rows = page.getByRole('table').getByRole('row'); // gồm cả dòng tiêu đề
   }
 
-  /** Dòng của bảng có ô đầu đúng bằng mã. */
+  /**
+   * Dòng của bảng có ít nhất một ô (bất kỳ cột nào) có nội dung đúng bằng `code`.
+   * Với data hiện tại chỉ ô Mã khớp vì mã không trùng nội dung các cột khác.
+   */
   row(code: string): Locator {
     return this.rows.filter({ has: this.page.getByRole('cell', { name: code, exact: true }) });
   }
