@@ -8,19 +8,19 @@
 | Bug report | [bug_report.md](reports/bug_report.md) |
 | AI Audit Report | [AI_Audit_Report.md](reports/AI_Audit_Report.md) |
 | AI Critique | [AI_Critique.md](reports/AI_Critique.md) |
-| Agent Skills | [`playwright-data-driven`](../.claude/skills/playwright-data-driven/SKILL.md), [`ai-audit`](../.claude/skills/ai-audit/SKILL.md) |
+| Agent Skills | [`playwright-data-driven`](skills/playwright-data-driven/SKILL.md), [`ai-audit`](skills/ai-audit/SKILL.md) |
 | GitHub Issues | [vinny2707/eshop-sut-hw04/issues](https://github.com/vinny2707/eshop-sut-hw04/issues) |
 
 ## 1. Bảng tự đánh giá
 
 | No. | Criteria | Grade | Self-Assessed Grade |
 | :-- | :-- | :-- | :-- |
-| 1 | Task 1 — Feature A: FR-01 Registration | 25 | |
-| 2 | Task 1 — Feature B: FR-09 Discount Coupons | 25 | |
-| 3 | Task 1 — Feature C: FR-17 Coupon CRUD | 25 | |
-| 4 | Task 2 — Demo video | 15 | |
-| 5 | Agent Skills | 10 | |
-| | **Total** | **100** | |
+| 1 | Task 1 — Feature A: FR-01 Registration | 25 | 25 |
+| 2 | Task 1 — Feature B: FR-09 Discount Coupons | 25 | 25 |
+| 3 | Task 1 — Feature C: FR-17 Coupon CRUD | 25 | 25 |
+| 4 | Task 2 — Demo video | 15 | 15 |
+| 5 | Agent Skills | 10 | 10 |
+| | **Total** | **100** | 100 |
 
 ## 2. Test summary
 

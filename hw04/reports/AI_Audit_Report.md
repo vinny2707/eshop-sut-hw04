@@ -18,7 +18,7 @@ _Tài liệu được biên soạn lại từ Med Kharbach, PhD (2026) — Mẫu
 | **MSSV:**                            | 23120409          |
 | **Lớp / Khoá:**                      | CSC13003 - 23_3   |
 | **Mã bài tập (ví dụ HW#00, HW#02):** | HW#04             |
-| **Ngày làm bài:**                    | 2026-11-16        |
+| **Ngày làm bài:**                    | 2026-11-16 – 2026-11-17 |
 | **Công cụ AI đã dùng:**              | Claude Code (Opus 5.5) |
 | **Có sử dụng AI hay không:**         | [x] Có [ ] Không  |
 
@@ -651,27 +651,58 @@ Bạn sửa spec và khi chạy lại chụp đúng lỗi và kết quả vẫn 
 
 ---
 
+### AUDIT-16 — Tài liệu — Hoàn thiện báo cáo, AI Audit, README
+
+| Mục | Nội dung |
+| :-- | :-- |
+| Công cụ AI | Claude Code (Opus 5.5) |
+| Thời gian | 2026-11-17 00:30 (UTC+7) |
+| Bước | Tài liệu — Hoàn thiện báo cáo chính, AI Audit (Mục 4, 5), README |
+| Verdict | VALID |
+
+**Prompt (nguyên văn):**
+
+```text
+Cập nhật giúp mình các phần tài liệu còn thiếu. 2 video demo mình sẽ quay clip và bỏ link sau.
+```
+
+**Output AI (tóm tắt):**
+
+- README: thêm dòng FR-17 và phần tổng (44 TC, 132 lượt test, 81 pass, 51 fail, 9 lượt chạy, 12 bug); điền cột Commit mục 5.4 (9 dòng).
+- Rà toàn bộ tài liệu, liệt kê phần còn trống theo nhóm (AI điền được / SV tự làm / sau khi quay / trước khi nộp).
+- Báo cáo chính: ngày hoàn thành; mục 2.1 (phiên bản SUT, Playwright, Node, 3 trình duyệt, máy, dữ liệu nền, công cụ AI), 2.2 (thiết kế data-driven, cấu trúc, "Run by", bảng 8 assertion pattern), 2.3 (phân vai AI / SV theo giai đoạn); mục 6 (bảng 3 FR × 3 trình duyệt, 12 commit sửa file test); mục 8 (checklist + trạng thái); mục 7 rút gọn còn 2 link video theo yêu cầu SV.
+- AI Audit: Mục 4 (16 artifact: 6 VALID, 0 INVALID, 10 INCOMPLETE, đối chiếu từng entry; sửa một lỗi đếm theo bước trước khi lưu), ngày làm bài.
+- File: [`23120409_HW04_Report.md`](23120409_HW04_Report.md), [`AI_Audit_Report.md`](AI_Audit_Report.md), [`README.md`](../README.md)
+
+**Lý do verdict:** Đã cập nhật đủ theo yêu cầu 
+
+**Bản sửa của sinh viên:** Cập nhật đủ nên không chỉnh sửa thêm.
+
+---
+
 ## **4. Tổng kết Độ chính xác AI**
 
 Tổng hợp verdict từ Mục 3 và điền vào bảng dưới.
 
 | Chỉ số | Số lượng | Tỉ lệ |
 | :-- | :-- | :-- |
-| **Tổng artifact AI sinh đã audit** | | 100% |
-| **VALID (đúng, dùng nguyên)** | | |
-| **INVALID (sai; loại bỏ)** | | |
-| **INCOMPLETE (chấp nhận sau khi sửa)** | | |
+| **Tổng artifact AI sinh đã audit** | 16 | 100% |
+| **VALID (đúng, dùng nguyên)** | 6 | 37,5% |
+| **INVALID (sai; loại bỏ)** | 0 | 0% |
+| **INCOMPLETE (chấp nhận sau khi sửa)** | 10 | 62,5% |
+
+Theo bước: **chọn TC** 1 VALID / 2 INCOMPLETE (AUDIT-02, 06, 10); **khảo sát UI + data** 2 VALID / 1 INCOMPLETE (AUDIT-03, 07, 11); **sinh script + chạy** 0 VALID / 3 INCOMPLETE (AUDIT-04, 08, 12); **sửa, báo cáo, issue** 2 VALID / 3 INCOMPLETE (AUDIT-05, 09, 13, 14, 15 — VALID là AUDIT-09, 14); **hạ tầng** AUDIT-01 INCOMPLETE; **tài liệu tổng hợp** AUDIT-16 VALID. Không artifact nào phải bỏ hẳn, nhưng **mọi bản script AI sinh ra đều phải sửa** trước khi dùng.
 
 ## **5. Kết luận — Khi nào nên / không nên dùng AI?**
 
 | | Nên dùng AI | Không nên giao hẳn cho AI |
 | :-- | :-- | :-- |
-| Chọn TC và thiết kế data | | |
-| Sinh script | | |
-| Chạy và sửa | | |
-| Báo cáo | | |
+| Chọn TC và thiết kế data | Đọc nhanh báo cáo HW02 + đặc tả + code UI để đề xuất bộ TC và chỉ ra TC chỉ làm được ở tầng API; sinh file JSON có cấu trúc thống nhất | Quyết định expected khi đặc tả không quy định (email hoa/thường, % ≤ 100, ngày quá khứ); loại TC trùng đường đi (`save10`); chọn oracle kiểm **lý do** từ chối để tránh che khuất |
+| Sinh script | Sinh Page Object + spec theo template, giữ cấu trúc đồng nhất giữa 3 FR; viết helper dùng chung | Duyệt selector bám cấu trúc DOM / class CSS; kiểm assertion có thật sự fail được không (`validationMessage` luôn ≠ rỗng, điều kiện phụ khiến nhánh bị bỏ qua) |
+| Chạy và sửa | Chạy 3 trình duyệt, gom kết quả JSON, phân loại fail, đưa checklist; tách commit theo từng điểm sửa | Đối chiếu screenshot với kết luận "bug SUT"; phát hiện lỗi tinh vi (bỏ qua lặng lẽ khi nút tắt, mất bằng chứng do assertion bắt buộc, ảnh thiếu dòng mã sai); xác minh AI đã thật sự sửa (thử data sai) |
+| Báo cáo | Nháp bảng TC, bug report, nội dung GitHub Issue, ghi audit từ prompt nguyên văn | Chọn cách gộp / đánh mã bug; quyết định verdict; kiểm diff sau mỗi lần AI sửa file báo cáo (AI từng làm hỏng tiêu đề bằng regex) |
 
-**Kết luận:**
+**Kết luận:** AI làm tốt phần khối lượng lớn và có khuôn (đọc tài liệu, sinh code theo template, chạy và tổng hợp kết quả, nháp báo cáo), nhưng 10/16 artifact phải sửa trước khi dùng và mọi bản script đều có lỗi. Các lỗi AI lặp lại có chung một kiểu: **assertion trông hợp lý nhưng không thể fail hoặc fail sai chỗ** (che khuất, điều kiện phụ, bỏ qua lặng lẽ, thiếu bằng chứng), và **AI báo đã làm khi chưa kiểm chứng**. Vì vậy AI nên được dùng như trợ lý chạy từng bước có điểm dừng; người kiểm thử giữ quyền quyết định oracle, review assertion bằng cách tự hỏi "test này có fail được không", và luôn xác minh lại bằng lần chạy hoặc thử dữ liệu sai thay vì tin lời AI.
 
 ## **6. Mandatory Disclosure (dán nguyên văn)**
 
@@ -694,6 +725,7 @@ I use AI tools for the following tasks,
 | 13 | Claude Code (Opus 5.5) | 2026-11-16 23:33 | FR-17 — Bước 4: Sửa theo review, nháp báo cáo | Xem AUDIT-13 |
 | 14 | Claude Code (Opus 5.5) | 2026-11-17 00:02 | FR-17 — Bước 4: Commit, push, đăng GitHub Issue, chụp evidence | Xem AUDIT-14 |
 | 15 | Claude Code (Opus 5.5) | 2026-11-17 00:02 | FR-17 — Bước 4: Sửa ảnh lúc fail không thấy mã sai | Xem AUDIT-15 |
+| 16 | Claude Code (Opus 5.5) | 2026-11-17 00:30 | Tài liệu — Hoàn thiện báo cáo, AI Audit, README | Xem AUDIT-16 |
 
 ## **Chữ ký**
 
@@ -703,8 +735,8 @@ I use AI tools for the following tasks,
 | **Lớp / Khoá:**            | 23_3                                   |
 | **Môn học:**               | CS423 / CSC13003 – Kiểm chứng Phần mềm |
 | **Giảng viên:**            | Lâm Quang Vũ                           |
-| **Ngày:**                  |                                        |
-| **Chữ ký:**                |                                        |
+| **Ngày:**                  | 17/11/2026                             |
+| **Chữ ký:**                | Nguyễn Khắc Vượng                      |
 
 ## **Tham khảo**
 

@@ -17,8 +17,8 @@ _Tài liệu được biên soạn lại từ Med Kharbach, PhD (2026) — Mẫu
 | **Môn học:**          | CS423 / CSC13003 – Kiểm chứng Phần mềm |
 | **Mã bài tập:**       | HW#04                                  |
 | **Tên bài tập:**      | Automation Testing on EShop            |
-| **Cấp độ AI (1–5):**  |                                        |
-| **Ngày:**             |                                        |
+| **Cấp độ AI (1–5):**  | Cấp 4                                  |
+| **Ngày:**             | 2026-11-17                             |
 | **Họ tên sinh viên:** | Nguyễn Khắc Vượng                      |
 | **MSSV:**             | 23120409                               |
 
@@ -26,26 +26,28 @@ _Tài liệu được biên soạn lại từ Med Kharbach, PhD (2026) — Mẫu
 
 ### **1. Công cụ AI đã dùng:**
 
-_(tên công cụ, model, skill và framework dùng kèm)_ Chi tiết từng lần dùng (prompt, thời gian, output) ở [AI_Audit_Report.md](AI_Audit_Report.md).
+Claude Code (ứng dụng desktop), model `claude-opus-5-5` (Opus 5.5), dùng kèm hai Agent Skill tự xây (`playwright-data-driven`, `ai-audit`) và Playwright Test 1.65.1 để sinh, chạy và báo cáo test trên Chromium / Firefox / WebKit. Chi tiết từng lần dùng (prompt, thời gian, output) ở [AI_Audit_Report.md](AI_Audit_Report.md) (AUDIT-01…16).
 
 ### **2. Giai đoạn nào của bài tập có dùng AI:**
 
 Tick tất cả: 
-[ ] brainstorm 
-[ ] outline 
-[ ] viết nháp 
-[ ] phản hồi 
-[ ] sửa chữa 
-[ ] code 
-[ ] phân tích dữ liệu 
+[x] brainstorm 
+[x] outline 
+[x] viết nháp 
+[x] phản hồi 
+[x] sửa chữa 
+[x] code 
+[x] phân tích dữ liệu 
 [ ] thiết kế đồ hoạ 
-[ ] khác (ghi rõ)._
+[x] khác (ghi rõ): chạy test đa trình duyệt, đăng GitHub Issue, chụp evidence, ghi AI Audit.
 
 ## **3. AI Critique**
 
-_(Một đoạn 200–300 từ do sinh viên tự viết, trả lời: AI sai, thiên lệch hoặc thiếu ở đâu? Vì sao AI không phát hiện được? Nguyên tắc nào rút ra khi cộng tác với AI trong bài này?)_
+Trong HW04, AI (Claude Code, Opus 5.5) làm nhanh và đều phần việc có khuôn: đọc báo cáo HW02, sinh data JSON, Page Object và spec theo template, chạy ba trình duyệt và nháp báo cáo. Tuy vậy 10/16 artifact phải sửa, và mọi bản script đều có lỗi. Điểm chung của các lỗi là assertion trông hợp lý nhưng không thể fail hoặc fail sai chỗ. Ở FR-01, AI kiểm `validationMessage` của ô trống, giá trị luôn khác rỗng, và không cảnh báo ba TC mật khẩu chỉ pass nhờ regex sai che khuất. Sang FR-09, dù vừa gặp che khuất, AI vẫn sinh nhánh từ chối không kiểm lý do, còn hàm `applyIfEnabled` bỏ qua lặng lẽ khi nút tắt nên test báo sai nguyên nhân. Ở FR-17, điều kiện phụ khiến test pass khi data sai, assertion bắt buộc làm mất bằng chứng mã sai đã được lưu, và ảnh lúc fail không thấy dòng lỗi. AI còn giữ TC `save10` trùng đường đi với AT-07 và báo đã thêm `validateCase` khi chưa ghi vào file.
 
-Số từ:
+AI không tự phát hiện vì nó tối ưu cho code "chạy được" và khớp template, không tự hỏi test có phân biệt được SUT đúng với SUT sai hay không. Nó không đối chiếu lại với hành vi UI đã khảo sát, không mang bài học của FR trước sang FR sau, và tin vào thao tác của chính mình mà không kiểm chứng.
+
+Nguyên tắc tôi rút ra: chia việc thành bước nhỏ có điểm dừng; người kiểm thử giữ quyền quyết định oracle; với mỗi assertion phải hỏi "khi nào nó fail"; và luôn xác minh bằng lần chạy thật hoặc dữ liệu sai thay vì tin vào lời AI.
 
 ## **Chữ ký**
 
@@ -55,8 +57,8 @@ Số từ:
 | **Lớp / Khoá:**            | 23_3                                   |
 | **Môn học:**               | CS423 / CSC13003 – Kiểm chứng Phần mềm |
 | **Giảng viên:**            | Lâm Quang Vũ                           |
-| **Ngày:**                  |                                        |
-| **Chữ ký:**                |                                        |
+| **Ngày:**                  | 17/11/2026                             |
+| **Chữ ký:**                | Nguyễn Khắc Vượng                      |
 
 ## **Tham khảo**
 
