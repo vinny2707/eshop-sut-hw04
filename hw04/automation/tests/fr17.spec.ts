@@ -21,6 +21,36 @@ type Expected = {
 
 const cases = loadCases<Input, Expected>('fr17');
 
+/** Data thiếu trường / gõ sai → fail ngay, không để test "pass" mà không kiểm tra gì. */
+function validateCase(id: string, input: Input, expected: Expected): void {
+  const fail = (msg: string): never => {
+    throw new Error(`Data không hợp lệ ở ${id}: ${msg}`);
+  };
+  if (!['create', 'view', 'delete'].includes(input.action)) fail(`input.action "${input.action}"`);
+  if (input.action === 'create' && !input.coupon) fail('thiếu input.coupon');
+  if (input.action === 'delete' && !input.code) fail('thiếu input.code');
+  switch (expected.outcome) {
+    case 'created':
+      if (expected.row?.length !== 6) fail('expected.row phải có đúng 6 ô');
+      break;
+    case 'listed':
+      if (!expected.rows?.length) fail('thiếu expected.rows');
+      break;
+    case 'deleted':
+      if (!input.code) fail('thiếu input.code');
+      break;
+    case 'rejected':
+      if (expected.rejectedBy === 'browser') {
+        if (!expected.invalidField) fail('thiếu expected.invalidField');
+      } else if (expected.rejectedBy !== 'app') {
+        fail(`expected.rejectedBy "${expected.rejectedBy}"`);
+      }
+      break;
+    default:
+      fail(`expected.outcome "${expected.outcome}"`);
+  }
+}
+
 test.describe('FR-17 Quản lý mã giảm giá', () => {
   test.use({ baseURL: ADMIN_URL });
 
@@ -30,6 +60,7 @@ test.describe('FR-17 Quản lý mã giảm giá', () => {
     test(`${tc.id} | ${tc.title}`, { annotation }, async ({ page }) => {
       const p = new AdminCouponPage(page);
       const { input, expected } = tc;
+      validateCase(tc.id, input, expected);
 
       // App báo lỗi bằng alert(): ghi lại nội dung rồi accept để trang không bị chặn.
       const dialogs: string[] = [];
@@ -51,45 +82,47 @@ test.describe('FR-17 Quản lý mã giảm giá', () => {
       });
 
       await test.step('Thực hiện', async () => {
-        if (input.action === 'create' && input.coupon) {
-          await p.fillForm(input.coupon);
+        // Data đã được validateCase kiểm tra: create có coupon, delete có code.
+        if (input.action === 'create') {
+          await p.fillForm(input.coupon!);
           await p.submit();
-        }
-        if (input.action === 'delete' && input.code) {
-          await p.deleteRow(input.code);
+        } else if (input.action === 'delete') {
+          await p.deleteRow(input.code!);
         }
       });
 
       await test.step('Kiểm tra', async () => {
         // Expected chỉ lấy từ tc.expected (theo đặc tả FR-17).
-        if (expected.outcome === 'created' && expected.row) {
-          const code = expected.row[0];
+        if (expected.outcome === 'created') {
+          const row = expected.row!;
+          const code = row[0];
           // AP-04 giá trị: dòng mới hiển thị đúng 6 trường.
           await expect
             .poll(() => p.rowValues(code), { message: `Dòng ${code} phải hiển thị đúng giá trị đã nhập` })
-            .toEqual(expected.row);
+            .toEqual(row);
           // AP-03 số lượng: tạo đúng 1 mã.
           await expect(p.row(code), `Chỉ có 1 dòng ${code}`).toHaveCount(1);
           expect(dialogs, 'Tạo mã hợp lệ không được có thông báo lỗi').toEqual([]);
         }
 
-        if (expected.outcome === 'listed' && expected.rows) {
-          for (const r of expected.rows) {
+        if (expected.outcome === 'listed') {
+          for (const r of expected.rows!) {
             await expect.poll(() => p.rowValues(r[0]), { message: `Mã ${r[0]} phải hiển thị đủ 6 cột` }).toEqual(r);
           }
         }
 
-        if (expected.outcome === 'deleted' && input.code) {
+        if (expected.outcome === 'deleted') {
+          const code = input.code!;
           // AP-03 số lượng: dòng bị xóa biến mất; AP-02 hiển thị: các mã khác còn nguyên.
-          await expect(p.row(input.code), `Mã ${input.code} phải bị xóa khỏi bảng`).toHaveCount(0);
-          for (const code of expected.remaining ?? []) {
-            await expect(p.row(code), `Mã ${code} phải còn nguyên`).toBeVisible();
+          await expect(p.row(code), `Mã ${code} phải bị xóa khỏi bảng`).toHaveCount(0);
+          for (const other of expected.remaining ?? []) {
+            await expect(p.row(other), `Mã ${other} phải còn nguyên`).toBeVisible();
           }
         }
 
         if (expected.outcome === 'rejected') {
-          if (expected.rejectedBy === 'browser' && expected.invalidField) {
-            const field = p.field(expected.invalidField);
+          if (expected.rejectedBy === 'browser') {
+            const field = p.field(expected.invalidField!);
             // AP-05 validation HTML5 + focus: trình duyệt chặn submit.
             const msg = await field.evaluate((el: HTMLInputElement) => el.validationMessage);
             expect(msg, `Trường "${expected.invalidField}" phải bị validation HTML5 chặn`).not.toBe('');
