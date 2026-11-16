@@ -1,0 +1,1469 @@
+{
+  "config": {
+    "argv": [
+      "D:\\App Data\\nodejs\\node.exe",
+      "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--project=webkit"
+    ],
+    "configFile": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\playwright.config.ts",
+    "rootDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23120409",
+      "Run at (ISO 8601)": "2026-11-16T15:07:44.352Z",
+      "Feature": "fr09",
+      "Browser": "webkit",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/test-results/fr09-webkit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120409",
+          "Run at (ISO 8601)": "2026-11-16T15:07:44.352Z",
+          "Feature": "fr09",
+          "Browser": "webkit",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "fr09*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/test-results/fr09-webkit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120409",
+          "Run at (ISO 8601)": "2026-11-16T15:07:44.352Z",
+          "Feature": "fr09",
+          "Browser": "webkit",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "fr09*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/test-results/fr09-webkit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120409",
+          "Run at (ISO 8601)": "2026-11-16T15:07:44.352Z",
+          "Feature": "fr09",
+          "Browser": "webkit",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "fr09*.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr09-webkit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120409",
+          "Run at (ISO 8601)": "2026-11-16T15:07:44.352Z",
+          "Feature": "fr09",
+          "Browser": "webkit",
+          "actualWorkers": 1
+        },
+        "name": "webkit",
+        "testDir": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests",
+        "snapshotDir": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests",
+        "testIgnore": [],
+        "testMatch": "fr09*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://localhost:5173",
+          "screenshot": "only-on-failure",
+          "trace": "off",
+          "video": "off",
+          "actionTimeout": 10000,
+          "navigationTimeout": 15000,
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "reports/fr09/webkit",
+          "title": "Run by: 23120409 | fr09-webkit | 2026-11-16T15:07:44.352Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/fr09/webkit.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr09.spec.ts",
+      "file": "fr09.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-09 Mã giảm giá",
+          "file": "fr09.spec.ts",
+          "line": 25,
+          "column": 6,
+          "specs": [
+            {
+              "title": "FR09-AT-01 | Mã VIP100 (fixed 100.000)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Positive",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1442,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 729
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 114
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 106
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:07:50.173Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Positive",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-f3831e6765933f6f6b2a",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-02 | Mã SAVE10 (percent 10%)",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Positive",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1401,
+                      "error": {
+                        "message": "Error: Số tiền giảm phải là 400000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400000\u001b[39m\nReceived: \u001b[31m-36000000\u001b[39m",
+                        "stack": "Error: Số tiền giảm phải là 400000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400000\u001b[39m\nReceived: \u001b[31m-36000000\u001b[39m\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:80:75\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7",
+                        "location": {
+                          "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                          "column": 75,
+                          "line": 80
+                        },
+                        "snippet": " \u001b[90m 78 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải trong khoảng ${min}–${max}`\u001b[39m)\u001b[33m.\u001b[39mtoBeLessThanOrEqual(max)\u001b[33m;\u001b[39m\n \u001b[90m 79 |\u001b[39m           } \u001b[36melse\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 80 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải là ${expected.discount}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(expected\u001b[33m.\u001b[39mdiscount)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 81 |\u001b[39m           }\n \u001b[90m 82 |\u001b[39m\n \u001b[90m 83 |\u001b[39m           \u001b[36mconst\u001b[39m final \u001b[33m=\u001b[39m expected\u001b[33m.\u001b[39mfinal \u001b[33m??\u001b[39m expected\u001b[33m.\u001b[39mtotal \u001b[33m-\u001b[39m discount\u001b[33m;\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "column": 75,
+                            "line": 80
+                          },
+                          "message": "Error: Số tiền giảm phải là 400000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400000\u001b[39m\nReceived: \u001b[31m-36000000\u001b[39m\n\n  78 |             expect(discount, `Số tiền giảm phải trong khoảng ${min}–${max}`).toBeLessThanOrEqual(max);\n  79 |           } else {\n> 80 |             expect(discount, `Số tiền giảm phải là ${expected.discount}`).toBe(expected.discount);\n     |                                                                           ^\n  81 |           }\n  82 |\n  83 |           const final = expected.final ?? expected.total - discount;\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:80:75\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 714
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 161
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 40,
+                          "error": {
+                            "message": "Error: Số tiền giảm phải là 400000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400000\u001b[39m\nReceived: \u001b[31m-36000000\u001b[39m",
+                            "stack": "Error: Số tiền giảm phải là 400000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400000\u001b[39m\nReceived: \u001b[31m-36000000\u001b[39m\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:80:75\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7",
+                            "location": {
+                              "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                              "column": 75,
+                              "line": 80
+                            },
+                            "snippet": " \u001b[90m 78 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải trong khoảng ${min}–${max}`\u001b[39m)\u001b[33m.\u001b[39mtoBeLessThanOrEqual(max)\u001b[33m;\u001b[39m\n \u001b[90m 79 |\u001b[39m           } \u001b[36melse\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 80 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải là ${expected.discount}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(expected\u001b[33m.\u001b[39mdiscount)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 81 |\u001b[39m           }\n \u001b[90m 82 |\u001b[39m\n \u001b[90m 83 |\u001b[39m           \u001b[36mconst\u001b[39m final \u001b[33m=\u001b[39m expected\u001b[33m.\u001b[39mfinal \u001b[33m??\u001b[39m expected\u001b[33m.\u001b[39mtotal \u001b[33m-\u001b[39m discount\u001b[33m;\u001b[39m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:07:51.768Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Positive",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr09-webkit\\fr09-FR-09-Mã-giảm-giá-FR09-AT-02-Mã-SAVE10-percent-10--webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr09-webkit\\fr09-FR-09-Mã-giảm-giá-FR09-AT-02-Mã-SAVE10-percent-10--webkit\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "column": 75,
+                        "line": 80
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-a4fa96f02361bdab97da",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-03 | Mã không tồn tại (NOTEXIST)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1473,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 758
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 144
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 90
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:07:53.875Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-a1344c06250deaf5b2ad",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-04 | Mã rỗng",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1181,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 596
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 76
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 37
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:07:55.471Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-a3369f3713fa2c42144c",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-05 | Mã viết thường (vip100)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Edge",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1341,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 718
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 125
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 57
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:07:56.675Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Edge",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-ff8eaf012ba2028a8b7d",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-06 | Mã có khoảng trắng đầu/cuối",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Edge",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1365,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 717
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 143
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 50
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:07:58.034Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Edge",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-d493145b6d9bb9d0c085",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-07 | Mã hết hạn (EXPIRED)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1415,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 762
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 159
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 46
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:07:59.423Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-6102ec1092176db4266d",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-08 | Chưa đăng nhập (Thoát khi đang ở Checkout)",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 6497,
+                      "error": {
+                        "message": "Error: Mã phải bị từ chối vì \"đăng nhập\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('p.text-red-600')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Mã phải bị từ chối vì \"đăng nhập\" locator('p.text-red-600') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('p.text-red-600')\u001b[22m\n",
+                        "stack": "Error: Mã phải bị từ chối vì \"đăng nhập\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('p.text-red-600')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Mã phải bị từ chối vì \"đăng nhập\" locator('p.text-red-600') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('p.text-red-600')\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:95:86\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7",
+                        "location": {
+                          "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                          "column": 86,
+                          "line": 95
+                        },
+                        "snippet": " \u001b[90m 93 |\u001b[39m         \u001b[36mif\u001b[39m (expected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'rejected'\u001b[39m) {\n \u001b[90m 94 |\u001b[39m           \u001b[90m// AP-03 hiển thị + nội dung: thông báo lỗi nêu đúng điều kiện bị vi phạm (tránh pass sai lý do).\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 95 |\u001b[39m           \u001b[36mawait\u001b[39m expect(co\u001b[33m.\u001b[39mcouponError\u001b[33m,\u001b[39m \u001b[32m`Mã phải bị từ chối vì \"${expected.reason}\"`\u001b[39m)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 96 |\u001b[39m           \u001b[36mawait\u001b[39m expect(co\u001b[33m.\u001b[39mcouponError\u001b[33m,\u001b[39m \u001b[32m`Thông báo lỗi phải nêu lý do \"${expected.reason}\"`\u001b[39m)\u001b[33m.\u001b[39mtoContainText(\n \u001b[90m 97 |\u001b[39m             \u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(expected\u001b[33m.\u001b[39mreason \u001b[33m??\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m)\u001b[33m,\u001b[39m\n \u001b[90m 98 |\u001b[39m           )\u001b[33m;\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "column": 86,
+                            "line": 95
+                          },
+                          "message": "Error: Mã phải bị từ chối vì \"đăng nhập\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('p.text-red-600')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Mã phải bị từ chối vì \"đăng nhập\" locator('p.text-red-600') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('p.text-red-600')\u001b[22m\n\n\n  93 |         if (expected.outcome === 'rejected') {\n  94 |           // AP-03 hiển thị + nội dung: thông báo lỗi nêu đúng điều kiện bị vi phạm (tránh pass sai lý do).\n> 95 |           await expect(co.couponError, `Mã phải bị từ chối vì \"${expected.reason}\"`).toBeVisible();\n     |                                                                                      ^\n  96 |           await expect(co.couponError, `Thông báo lỗi phải nêu lý do \"${expected.reason}\"`).toContainText(\n  97 |             new RegExp(expected.reason ?? '', 'i'),\n  98 |           );\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:95:86\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 767
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 221
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 5014,
+                          "error": {
+                            "message": "Error: Mã phải bị từ chối vì \"đăng nhập\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('p.text-red-600')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Mã phải bị từ chối vì \"đăng nhập\" locator('p.text-red-600') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('p.text-red-600')\u001b[22m\n",
+                            "stack": "Error: Mã phải bị từ chối vì \"đăng nhập\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('p.text-red-600')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Mã phải bị từ chối vì \"đăng nhập\" locator('p.text-red-600') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('p.text-red-600')\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:95:86\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7",
+                            "location": {
+                              "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                              "column": 86,
+                              "line": 95
+                            },
+                            "snippet": " \u001b[90m 93 |\u001b[39m         \u001b[36mif\u001b[39m (expected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'rejected'\u001b[39m) {\n \u001b[90m 94 |\u001b[39m           \u001b[90m// AP-03 hiển thị + nội dung: thông báo lỗi nêu đúng điều kiện bị vi phạm (tránh pass sai lý do).\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 95 |\u001b[39m           \u001b[36mawait\u001b[39m expect(co\u001b[33m.\u001b[39mcouponError\u001b[33m,\u001b[39m \u001b[32m`Mã phải bị từ chối vì \"${expected.reason}\"`\u001b[39m)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 96 |\u001b[39m           \u001b[36mawait\u001b[39m expect(co\u001b[33m.\u001b[39mcouponError\u001b[33m,\u001b[39m \u001b[32m`Thông báo lỗi phải nêu lý do \"${expected.reason}\"`\u001b[39m)\u001b[33m.\u001b[39mtoContainText(\n \u001b[90m 97 |\u001b[39m             \u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(expected\u001b[33m.\u001b[39mreason \u001b[33m??\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m)\u001b[33m,\u001b[39m\n \u001b[90m 98 |\u001b[39m           )\u001b[33m;\u001b[39m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:08:00.874Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr09-webkit\\fr09-FR-09-Mã-giảm-giá-FR0-28cba--Thoát-khi-đang-ở-Checkout--webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr09-webkit\\fr09-FR-09-Mã-giảm-giá-FR0-28cba--Thoát-khi-đang-ở-Checkout--webkit\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "column": 86,
+                        "line": 95
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-6a62145590bf7ea44891",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-09 | Tổng 299.999 (dưới ngưỡng 300.000)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Edge",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    },
+                    {
+                      "type": "note",
+                      "description": "Tổng được nhập vào ô tổng tiền ở Checkout — ô này sửa được là bug FR-08 (ngoài phạm vi).",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1483,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 768
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 171
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 79
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:08:08.092Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Edge",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        },
+                        {
+                          "type": "note",
+                          "description": "Tổng được nhập vào ô tổng tiền ở Checkout — ô này sửa được là bug FR-08 (ngoài phạm vi).",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-37f96faa74969a410e2b",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-10 | Tổng đúng bằng ngưỡng 300.000",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Edge",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    },
+                    {
+                      "type": "note",
+                      "description": "Tổng được nhập vào ô tổng tiền ở Checkout — ô này sửa được là bug FR-08 (ngoài phạm vi).",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 6380,
+                      "error": {
+                        "message": "Error: Phải hiện thông báo áp dụng mã thành công\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Áp dụng thành công/)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Phải hiện thông báo áp dụng mã thành công getByText(/Áp dụng thành công/) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Áp dụng thành công/)\u001b[22m\n",
+                        "stack": "Error: Phải hiện thông báo áp dụng mã thành công\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Áp dụng thành công/)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Phải hiện thông báo áp dụng mã thành công getByText(/Áp dụng thành công/) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Áp dụng thành công/)\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:68:88\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7",
+                        "location": {
+                          "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                          "column": 88,
+                          "line": 68
+                        },
+                        "snippet": " \u001b[90m 66 |\u001b[39m         \u001b[36mif\u001b[39m (expected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'applied'\u001b[39m) {\n \u001b[90m 67 |\u001b[39m           \u001b[90m// AP-03 hiển thị: thông báo áp dụng thành công.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m           \u001b[36mawait\u001b[39m expect(co\u001b[33m.\u001b[39msuccessMessage\u001b[33m,\u001b[39m \u001b[32m'Phải hiện thông báo áp dụng mã thành công'\u001b[39m)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 69 |\u001b[39m           \u001b[36mawait\u001b[39m expect(co\u001b[33m.\u001b[39mcouponError\u001b[33m,\u001b[39m \u001b[32m'Không được có thông báo lỗi khi mã hợp lệ'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m\n \u001b[90m 71 |\u001b[39m           \u001b[90m// AP-04 giá trị số: số tiền giảm theo công thức FR-09.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "column": 88,
+                            "line": 68
+                          },
+                          "message": "Error: Phải hiện thông báo áp dụng mã thành công\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Áp dụng thành công/)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Phải hiện thông báo áp dụng mã thành công getByText(/Áp dụng thành công/) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Áp dụng thành công/)\u001b[22m\n\n\n  66 |         if (expected.outcome === 'applied') {\n  67 |           // AP-03 hiển thị: thông báo áp dụng thành công.\n> 68 |           await expect(co.successMessage, 'Phải hiện thông báo áp dụng mã thành công').toBeVisible();\n     |                                                                                        ^\n  69 |           await expect(co.couponError, 'Không được có thông báo lỗi khi mã hợp lệ').toHaveCount(0);\n  70 |\n  71 |           // AP-04 giá trị số: số tiền giảm theo công thức FR-09.\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:68:88\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 682
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 143
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 5005,
+                          "error": {
+                            "message": "Error: Phải hiện thông báo áp dụng mã thành công\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Áp dụng thành công/)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Phải hiện thông báo áp dụng mã thành công getByText(/Áp dụng thành công/) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Áp dụng thành công/)\u001b[22m\n",
+                            "stack": "Error: Phải hiện thông báo áp dụng mã thành công\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Áp dụng thành công/)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Phải hiện thông báo áp dụng mã thành công getByText(/Áp dụng thành công/) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Áp dụng thành công/)\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:68:88\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7",
+                            "location": {
+                              "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                              "column": 88,
+                              "line": 68
+                            },
+                            "snippet": " \u001b[90m 66 |\u001b[39m         \u001b[36mif\u001b[39m (expected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'applied'\u001b[39m) {\n \u001b[90m 67 |\u001b[39m           \u001b[90m// AP-03 hiển thị: thông báo áp dụng thành công.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m           \u001b[36mawait\u001b[39m expect(co\u001b[33m.\u001b[39msuccessMessage\u001b[33m,\u001b[39m \u001b[32m'Phải hiện thông báo áp dụng mã thành công'\u001b[39m)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 69 |\u001b[39m           \u001b[36mawait\u001b[39m expect(co\u001b[33m.\u001b[39mcouponError\u001b[33m,\u001b[39m \u001b[32m'Không được có thông báo lỗi khi mã hợp lệ'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m\n \u001b[90m 71 |\u001b[39m           \u001b[90m// AP-04 giá trị số: số tiền giảm theo công thức FR-09.\u001b[39m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:08:09.690Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Edge",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        },
+                        {
+                          "type": "note",
+                          "description": "Tổng được nhập vào ô tổng tiền ở Checkout — ô này sửa được là bug FR-08 (ngoài phạm vi).",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr09-webkit\\fr09-FR-09-Mã-giảm-giá-FR0-7234c-ng-đúng-bằng-ngưỡng-300-000-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr09-webkit\\fr09-FR-09-Mã-giảm-giá-FR0-7234c-ng-đúng-bằng-ngưỡng-300-000-webkit\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "column": 88,
+                        "line": 68
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-f445a6dfa3c048e02ae6",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-11 | Tổng 300.001 (ngay trên ngưỡng)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Edge",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    },
+                    {
+                      "type": "note",
+                      "description": "Tổng được nhập vào ô tổng tiền ở Checkout — ô này sửa được là bug FR-08 (ngoài phạm vi).",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1397,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 715
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 139
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 72
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:08:16.782Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Edge",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        },
+                        {
+                          "type": "note",
+                          "description": "Tổng được nhập vào ô tổng tiền ở Checkout — ô này sửa được là bug FR-08 (ngoài phạm vi).",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-c6c59761df75ae214284",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-12 | Đã dùng VIP100 1 lần (giới hạn 2)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Edge",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1402,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 755
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 145
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 78
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:08:18.305Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Edge",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-8e5b13c513d44334d341",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-13 | Đã dùng VIP100 2 lần (đạt giới hạn)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1339,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 724
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 133
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 46
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:08:19.730Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-981884a8c74da787752b",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-14 | Đã dùng SAVE10 1 lần (giới hạn 1)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1358,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 729
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 123
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 43
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:08:21.086Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-054082df769f85bbe0fa",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-15 | SAVE10 với tổng 300.005 (giảm % ra số lẻ)",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Edge",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    },
+                    {
+                      "type": "note",
+                      "description": "Đặc tả không quy định làm tròn; chấp nhận làm tròn xuống hoặc gần nhất (quyết định HW02). Tổng nhập vào ô tổng tiền (bug FR-08).",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1378,
+                      "error": {
+                        "message": "Error: Số tiền giảm phải trong khoảng 30000–30001\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m30000\u001b[39m\nReceived:    \u001b[31m-2700045\u001b[39m",
+                        "stack": "Error: Số tiền giảm phải trong khoảng 30000–30001\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m30000\u001b[39m\nReceived:    \u001b[31m-2700045\u001b[39m\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:77:78\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7",
+                        "location": {
+                          "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                          "column": 78,
+                          "line": 77
+                        },
+                        "snippet": " \u001b[90m 75 |\u001b[39m             \u001b[36mconst\u001b[39m min \u001b[33m=\u001b[39m \u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mmin(\u001b[33m...\u001b[39mexpected\u001b[33m.\u001b[39mdiscount)\u001b[33m;\u001b[39m\n \u001b[90m 76 |\u001b[39m             \u001b[36mconst\u001b[39m max \u001b[33m=\u001b[39m \u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mmax(\u001b[33m...\u001b[39mexpected\u001b[33m.\u001b[39mdiscount)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 77 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải trong khoảng ${min}–${max}`\u001b[39m)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(min)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 78 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải trong khoảng ${min}–${max}`\u001b[39m)\u001b[33m.\u001b[39mtoBeLessThanOrEqual(max)\u001b[33m;\u001b[39m\n \u001b[90m 79 |\u001b[39m           } \u001b[36melse\u001b[39m {\n \u001b[90m 80 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải là ${expected.discount}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(expected\u001b[33m.\u001b[39mdiscount)\u001b[33m;\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "column": 78,
+                            "line": 77
+                          },
+                          "message": "Error: Số tiền giảm phải trong khoảng 30000–30001\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m30000\u001b[39m\nReceived:    \u001b[31m-2700045\u001b[39m\n\n  75 |             const min = Math.min(...expected.discount);\n  76 |             const max = Math.max(...expected.discount);\n> 77 |             expect(discount, `Số tiền giảm phải trong khoảng ${min}–${max}`).toBeGreaterThanOrEqual(min);\n     |                                                                              ^\n  78 |             expect(discount, `Số tiền giảm phải trong khoảng ${min}–${max}`).toBeLessThanOrEqual(max);\n  79 |           } else {\n  80 |             expect(discount, `Số tiền giảm phải là ${expected.discount}`).toBe(expected.discount);\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:77:78\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 695
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 170
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 36,
+                          "error": {
+                            "message": "Error: Số tiền giảm phải trong khoảng 30000–30001\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m30000\u001b[39m\nReceived:    \u001b[31m-2700045\u001b[39m",
+                            "stack": "Error: Số tiền giảm phải trong khoảng 30000–30001\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m30000\u001b[39m\nReceived:    \u001b[31m-2700045\u001b[39m\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:77:78\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7",
+                            "location": {
+                              "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                              "column": 78,
+                              "line": 77
+                            },
+                            "snippet": " \u001b[90m 75 |\u001b[39m             \u001b[36mconst\u001b[39m min \u001b[33m=\u001b[39m \u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mmin(\u001b[33m...\u001b[39mexpected\u001b[33m.\u001b[39mdiscount)\u001b[33m;\u001b[39m\n \u001b[90m 76 |\u001b[39m             \u001b[36mconst\u001b[39m max \u001b[33m=\u001b[39m \u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mmax(\u001b[33m...\u001b[39mexpected\u001b[33m.\u001b[39mdiscount)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 77 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải trong khoảng ${min}–${max}`\u001b[39m)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(min)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 78 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải trong khoảng ${min}–${max}`\u001b[39m)\u001b[33m.\u001b[39mtoBeLessThanOrEqual(max)\u001b[33m;\u001b[39m\n \u001b[90m 79 |\u001b[39m           } \u001b[36melse\u001b[39m {\n \u001b[90m 80 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải là ${expected.discount}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(expected\u001b[33m.\u001b[39mdiscount)\u001b[33m;\u001b[39m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:08:22.462Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Edge",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        },
+                        {
+                          "type": "note",
+                          "description": "Đặc tả không quy định làm tròn; chấp nhận làm tròn xuống hoặc gần nhất (quyết định HW02). Tổng nhập vào ô tổng tiền (bug FR-08).",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr09-webkit\\fr09-FR-09-Mã-giảm-giá-FR0-9937e-tổng-300-005-giảm-ra-số-lẻ--webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr09-webkit\\fr09-FR-09-Mã-giảm-giá-FR0-9937e-tổng-300-005-giảm-ra-số-lẻ--webkit\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "column": 78,
+                        "line": 77
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-620b9701e3b1352de131",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-16T15:07:46.103Z",
+    "duration": 39094.086,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

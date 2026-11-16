@@ -1,0 +1,1469 @@
+{
+  "config": {
+    "argv": [
+      "D:\\App Data\\nodejs\\node.exe",
+      "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--project=firefox"
+    ],
+    "configFile": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\playwright.config.ts",
+    "rootDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23120409",
+      "Run at (ISO 8601)": "2026-11-16T15:06:21.976Z",
+      "Feature": "fr09",
+      "Browser": "firefox",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/test-results/fr09-firefox",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120409",
+          "Run at (ISO 8601)": "2026-11-16T15:06:21.976Z",
+          "Feature": "fr09",
+          "Browser": "firefox",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "fr09*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/test-results/fr09-firefox",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120409",
+          "Run at (ISO 8601)": "2026-11-16T15:06:21.976Z",
+          "Feature": "fr09",
+          "Browser": "firefox",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "fr09*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/test-results/fr09-firefox",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120409",
+          "Run at (ISO 8601)": "2026-11-16T15:06:21.976Z",
+          "Feature": "fr09",
+          "Browser": "firefox",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "fr09*.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr09-firefox",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120409",
+          "Run at (ISO 8601)": "2026-11-16T15:06:21.976Z",
+          "Feature": "fr09",
+          "Browser": "firefox",
+          "actualWorkers": 1
+        },
+        "name": "firefox",
+        "testDir": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests",
+        "snapshotDir": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests",
+        "testIgnore": [],
+        "testMatch": "fr09*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://localhost:5173",
+          "screenshot": "only-on-failure",
+          "trace": "off",
+          "video": "off",
+          "actionTimeout": 10000,
+          "navigationTimeout": 15000,
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "firefox"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "firefox"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "reports/fr09/firefox",
+          "title": "Run by: 23120409 | fr09-firefox | 2026-11-16T15:06:21.976Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/fr09/firefox.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr09.spec.ts",
+      "file": "fr09.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-09 Mã giảm giá",
+          "file": "fr09.spec.ts",
+          "line": 25,
+          "column": 6,
+          "specs": [
+            {
+              "title": "FR09-AT-01 | Mã VIP100 (fixed 100.000)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Positive",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4877,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 2915
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 101
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 176
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:06:29.073Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Positive",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-5647998db627e7e206c1",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-02 | Mã SAVE10 (percent 10%)",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Positive",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3417,
+                      "error": {
+                        "message": "Error: Số tiền giảm phải là 400000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400000\u001b[39m\nReceived: \u001b[31m-36000000\u001b[39m",
+                        "stack": "Error: Số tiền giảm phải là 400000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400000\u001b[39m\nReceived: \u001b[31m-36000000\u001b[39m\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:80:75\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7",
+                        "location": {
+                          "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                          "column": 75,
+                          "line": 80
+                        },
+                        "snippet": " \u001b[90m 78 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải trong khoảng ${min}–${max}`\u001b[39m)\u001b[33m.\u001b[39mtoBeLessThanOrEqual(max)\u001b[33m;\u001b[39m\n \u001b[90m 79 |\u001b[39m           } \u001b[36melse\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 80 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải là ${expected.discount}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(expected\u001b[33m.\u001b[39mdiscount)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 81 |\u001b[39m           }\n \u001b[90m 82 |\u001b[39m\n \u001b[90m 83 |\u001b[39m           \u001b[36mconst\u001b[39m final \u001b[33m=\u001b[39m expected\u001b[33m.\u001b[39mfinal \u001b[33m??\u001b[39m expected\u001b[33m.\u001b[39mtotal \u001b[33m-\u001b[39m discount\u001b[33m;\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "column": 75,
+                            "line": 80
+                          },
+                          "message": "Error: Số tiền giảm phải là 400000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400000\u001b[39m\nReceived: \u001b[31m-36000000\u001b[39m\n\n  78 |             expect(discount, `Số tiền giảm phải trong khoảng ${min}–${max}`).toBeLessThanOrEqual(max);\n  79 |           } else {\n> 80 |             expect(discount, `Số tiền giảm phải là ${expected.discount}`).toBe(expected.discount);\n     |                                                                           ^\n  81 |           }\n  82 |\n  83 |           const final = expected.final ?? expected.total - discount;\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:80:75\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 2805
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 89
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 47,
+                          "error": {
+                            "message": "Error: Số tiền giảm phải là 400000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400000\u001b[39m\nReceived: \u001b[31m-36000000\u001b[39m",
+                            "stack": "Error: Số tiền giảm phải là 400000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400000\u001b[39m\nReceived: \u001b[31m-36000000\u001b[39m\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:80:75\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7",
+                            "location": {
+                              "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                              "column": 75,
+                              "line": 80
+                            },
+                            "snippet": " \u001b[90m 78 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải trong khoảng ${min}–${max}`\u001b[39m)\u001b[33m.\u001b[39mtoBeLessThanOrEqual(max)\u001b[33m;\u001b[39m\n \u001b[90m 79 |\u001b[39m           } \u001b[36melse\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 80 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải là ${expected.discount}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(expected\u001b[33m.\u001b[39mdiscount)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 81 |\u001b[39m           }\n \u001b[90m 82 |\u001b[39m\n \u001b[90m 83 |\u001b[39m           \u001b[36mconst\u001b[39m final \u001b[33m=\u001b[39m expected\u001b[33m.\u001b[39mfinal \u001b[33m??\u001b[39m expected\u001b[33m.\u001b[39mtotal \u001b[33m-\u001b[39m discount\u001b[33m;\u001b[39m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:06:34.834Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Positive",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr09-firefox\\fr09-FR-09-Mã-giảm-giá-FR09-AT-02-Mã-SAVE10-percent-10--firefox\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr09-firefox\\fr09-FR-09-Mã-giảm-giá-FR09-AT-02-Mã-SAVE10-percent-10--firefox\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "column": 75,
+                        "line": 80
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-36ea8bc2ad4e0036b26e",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-03 | Mã không tồn tại (NOTEXIST)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4539,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 2912
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 114
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 53
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:06:39.573Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-73abecf571777fa9993d",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-04 | Mã rỗng",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3156,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 2702
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 24
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 30
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:06:45.037Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-7b45978dddb284f4e153",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-05 | Mã viết thường (vip100)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Edge",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3481,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 2718
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 95
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 125
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:06:48.214Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Edge",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-0aaeb49bb9c0e87d1937",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-06 | Mã có khoảng trắng đầu/cuối",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Edge",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3398,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 2725
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 99
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 74
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:06:51.720Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Edge",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-a910e78d526cb104b901",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-07 | Mã hết hạn (EXPIRED)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3212,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 2672
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 101
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 51
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:06:55.135Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-41a753b0adea85d324e4",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-08 | Chưa đăng nhập (Thoát khi đang ở Checkout)",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 8286,
+                      "error": {
+                        "message": "Error: Mã phải bị từ chối vì \"đăng nhập\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('p.text-red-600')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Mã phải bị từ chối vì \"đăng nhập\" locator('p.text-red-600') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('p.text-red-600')\u001b[22m\n",
+                        "stack": "Error: Mã phải bị từ chối vì \"đăng nhập\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('p.text-red-600')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Mã phải bị từ chối vì \"đăng nhập\" locator('p.text-red-600') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('p.text-red-600')\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:95:86\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7",
+                        "location": {
+                          "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                          "column": 86,
+                          "line": 95
+                        },
+                        "snippet": " \u001b[90m 93 |\u001b[39m         \u001b[36mif\u001b[39m (expected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'rejected'\u001b[39m) {\n \u001b[90m 94 |\u001b[39m           \u001b[90m// AP-03 hiển thị + nội dung: thông báo lỗi nêu đúng điều kiện bị vi phạm (tránh pass sai lý do).\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 95 |\u001b[39m           \u001b[36mawait\u001b[39m expect(co\u001b[33m.\u001b[39mcouponError\u001b[33m,\u001b[39m \u001b[32m`Mã phải bị từ chối vì \"${expected.reason}\"`\u001b[39m)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 96 |\u001b[39m           \u001b[36mawait\u001b[39m expect(co\u001b[33m.\u001b[39mcouponError\u001b[33m,\u001b[39m \u001b[32m`Thông báo lỗi phải nêu lý do \"${expected.reason}\"`\u001b[39m)\u001b[33m.\u001b[39mtoContainText(\n \u001b[90m 97 |\u001b[39m             \u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(expected\u001b[33m.\u001b[39mreason \u001b[33m??\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m)\u001b[33m,\u001b[39m\n \u001b[90m 98 |\u001b[39m           )\u001b[33m;\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "column": 86,
+                            "line": 95
+                          },
+                          "message": "Error: Mã phải bị từ chối vì \"đăng nhập\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('p.text-red-600')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Mã phải bị từ chối vì \"đăng nhập\" locator('p.text-red-600') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('p.text-red-600')\u001b[22m\n\n\n  93 |         if (expected.outcome === 'rejected') {\n  94 |           // AP-03 hiển thị + nội dung: thông báo lỗi nêu đúng điều kiện bị vi phạm (tránh pass sai lý do).\n> 95 |           await expect(co.couponError, `Mã phải bị từ chối vì \"${expected.reason}\"`).toBeVisible();\n     |                                                                                      ^\n  96 |           await expect(co.couponError, `Thông báo lỗi phải nêu lý do \"${expected.reason}\"`).toContainText(\n  97 |             new RegExp(expected.reason ?? '', 'i'),\n  98 |           );\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:95:86\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 2694
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 184
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 5018,
+                          "error": {
+                            "message": "Error: Mã phải bị từ chối vì \"đăng nhập\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('p.text-red-600')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Mã phải bị từ chối vì \"đăng nhập\" locator('p.text-red-600') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('p.text-red-600')\u001b[22m\n",
+                            "stack": "Error: Mã phải bị từ chối vì \"đăng nhập\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('p.text-red-600')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Mã phải bị từ chối vì \"đăng nhập\" locator('p.text-red-600') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('p.text-red-600')\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:95:86\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7",
+                            "location": {
+                              "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                              "column": 86,
+                              "line": 95
+                            },
+                            "snippet": " \u001b[90m 93 |\u001b[39m         \u001b[36mif\u001b[39m (expected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'rejected'\u001b[39m) {\n \u001b[90m 94 |\u001b[39m           \u001b[90m// AP-03 hiển thị + nội dung: thông báo lỗi nêu đúng điều kiện bị vi phạm (tránh pass sai lý do).\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 95 |\u001b[39m           \u001b[36mawait\u001b[39m expect(co\u001b[33m.\u001b[39mcouponError\u001b[33m,\u001b[39m \u001b[32m`Mã phải bị từ chối vì \"${expected.reason}\"`\u001b[39m)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 96 |\u001b[39m           \u001b[36mawait\u001b[39m expect(co\u001b[33m.\u001b[39mcouponError\u001b[33m,\u001b[39m \u001b[32m`Thông báo lỗi phải nêu lý do \"${expected.reason}\"`\u001b[39m)\u001b[33m.\u001b[39mtoContainText(\n \u001b[90m 97 |\u001b[39m             \u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(expected\u001b[33m.\u001b[39mreason \u001b[33m??\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m)\u001b[33m,\u001b[39m\n \u001b[90m 98 |\u001b[39m           )\u001b[33m;\u001b[39m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:06:58.363Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr09-firefox\\fr09-FR-09-Mã-giảm-giá-FR0-28cba--Thoát-khi-đang-ở-Checkout--firefox\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr09-firefox\\fr09-FR-09-Mã-giảm-giá-FR0-28cba--Thoát-khi-đang-ở-Checkout--firefox\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "column": 86,
+                        "line": 95
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-74f90a367348cf3daaf1",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-09 | Tổng 299.999 (dưới ngưỡng 300.000)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Edge",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    },
+                    {
+                      "type": "note",
+                      "description": "Tổng được nhập vào ô tổng tiền ở Checkout — ô này sửa được là bug FR-08 (ngoài phạm vi).",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4577,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 2923
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 124
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 49
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:07:07.956Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Edge",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        },
+                        {
+                          "type": "note",
+                          "description": "Tổng được nhập vào ô tổng tiền ở Checkout — ô này sửa được là bug FR-08 (ngoài phạm vi).",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-45b1749feead8889bee4",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-10 | Tổng đúng bằng ngưỡng 300.000",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Edge",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    },
+                    {
+                      "type": "note",
+                      "description": "Tổng được nhập vào ô tổng tiền ở Checkout — ô này sửa được là bug FR-08 (ngoài phạm vi).",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 8254,
+                      "error": {
+                        "message": "Error: Phải hiện thông báo áp dụng mã thành công\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Áp dụng thành công/)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Phải hiện thông báo áp dụng mã thành công getByText(/Áp dụng thành công/) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Áp dụng thành công/)\u001b[22m\n",
+                        "stack": "Error: Phải hiện thông báo áp dụng mã thành công\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Áp dụng thành công/)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Phải hiện thông báo áp dụng mã thành công getByText(/Áp dụng thành công/) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Áp dụng thành công/)\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:68:88\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7",
+                        "location": {
+                          "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                          "column": 88,
+                          "line": 68
+                        },
+                        "snippet": " \u001b[90m 66 |\u001b[39m         \u001b[36mif\u001b[39m (expected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'applied'\u001b[39m) {\n \u001b[90m 67 |\u001b[39m           \u001b[90m// AP-03 hiển thị: thông báo áp dụng thành công.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m           \u001b[36mawait\u001b[39m expect(co\u001b[33m.\u001b[39msuccessMessage\u001b[33m,\u001b[39m \u001b[32m'Phải hiện thông báo áp dụng mã thành công'\u001b[39m)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 69 |\u001b[39m           \u001b[36mawait\u001b[39m expect(co\u001b[33m.\u001b[39mcouponError\u001b[33m,\u001b[39m \u001b[32m'Không được có thông báo lỗi khi mã hợp lệ'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m\n \u001b[90m 71 |\u001b[39m           \u001b[90m// AP-04 giá trị số: số tiền giảm theo công thức FR-09.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "column": 88,
+                            "line": 68
+                          },
+                          "message": "Error: Phải hiện thông báo áp dụng mã thành công\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Áp dụng thành công/)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Phải hiện thông báo áp dụng mã thành công getByText(/Áp dụng thành công/) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Áp dụng thành công/)\u001b[22m\n\n\n  66 |         if (expected.outcome === 'applied') {\n  67 |           // AP-03 hiển thị: thông báo áp dụng thành công.\n> 68 |           await expect(co.successMessage, 'Phải hiện thông báo áp dụng mã thành công').toBeVisible();\n     |                                                                                        ^\n  69 |           await expect(co.couponError, 'Không được có thông báo lỗi khi mã hợp lệ').toHaveCount(0);\n  70 |\n  71 |           // AP-04 giá trị số: số tiền giảm theo công thức FR-09.\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:68:88\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 2735
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 137
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 5006,
+                          "error": {
+                            "message": "Error: Phải hiện thông báo áp dụng mã thành công\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Áp dụng thành công/)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Phải hiện thông báo áp dụng mã thành công getByText(/Áp dụng thành công/) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Áp dụng thành công/)\u001b[22m\n",
+                            "stack": "Error: Phải hiện thông báo áp dụng mã thành công\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Áp dụng thành công/)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Phải hiện thông báo áp dụng mã thành công getByText(/Áp dụng thành công/) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Áp dụng thành công/)\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:68:88\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7",
+                            "location": {
+                              "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                              "column": 88,
+                              "line": 68
+                            },
+                            "snippet": " \u001b[90m 66 |\u001b[39m         \u001b[36mif\u001b[39m (expected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'applied'\u001b[39m) {\n \u001b[90m 67 |\u001b[39m           \u001b[90m// AP-03 hiển thị: thông báo áp dụng thành công.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m           \u001b[36mawait\u001b[39m expect(co\u001b[33m.\u001b[39msuccessMessage\u001b[33m,\u001b[39m \u001b[32m'Phải hiện thông báo áp dụng mã thành công'\u001b[39m)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 69 |\u001b[39m           \u001b[36mawait\u001b[39m expect(co\u001b[33m.\u001b[39mcouponError\u001b[33m,\u001b[39m \u001b[32m'Không được có thông báo lỗi khi mã hợp lệ'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m\n \u001b[90m 71 |\u001b[39m           \u001b[90m// AP-04 giá trị số: số tiền giảm theo công thức FR-09.\u001b[39m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:07:13.455Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Edge",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        },
+                        {
+                          "type": "note",
+                          "description": "Tổng được nhập vào ô tổng tiền ở Checkout — ô này sửa được là bug FR-08 (ngoài phạm vi).",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr09-firefox\\fr09-FR-09-Mã-giảm-giá-FR0-7234c-ng-đúng-bằng-ngưỡng-300-000-firefox\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr09-firefox\\fr09-FR-09-Mã-giảm-giá-FR0-7234c-ng-đúng-bằng-ngưỡng-300-000-firefox\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "column": 88,
+                        "line": 68
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-c7434c0d313bccbf622b",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-11 | Tổng 300.001 (ngay trên ngưỡng)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Edge",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    },
+                    {
+                      "type": "note",
+                      "description": "Tổng được nhập vào ô tổng tiền ở Checkout — ô này sửa được là bug FR-08 (ngoài phạm vi).",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4949,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 2874
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 125
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 133
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:07:23.190Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Edge",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        },
+                        {
+                          "type": "note",
+                          "description": "Tổng được nhập vào ô tổng tiền ở Checkout — ô này sửa được là bug FR-08 (ngoài phạm vi).",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-99a81ff272495e816fc5",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-12 | Đã dùng VIP100 1 lần (giới hạn 2)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Edge",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3440,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 2729
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 120
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 101
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:07:28.929Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Edge",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-bf9201449b52dfea18de",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-13 | Đã dùng VIP100 2 lần (đạt giới hạn)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3475,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 2811
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 92
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 57
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:07:32.389Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-01e999d4c0646c53a956",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-14 | Đã dùng SAVE10 1 lần (giới hạn 1)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3231,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 2689
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 95
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 42
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:07:35.880Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-76f8f8ae5aaf0bb6435d",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            },
+            {
+              "title": "FR09-AT-15 | SAVE10 với tổng 300.005 (giảm % ra số lẻ)",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Edge",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    },
+                    {
+                      "type": "note",
+                      "description": "Đặc tả không quy định làm tròn; chấp nhận làm tròn xuống hoặc gần nhất (quyết định HW02). Tổng nhập vào ô tổng tiền (bug FR-08).",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "line": 29,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3309,
+                      "error": {
+                        "message": "Error: Số tiền giảm phải trong khoảng 30000–30001\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m30000\u001b[39m\nReceived:    \u001b[31m-2700045\u001b[39m",
+                        "stack": "Error: Số tiền giảm phải trong khoảng 30000–30001\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m30000\u001b[39m\nReceived:    \u001b[31m-2700045\u001b[39m\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:77:78\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7",
+                        "location": {
+                          "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                          "column": 78,
+                          "line": 77
+                        },
+                        "snippet": " \u001b[90m 75 |\u001b[39m             \u001b[36mconst\u001b[39m min \u001b[33m=\u001b[39m \u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mmin(\u001b[33m...\u001b[39mexpected\u001b[33m.\u001b[39mdiscount)\u001b[33m;\u001b[39m\n \u001b[90m 76 |\u001b[39m             \u001b[36mconst\u001b[39m max \u001b[33m=\u001b[39m \u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mmax(\u001b[33m...\u001b[39mexpected\u001b[33m.\u001b[39mdiscount)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 77 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải trong khoảng ${min}–${max}`\u001b[39m)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(min)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 78 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải trong khoảng ${min}–${max}`\u001b[39m)\u001b[33m.\u001b[39mtoBeLessThanOrEqual(max)\u001b[33m;\u001b[39m\n \u001b[90m 79 |\u001b[39m           } \u001b[36melse\u001b[39m {\n \u001b[90m 80 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải là ${expected.discount}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(expected\u001b[33m.\u001b[39mdiscount)\u001b[33m;\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "column": 78,
+                            "line": 77
+                          },
+                          "message": "Error: Số tiền giảm phải trong khoảng 30000–30001\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m30000\u001b[39m\nReceived:    \u001b[31m-2700045\u001b[39m\n\n  75 |             const min = Math.min(...expected.discount);\n  76 |             const max = Math.max(...expected.discount);\n> 77 |             expect(discount, `Số tiền giảm phải trong khoảng ${min}–${max}`).toBeGreaterThanOrEqual(min);\n     |                                                                              ^\n  78 |             expect(discount, `Số tiền giảm phải trong khoảng ${min}–${max}`).toBeLessThanOrEqual(max);\n  79 |           } else {\n  80 |             expect(discount, `Số tiền giảm phải là ${expected.discount}`).toBe(expected.discount);\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:77:78\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 2690
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 107
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 37,
+                          "error": {
+                            "message": "Error: Số tiền giảm phải trong khoảng 30000–30001\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m30000\u001b[39m\nReceived:    \u001b[31m-2700045\u001b[39m",
+                            "stack": "Error: Số tiền giảm phải trong khoảng 30000–30001\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m30000\u001b[39m\nReceived:    \u001b[31m-2700045\u001b[39m\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:77:78\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts:59:7",
+                            "location": {
+                              "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                              "column": 78,
+                              "line": 77
+                            },
+                            "snippet": " \u001b[90m 75 |\u001b[39m             \u001b[36mconst\u001b[39m min \u001b[33m=\u001b[39m \u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mmin(\u001b[33m...\u001b[39mexpected\u001b[33m.\u001b[39mdiscount)\u001b[33m;\u001b[39m\n \u001b[90m 76 |\u001b[39m             \u001b[36mconst\u001b[39m max \u001b[33m=\u001b[39m \u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mmax(\u001b[33m...\u001b[39mexpected\u001b[33m.\u001b[39mdiscount)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 77 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải trong khoảng ${min}–${max}`\u001b[39m)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(min)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 78 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải trong khoảng ${min}–${max}`\u001b[39m)\u001b[33m.\u001b[39mtoBeLessThanOrEqual(max)\u001b[33m;\u001b[39m\n \u001b[90m 79 |\u001b[39m           } \u001b[36melse\u001b[39m {\n \u001b[90m 80 |\u001b[39m             expect(discount\u001b[33m,\u001b[39m \u001b[32m`Số tiền giảm phải là ${expected.discount}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(expected\u001b[33m.\u001b[39mdiscount)\u001b[33m;\u001b[39m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-11-16T15:07:39.128Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Edge",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        },
+                        {
+                          "type": "note",
+                          "description": "Đặc tả không quy định làm tròn; chấp nhận làm tròn xuống hoặc gần nhất (quyết định HW02). Tổng nhập vào ô tổng tiền (bug FR-08).",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                            "line": 29,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr09-firefox\\fr09-FR-09-Mã-giảm-giá-FR0-9937e-tổng-300-005-giảm-ra-số-lẻ--firefox\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr09-firefox\\fr09-FR-09-Mã-giảm-giá-FR0-9937e-tổng-300-005-giảm-ra-số-lẻ--firefox\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr09.spec.ts",
+                        "column": 78,
+                        "line": 77
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "755f59dae03ac1ba4c34-09f0ce80de74f7ffe8a1",
+              "file": "fr09.spec.ts",
+              "line": 29,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-16T15:06:23.941Z",
+    "duration": 80283.08099999999,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}
