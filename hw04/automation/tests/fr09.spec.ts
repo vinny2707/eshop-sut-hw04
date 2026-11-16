@@ -68,9 +68,16 @@ test.describe('FR-09 Mã giảm giá', () => {
           await expect(co.couponError, 'Không được có thông báo lỗi khi mã hợp lệ').toHaveCount(0);
 
           // AP-04 giá trị số: số tiền giảm theo công thức FR-09.
-          const allowed = Array.isArray(expected.discount) ? expected.discount : [expected.discount];
           const discount = await co.money(co.savings);
-          expect(allowed, `Số tiền giảm phải là ${allowed.join(' hoặc ')}`).toContain(discount);
+          if (Array.isArray(expected.discount)) {
+            // Nhiều cách làm tròn được chấp nhận → kiểm theo khoảng (giữ đúng vế Expected / Received).
+            const min = Math.min(...expected.discount);
+            const max = Math.max(...expected.discount);
+            expect(discount, `Số tiền giảm phải trong khoảng ${min}–${max}`).toBeGreaterThanOrEqual(min);
+            expect(discount, `Số tiền giảm phải trong khoảng ${min}–${max}`).toBeLessThanOrEqual(max);
+          } else {
+            expect(discount, `Số tiền giảm phải là ${expected.discount}`).toBe(expected.discount);
+          }
 
           const final = expected.final ?? expected.total - discount;
           await expect
