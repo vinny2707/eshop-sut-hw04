@@ -6,7 +6,7 @@ Báo cáo lỗi chi tiết của các tính năng được tự động hóa. M�
 | :-- | :-- | :-- |
 | FR-01 Registration | 6 | [FR-01](#fr-01--registration) |
 | FR-09 Discount Coupons | 3 | [FR-09](#fr-09--discount-coupons) |
-| FR-17 Coupon CRUD | | [FR-17](#fr-17--coupon-crud) |
+| FR-17 Coupon CRUD | 3 | [FR-17](#fr-17--coupon-crud) |
 
 ## FR-01 — Registration
 
@@ -202,8 +202,65 @@ Dữ liệu cơ sở: user mới đăng ký cho mỗi test, giỏ 1 × "Bàn ph�
 
 ## FR-17 — Coupon CRUD
 
-Môi trường: . HTML report:
+Môi trường: Windows 11, Node 24.14, Playwright 1.65.1 (Chromium 159.0.8154.6 / Firefox 159.0 / WebKit 27.2), SUT commit `85af3ba`, Web Admin `http://localhost:5174` (tab "Mã Giảm Giá"), tài khoản `admin@eshop.com`, DB seed mới mỗi lượt chạy. HTML report: [Chromium](../automation/reports/fr17/chromium/index.html) · [Firefox](../automation/reports/fr17/firefox/index.html) · [WebKit](../automation/reports/fr17/webkit/index.html) (lượt chạy 2026-11-16T16:53Z–16:57Z).
+
+Dữ liệu cơ sở của form: loại `percent`, giá trị 15, đơn tối thiểu 200.000, hạn 2099-12-31, 1 lần/người, mã `CPnn` (trừ khi ghi khác). Mọi bug tái hiện trên **cả 3 trình duyệt**; mỗi TC fail báo cả "không có thông báo lỗi" lẫn "số dòng tăng thêm 1".
 
 | Bug ID | Tiêu đề | Severity | TC liên quan | Trình duyệt | GitHub Issue |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| BUG-FR17-01 | | | | | |
+| BUG-FR17-01 | Tạo được mã chỉ gồm khoảng trắng | Medium | AT-06 | Chromium, Firefox, WebKit | [#10](https://github.com/vinny2707/eshop-sut-hw04/issues/10) |
+| BUG-FR17-02 | Tạo được mã có giá trị giảm 0 hoặc trên 100% | High | AT-08, AT-09 | Chromium, Firefox, WebKit | [#11](https://github.com/vinny2707/eshop-sut-hw04/issues/11) |
+| BUG-FR17-03 | Tạo được mã có đơn tối thiểu âm | Medium | AT-10 | Chromium, Firefox, WebKit | [#12](https://github.com/vinny2707/eshop-sut-hw04/issues/12) |
+
+### BUG-FR17-01 — Tạo được mã chỉ gồm khoảng trắng
+
+| Rule | Severity | TC | Trình duyệt |
+| :-- | :-- | :-- | :-- |
+| FR-17: `code` bắt buộc | Medium | AT-06 | Chromium, Firefox, WebKit |
+
+- **Tái hiện:** đăng nhập Web Admin → tab "Mã Giảm Giá" → ô mã nhập `"   "` (3 khoảng trắng), các ô khác theo dữ liệu cơ sở → bấm **Tạo mã**.
+- **Mong đợi** (FR-17): từ chối, có thông báo lỗi, không tạo mã.
+- **Thực tế:** không có thông báo; bảng thêm một dòng có ô Mã trống (Phần trăm, 15%, 200,000 ₫, 2099-12-31, 1 lần).
+- **Assertion fail:** FR17-AT-06 — `Phải có thông báo lỗi khi dữ liệu mã không hợp lệ` (Received 0) và `Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)` — Expected 6, Received 7.
+- **Nghi vấn vị trí:** `frontend-admin/src/App.jsx` — ô mã chỉ có `required` (khoảng trắng vẫn hợp lệ), không `trim`; `backend/server.js` `POST /api/admin/coupons` không kiểm `code`.
+
+**GitHub Issue:** [#10](https://github.com/vinny2707/eshop-sut-hw04/issues/10)
+
+![Issue #10](../evidence/github-issue/issue-10-BUG-FR17-01.png)
+
+---
+
+### BUG-FR17-02 — Tạo được mã có giá trị giảm 0 hoặc trên 100%
+
+| Rule | Severity | TC | Trình duyệt |
+| :-- | :-- | :-- | :-- |
+| FR-17: `discount_value` dương; percent ≤ 100 (quyết định HW02) | High | AT-08, AT-09 | Chromium, Firefox, WebKit |
+
+- **Tái hiện:** đăng nhập Web Admin → tab "Mã Giảm Giá" → loại Phần trăm, giá trị `0` (AT-08) hoặc `101` (AT-09), các ô khác theo dữ liệu cơ sở → bấm **Tạo mã**.
+- **Mong đợi** (FR-17): từ chối, có thông báo lỗi, không tạo mã.
+- **Thực tế:** không có thông báo; bảng thêm dòng `CP08` "0%" và `CP09` "101%".
+- **Assertion fail:** FR17-AT-08, AT-09 — `Phải có thông báo lỗi…` (Received 0) và `Không được tạo thêm mã…` — số dòng tăng 1.
+- **Hệ quả:** mã 101% khi áp dụng ở Checkout cho số tiền giảm lớn hơn tổng đơn; mã 0% vô nghĩa.
+- **Nghi vấn vị trí:** `frontend-admin/src/App.jsx` — ô giá trị chỉ có `required`, không có `min` / `max`; `POST /api/admin/coupons` không kiểm `discount_value`.
+
+**GitHub Issue:** [#11](https://github.com/vinny2707/eshop-sut-hw04/issues/11)
+
+![Issue #11](../evidence/github-issue/issue-11-BUG-FR17-02.png)
+
+---
+
+### BUG-FR17-03 — Tạo được mã có đơn tối thiểu âm
+
+| Rule | Severity | TC | Trình duyệt |
+| :-- | :-- | :-- | :-- |
+| FR-17: `min_order_amount` ≥ 0 | Medium | AT-10 | Chromium, Firefox, WebKit |
+
+- **Tái hiện:** đăng nhập Web Admin → tab "Mã Giảm Giá" → đơn tối thiểu `-1`, các ô khác theo dữ liệu cơ sở → bấm **Tạo mã**.
+- **Mong đợi** (FR-17): từ chối, có thông báo lỗi, không tạo mã.
+- **Thực tế:** không có thông báo; bảng thêm dòng `CP10` với đơn tối thiểu "-1 ₫".
+- **Assertion fail:** FR17-AT-10 — `Phải có thông báo lỗi…` (Received 0) và `Không được tạo thêm mã…` — số dòng tăng 1.
+- **Nghi vấn vị trí:** `frontend-admin/src/App.jsx` — ô đơn tối thiểu không có `min="0"`; `POST /api/admin/coupons` không kiểm `min_order_amount`.
+
+**GitHub Issue:** [#12](https://github.com/vinny2707/eshop-sut-hw04/issues/12)
+
+![Issue #12](../evidence/github-issue/issue-12-BUG-FR17-03.png)

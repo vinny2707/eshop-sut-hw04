@@ -26,17 +26,15 @@
 
 Mỗi tính năng chạy trên 3 trình duyệt (Chromium / Firefox / WebKit); một lượt chạy = một tính năng trên một trình duyệt, có HTML report riêng ghi "Run by: 23120409" và ISO timestamp. Dashboard tổng: [automation/reports/index.html](automation/reports/index.html).
 
-_Số liệu cập nhật đến FR-09; FR-17 chưa chạy._
-
 | Chỉ số | Giá trị |
 | :-- | :-- |
 | Số tính năng | 3 |
-| TC đã tự động hóa | 30 (FR-01: 15, FR-09: 15) |
-| TC đã chạy (tính trên mọi lượt chạy) | 90 (30 × 3) |
-| Pass | 51 |
-| Fail | 39 |
-| Số lượt chạy trình duyệt | 6 / 9 (3 tính năng × 3 trình duyệt) |
-| Số bug | 9 (FR-01: 6, FR-09: 3) |
+| TC đã tự động hóa | 44 (FR-01: 15, FR-09: 15, FR-17: 14) |
+| TC đã chạy (tính trên mọi lượt chạy) | 132 (44 × 3) |
+| Pass | 81 |
+| Fail | 51 |
+| Số lượt chạy trình duyệt | 9 (3 tính năng × 3 trình duyệt) |
+| Số bug | 12 (FR-01: 6, FR-09: 3, FR-17: 3) — GitHub Issue #1–#12 |
 
 | FR | Nền tảng | TC tự động hóa | Trình duyệt | Đã chạy | Pass | Fail | Bug | HTML report |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -46,10 +44,10 @@ _Số liệu cập nhật đến FR-09; FR-17 chưa chạy._
 | FR-09 Discount Coupons | Web | 15 | Chromium | 15 | 11 | 4 | 3 | [fr09/chromium](automation/reports/fr09/chromium/index.html) |
 | | | | Firefox | 15 | 11 | 4 | | [fr09/firefox](automation/reports/fr09/firefox/index.html) |
 | | | | WebKit | 15 | 11 | 4 | | [fr09/webkit](automation/reports/fr09/webkit/index.html) |
-| FR-17 Coupon CRUD | Admin | | Chromium | | | | | |
-| | | | Firefox | | | | | |
-| | | | WebKit | | | | | |
-| **Tổng** | **3 FR** | 30 | **6 / 9 lượt** | 90 | 51 | 39 | 9 | |
+| FR-17 Coupon CRUD | Admin | 14 | Chromium | 14 | 10 | 4 | 3 | [fr17/chromium](automation/reports/fr17/chromium/index.html) |
+| | | | Firefox | 14 | 10 | 4 | | [fr17/firefox](automation/reports/fr17/firefox/index.html) |
+| | | | WebKit | 14 | 10 | 4 | | [fr17/webkit](automation/reports/fr17/webkit/index.html) |
+| **Tổng** | **3 FR** | 44 | **9 lượt** | 132 | 81 | 51 | 12 | |
 
 ## 3. Video demo
 

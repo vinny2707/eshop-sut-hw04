@@ -423,6 +423,234 @@ pushs những casi đã commit và thêm issue chụp lại cho tôi luôn bạn
 
 ---
 
+### AUDIT-10 — FR-17 Coupon CRUD — Bước 1: Chọn TC
+
+| Mục | Nội dung |
+| :-- | :-- |
+| Công cụ AI | Claude Code (Opus 5.5) |
+| Thời gian | 2026-11-16 22:39 (UTC+7) |
+| Bước | FR-17 — Bước 1: Chọn TC từ HW02 |
+| Verdict | INCOMPLETE |
+
+**Prompt (nguyên văn):**
+
+```text
+/playwright-data-driven fr17
+---
+AT-08 (`save10`). Ô mã tự đổi chữ nhập vào thành chữ hoa, nên `save10` gửi lên đúng là `SAVE10`. Đường đi trong code giống hệt AT-07, không thêm thông tin nào. Mĩnh nghĩ nên bỏ
+---
+[trích lại câu của AI về lựa chọn (a)/(b) cho TC phân quyền user thường]
+có trong các tc dự tính automation ko
+---
+Vậy giữ 14 cái TC đi bạn
+```
+
+**Output AI (tóm tắt):**
+
+- Đọc HW02 mục 5 (36 TC), đặc tả FR-17 (Thêm / Xem / Xóa, không có Sửa) và FR-12, code tab "Mã Giảm Giá" của `frontend-admin` (form, bảng, nút Xóa, lỗi qua `alert`).
+- Chọn ban đầu 15 TC; dự đoán theo code UI: AT `code` khoảng trắng, giá trị 0, % 101, đơn tối thiểu −1 sẽ fail; trường rỗng / số lần 0 bị HTML5 chặn.
+- Liệt kê TC không chọn / không tự động hóa ở UI (chỉ tầng API: TC-09, 10, 13, 16, 19, 21, 25, 26; trùng nhóm: TC-12, 15, 27…36) và hỏi SV chốt TC phân quyền user thường (TC-22…24).
+- Theo SV: bỏ `save10` (ô mã tự viết hoa → trùng đường đi với AT-07), giữ TC phân quyền ở bảng không tự động hóa; chốt 14 TC FR17-AT-01…14 (4 Positive, 7 Negative, 3 Edge).
+
+**Lý do verdict:** Bộ TC phủ đủ Thêm / Xem / Xóa, các trường bắt buộc và biên chính của FR-17 (ISTQB FL — phân hoạch tương đương, phân tích giá trị biên); TC loại bỏ có lý do đúng với giới hạn tầng UI. Chưa dùng nguyên được: AI giữ TC `save10` dù chính AI đã ghi ô mã tự viết hoa — ở UI TC này đi trùng đường với AT-07, không thêm thông tin (vi phạm tiêu chí "bỏ TC gần trùng" của chính bước chọn TC).
+
+**Bản sửa của sinh viên:** **Bỏ TC `save10` (TC-08)**, chuyển sang bảng không chọn với lý do chỉ kiểm được ở tầng API; **giữ TC phân quyền user thường ở bảng không tự động hóa**, chốt bộ **14 TC**.
+
+---
+
+### AUDIT-11 — FR-17 Coupon CRUD — Bước 2: Khảo sát UI + sinh data
+
+| Mục | Nội dung |
+| :-- | :-- |
+| Công cụ AI | Claude Code (Opus 5.5) |
+| Thời gian | 2026-11-16 22:56 (UTC+7) |
+| Bước | FR-17 — Bước 2: Khảo sát UI Admin và sinh data JSON |
+| Verdict | INCOMPLETE |
+
+**Prompt (nguyên văn):**
+
+```text
+Sang bước 2
+---
+1. So dòng bằng `toHaveText([...6 ô])` luôn fail: mỗi dòng có 7 ô (ô cuối là nút “Xóa”), và `toHaveText` không bỏ được dấu phân cách số. Nên đọc các ô bằng `allInnerTexts()`, lấy 6 ô đầu, bỏ dấu phân cách rồi so trong `expect.poll`.
+2. AT-06 có thể đếm số dòng ban đầu bằng 0: heading “EShop Admin” hiện trước khi bảng tải xong. Hãy chờ dòng `SAVE10` hiện rồi mới đếm.
+3. Dialog không được đóng: khi dùng `waitForEvent('dialog')`, Playwright không tự đóng alert. Test phải gọi `dialog.accept()`, nếu không trang bị treo.
+---
+nói rõ về 2 case cần mình chốt đi
+---
+Thì theo đúng là từng fr chạy tuần tự từng test mà dko bạn
+---
+Chốt theo hướng B
+```
+
+**Output AI (tóm tắt):**
+
+- Khảo sát tab "Mã Giảm Giá" của `frontend-admin`: form không có label (chọn bằng placeholder), ô mã tự viết hoa, `select` loại mã, placeholder giá trị đổi theo loại, đơn tối thiểu không có `min`; bảng 7 ô / dòng; lỗi hiện qua `alert()`; nút Xóa không xác nhận.
+- Đề xuất cách kiểm: bắt dialog lỗi, kiểm validation HTML5 + focus, so số dòng trước / sau cho mã khoảng trắng, chuẩn hóa số theo locale; ban đầu đề xuất so dòng bằng `toHaveText([...6 ô])` và đếm dòng ngay sau heading "EShop Admin".
+- Sinh `data/fr17.json`: 14 TC, `input` (action create / view / delete, đủ 6 trường form), `expected` (outcome, row 6 ô, rejectedBy, invalidField, remaining); kiểm ID, mã `CPnn` không trùng, dòng mong đợi khớp mã.
+- Sau góp ý của SV: thừa nhận 3 lỗi thiết kế và đưa cách sửa (`allInnerTexts` + `expect.poll`, chờ dòng `SAVE10`, `dialog.accept()`).
+- AT-04: ban đầu đề xuất tạo sẵn `CP04` bằng API vì lo phụ thuộc thứ tự; khi SV chỉ ra test chạy tuần tự và mỗi lần chạy reset DB, AI xác nhận đã đánh giá rủi ro quá cao; theo SV đổi sang xóa `BIGBUY` như HW02.
+- File: [`data/fr17.json`](../automation/data/fr17.json)
+
+**Lý do verdict:** Selector khớp code `App.jsx` (tab "Mã Giảm Giá"); data đúng 14 TC đã chốt. Chưa dùng nguyên được (Playwright docs — `toHaveText` với mảng, dialogs, auto-waiting):
+
+- So dòng bằng `toHaveText([...6 ô])` luôn fail vì dòng có 7 ô và không bỏ được dấu phân cách số.
+- Đếm số dòng ngay sau heading "EShop Admin" — bảng có thể chưa tải xong, số dòng ban đầu bằng 0.
+- Bắt dialog bằng `waitForEvent('dialog')` nhưng không đóng — alert chặn trang.
+- AT-04 đề xuất thêm bước tạo mã qua API vì đánh giá quá cao rủi ro phụ thuộc thứ tự, trong khi test chạy tuần tự và mỗi lần chạy reset DB.
+
+**Bản sửa của sinh viên:**
+
+- **Đọc 6 ô đầu bằng `allInnerTexts()`, bỏ dấu phân cách rồi so trong `expect.poll`.**
+- **Chờ dòng `SAVE10` hiện rồi mới đếm số dòng.**
+- **Gọi `dialog.accept()` sau khi đọc thông báo lỗi.**
+- **AT-04 xóa `BIGBUY` như HW02**, dựa vào thứ tự chạy tuần tự (ghi chú trong data).
+
+---
+
+### AUDIT-12 — FR-17 Coupon CRUD — Bước 3: Sinh Page Object + spec, chạy, phân loại
+
+| Mục | Nội dung |
+| :-- | :-- |
+| Công cụ AI | Claude Code (Opus 5.5) |
+| Thời gian | 2026-11-16 23:06 (UTC+7) |
+| Bước | FR-17 — Bước 3: Sinh Page Object + spec, chạy 3 trình duyệt, phân loại fail |
+| Verdict | INCOMPLETE |
+
+**Prompt (nguyên văn):**
+
+```text
+Sang bước 3
+```
+
+**Output AI (tóm tắt):**
+
+- Thêm `ADMIN` vào `helpers/env.ts`, `loginAs(page, 'admin')` vào `helpers/auth.ts` (ghi `localStorage["adminToken"]` trước `goto`); sinh `pages/AdminCouponPage.ts` (form theo placeholder, `row(code)`, `rowValues()` đọc 6 ô bằng `allInnerTexts` và bỏ dấu phân cách, `deleteRow()`) và `tests/fr17.spec.ts` (`ADMIN_URL`, bắt mọi `alert` bằng `page.on('dialog')` rồi `accept()`, chờ dòng `SAVE10` trước khi đếm; 5 assertion pattern) — áp dụng 3 điểm SV sửa ở bước 2.
+- `--list` 42 test; chạy `npm run test:fr17`: Chromium / Firefox / WebKit mỗi trình duyệt 10 pass, 4 fail, cùng tập TC; đủ 9/9 lượt chạy.
+- Phân loại 4 fail đều là bug SUT: AT-06 (mã chỉ khoảng trắng được tạo), AT-08 (giá trị 0), AT-09 (percent 101), AT-10 (đơn tối thiểu −1) — không có thông báo lỗi, mã vẫn được tạo.
+- Checklist review: selector `getByText` tab / `combobox` duy nhất / placeholder regex; TC bị app từ chối fail ở bước kiểm dialog nên không ghi bằng chứng mã đã được tạo; không kiểm nội dung thông báo lỗi; screenshot chỉ chụp phần màn hình đang hiển thị (không thấy dòng `CP09`); AT-04 dựa vào thứ tự chạy.
+- File: [`fr17.spec.ts`](../automation/tests/fr17.spec.ts), [`AdminCouponPage.ts`](../automation/pages/AdminCouponPage.ts), [`auth.ts`](../automation/helpers/auth.ts), [`env.ts`](../automation/helpers/env.ts), report [`reports/fr17/`](../automation/reports/fr17/)
+
+**Lý do verdict:**
+
+- Script chạy được trên 3 trình duyệt, áp dụng đúng 3 điểm SV sửa ở bước 2, data tách khỏi script, đủ ≥ 3 assertion pattern; phân loại 4 fail là bug SUT đúng.
+- Chưa dùng nguyên được (Playwright docs — soft assertions, locators):
+  - Các nhánh kiểm tra có điều kiện phụ (`&& expected.row`, `&& input.code`…) → data thiếu trường / `outcome` gõ sai thì test pass mà không kiểm gì.
+  - Thông báo lỗi kiểm bằng assertion bắt buộc → fail là dừng, report không ghi bằng chứng mã sai đã được tạo.
+  - Comment `row(code)` ghi "ô đầu" nhưng locator khớp bất kỳ ô nào.
+
+**Bản sửa của sinh viên:**
+
+- Commit bản AI gốc `bf98b4f` trước khi sửa; tự phát hiện cả 3 điểm khi review và yêu cầu AI kiểm tra lại trước khi sửa.
+- **Thêm `validateCase()` kiểm data đầu mỗi test, bỏ điều kiện phụ trong các nhánh.**
+- **Kiểm thông báo lỗi bằng soft assertion, vẫn kiểm số dòng** → report hiện cả 2 lỗi.
+- **Sửa comment `row(code)` theo hành vi thật** (chọn sửa comment, không đổi locator).
+
+---
+
+### AUDIT-13 — FR-17 Coupon CRUD — Bước 4: Sửa theo review, nháp báo cáo
+
+| Mục | Nội dung |
+| :-- | :-- |
+| Công cụ AI | Claude Code (Opus 5.5) |
+| Thời gian | 2026-11-16 23:33 (UTC+7) |
+| Bước | FR-17 — Bước 4: Sửa theo review, chạy lại, nháp mục 5 báo cáo và bug report |
+| Verdict | INCOMPLETE |
+
+**Prompt (nguyên văn):**
+
+```text
+1. Test pass dù không kiểm tra gì khi data sai: các nhánh kiểm tra có thêm điều kiện `&& expected.row`, `&& input.code`… Nếu data thiếu trường hoặc `outcome` gõ sai thì không nhánh nào chạy. Cần báo lỗi ngay khi data không hợp lệ.
+2. TC bị app từ chối không ghi bằng chứng mã đã được tạo: đổi assertion chờ dialog thành `expect.soft`, để test vẫn kiểm tra số dòng và báo cáo hiện cả 2 lỗi.
+3. `row(code)` khớp với bất kỳ ô nào, không chỉ ô đầu: comment ghi chưa đúng. Data hiện tại không bị ảnh hưởng.
+---
+[gửi lại nguyên văn 3 điểm trên sau khi dừng AI]
+mình thấy có các vấn đề như vậy bạn kiểm tra xem
+---
+Sửa cả 3 điểm về phần 3 sửa comment theo đúng hành vi thật
+```
+
+**Output AI (tóm tắt):**
+
+- Lần đầu AI bắt tay sửa ngay; SV dừng lại và yêu cầu kiểm tra trước. AI xác nhận cả 3 điểm đúng, chỉ ra dòng code liên quan và đề xuất cách sửa; với điểm 3 nêu 2 hướng (sửa comment / sửa locator).
+- Sửa: `validateCase()` kiểm data đầu mỗi test và bỏ điều kiện phụ trong các nhánh; kiểm dialog bằng `expect.configure({ soft: true }).poll` rồi vẫn kiểm số dòng; sửa comment `row(code)` theo hành vi thật.
+- Sai sót của AI: báo đã thêm `validateCase` trong khi lần ghi đó bị dừng; lỗi lộ ra khi thử data sai (`ReferenceError`), AI bổ sung hàm và thử lại — data sai giờ fail với `Data không hợp lệ ở FR17-AT-03…`; data được khôi phục bằng `git checkout`.
+- Chạy lại FR-17: Chromium / Firefox / WebKit mỗi trình duyệt 10 pass, 4 fail (AT-06, 08, 09, 10); mỗi TC fail báo cả "không có thông báo lỗi" và "số dòng tăng 1".
+- Nháp mục 5 báo cáo chính (bảng 14 TC, TC không tự động hóa, kết quả chạy, 3 bug, AI gap analysis 8 dòng) và `bug_report.md` cho BUG-FR17-01…03.
+- File: [`fr17.spec.ts`](../automation/tests/fr17.spec.ts), [`AdminCouponPage.ts`](../automation/pages/AdminCouponPage.ts), [`23120409_HW04_Report.md`](23120409_HW04_Report.md), [`bug_report.md`](bug_report.md)
+
+**Lý do verdict:** Phần sửa đúng 3 điểm SV nêu, chạy lại cho kết quả và bằng chứng đúng; báo cáo và bug report bám kết quả chạy thật và đặc tả FR-17. Chưa dùng nguyên được: AI bắt tay sửa khi SV mới nêu vấn đề (chưa xác nhận), và báo đã thêm `validateCase` trong khi chưa ghi — nếu không thử với data sai thì bản sửa #1 không có tác dụng (`ReferenceError`).
+
+**Bản sửa của sinh viên:** **Dừng AI, yêu cầu kiểm tra lại 3 điểm trước khi sửa**; **chọn sửa comment `row(code)` thay vì đổi locator**; yêu cầu thử data sai, nhờ đó phát hiện hàm `validateCase` chưa được thêm.
+
+---
+
+### AUDIT-14 — FR-17 Coupon CRUD — Bước 4: Commit, push, đăng GitHub Issue, chụp evidence
+
+| Mục | Nội dung |
+| :-- | :-- |
+| Công cụ AI | Claude Code (Opus 5.5) |
+| Thời gian | 2026-11-17 00:02 (UTC+7) |
+| Bước | FR-17 — Bước 4: Tách commit, push, đăng 3 GitHub Issue, chụp evidence |
+| Verdict | VALID |
+
+**Prompt (nguyên văn):**
+
+```text
+đăng github issue đi bạn rồi chụp evidence
+---
+vậy chia commit và push cái phần code và report html trước đi
+---
+Đăng issue và chụp evidence cho mình trước đi
+```
+
+**Output AI (tóm tắt):**
+
+- Nêu điều kiện trước khi đăng issue: ảnh trong issue trỏ tới file trên GitHub nên cần commit + push code và report FR-17 trước; hỏi SV đồng ý.
+- Tách phần sửa thành 3 commit `a8dd8aa`, `59d06a9`, `62a04bb` (kiểm file sau commit cuối giống bản đã chạy), commit report `559eab8`, push `main`.
+- Đăng issue #10, #11, #12 (nội dung lấy từ `bug_report.md`, kèm ảnh lúc fail); chụp trang issue và 3 report "Run by" vào `hw04/evidence/` (lần đầu quá thời gian chờ do trang GitHub không "networkidle", AI đổi sang chờ `load`); điền link và ảnh vào báo cáo, kiểm diff chỉ thay ô mẫu.
+- Chỉ ra hạn chế còn lại: ảnh lúc fail chỉ chụp khung nhìn nên không thấy dòng `CP08`–`CP10`.
+- File: [`23120409_HW04_Report.md`](23120409_HW04_Report.md), [`bug_report.md`](bug_report.md), [`evidence/`](../evidence/)
+
+**Lý do verdict:** Commit tách đúng theo từng điểm sửa, file sau commit cuối giống bản đã chạy; 3 issue đăng đúng nội dung bug report, evidence chụp từ trang thật; AI dừng hỏi SV trước khi commit / push thay vì tự làm. Hạn chế ảnh lúc fail thuộc về spec (xử lý ở AUDIT-15), không phải lỗi của bước này.
+
+**Bản sửa của sinh viên:** Không sửa nội dung. SV chốt thứ tự: **tách commit và push code + report HTML trước**, rồi mới **đăng issue và chụp evidence**.
+
+---
+
+### AUDIT-15 — FR-17 Coupon CRUD — Bước 4: Sửa ảnh lúc fail không thấy mã sai
+
+| Mục | Nội dung |
+| :-- | :-- |
+| Công cụ AI | Claude Code (Opus 5.5) |
+| Thời gian | 2026-11-17 00:02 (UTC+7) |
+| Bước | FR-17 — Bước 4: Sửa bằng chứng ảnh lúc fail, chạy lại, cập nhật evidence |
+| Verdict | INCOMPLETE |
+
+**Prompt (nguyên văn):**
+
+```text
+có 2 vấn đề là 2 mã giảm giá ở 2 bug ấy không xuất hiện trong ảnh
+---
+b đi bạn
+---
+Bạn sửa spec và khi chạy lại chụp đúng lỗi và kết quả vẫn i chang hả bạn
+```
+
+**Output AI (tóm tắt):**
+
+- Xác nhận ảnh AT-08…10 chỉ chụp khung nhìn 1280×720 nên dòng `CP08`–`CP10` ở cuối bảng bị cắt; đưa 2 hướng: (a) `fullPage` trong config, (b) cuộn bảng trong spec — đề xuất (a).
+- Theo SV chọn (b): khi đọc layout phát hiện nội dung cuộn trong khung riêng (`h-screen` + `overflow-auto`) nên (a) thực ra cũng không giúp được; thêm `scrollTableToEnd()` (`scrollIntoView({ block: 'end' })`) và gọi trước khi kiểm số dòng.
+- Chạy lại FR-17: vẫn 10 pass, 4 fail; ảnh AT-09 thấy `CP09 101%`, AT-10 thấy `CP10 -1 ₫`. Commit `d9e5f8e` + report `21ec407`, push; ảnh trong issue tự cập nhật; chụp lại evidence, cập nhật mốc giờ mục 5.2 / bug report, thêm dòng #9 vào gap analysis.
+- Khi được hỏi, so JSON kết quả 2 lượt chạy (`559eab8` và `21ec407`): giống hệt trên từng TC và trình duyệt — phần sửa chỉ thêm thao tác cuộn, không đổi assertion.
+- File: [`fr17.spec.ts`](../automation/tests/fr17.spec.ts), [`AdminCouponPage.ts`](../automation/pages/AdminCouponPage.ts), [`evidence/`](../evidence/)
+
+**Lý do verdict:** Bản sửa cuối đúng: ảnh lúc fail thấy rõ mã sai, kết quả chạy không đổi (đối chiếu JSON 2 lượt). Chưa dùng nguyên được: AI không tự kiểm ảnh chụp có chứa bằng chứng trước khi đăng issue, và đề xuất ban đầu (a) `fullPage` sẽ không có tác dụng với layout cuộn trong khung riêng — AI chỉ nhận ra khi đọc layout sau khi SV chọn (b) (Playwright docs — screenshots, `scrollIntoViewIfNeeded`).
+
+**Bản sửa của sinh viên:** **Phát hiện ảnh trong issue không thấy mã giảm giá sai**; **chọn (b) cuộn bảng trong spec thay vì đổi config**; yêu cầu xác nhận kết quả chạy lại không đổi so với lượt trước.
+
+---
+
 ## **4. Tổng kết Độ chính xác AI**
 
 Tổng hợp verdict từ Mục 3 và điền vào bảng dưới.
@@ -460,6 +688,12 @@ I use AI tools for the following tasks,
 | 7 | Claude Code (Opus 5.5) | 2026-11-16 21:03 | FR-09 — Bước 2: Khảo sát UI và sinh data JSON | Xem AUDIT-07 |
 | 8 | Claude Code (Opus 5.5) | 2026-11-16 21:43 | FR-09 — Bước 3: Sinh Page Object + spec, chạy, phân loại | Xem AUDIT-08 |
 | 9 | Claude Code (Opus 5.5) | 2026-11-16 22:23 | FR-09 — Bước 4: Sửa theo review, nháp báo cáo, đăng GitHub Issue | Xem AUDIT-09 |
+| 10 | Claude Code (Opus 5.5) | 2026-11-16 22:39 | FR-17 — Bước 1: Chọn TC từ HW02 | Xem AUDIT-10 |
+| 11 | Claude Code (Opus 5.5) | 2026-11-16 22:56 | FR-17 — Bước 2: Khảo sát UI Admin và sinh data JSON | Xem AUDIT-11 |
+| 12 | Claude Code (Opus 5.5) | 2026-11-16 23:06 | FR-17 — Bước 3: Sinh Page Object + spec, chạy, phân loại | Xem AUDIT-12 |
+| 13 | Claude Code (Opus 5.5) | 2026-11-16 23:33 | FR-17 — Bước 4: Sửa theo review, nháp báo cáo | Xem AUDIT-13 |
+| 14 | Claude Code (Opus 5.5) | 2026-11-17 00:02 | FR-17 — Bước 4: Commit, push, đăng GitHub Issue, chụp evidence | Xem AUDIT-14 |
+| 15 | Claude Code (Opus 5.5) | 2026-11-17 00:02 | FR-17 — Bước 4: Sửa ảnh lúc fail không thấy mã sai | Xem AUDIT-15 |
 
 ## **Chữ ký**
 
