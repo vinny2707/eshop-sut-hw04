@@ -5,7 +5,7 @@ Báo cáo lỗi chi tiết của các tính năng được tự động hóa. M�
 | FR | Số bug | Mục |
 | :-- | :-- | :-- |
 | FR-01 Registration | 6 | [FR-01](#fr-01--registration) |
-| FR-09 Discount Coupons | | [FR-09](#fr-09--discount-coupons) |
+| FR-09 Discount Coupons | 3 | [FR-09](#fr-09--discount-coupons) |
 | FR-17 Coupon CRUD | | [FR-17](#fr-17--coupon-crud) |
 
 ## FR-01 — Registration
@@ -134,11 +134,69 @@ Dữ liệu cơ sở: Họ Tên `Nguyen Van A`, mật khẩu `Abcdef1!`, email d
 
 ## FR-09 — Discount Coupons
 
-Môi trường: . HTML report:
+Môi trường: Windows 11, Node 24.14, Playwright 1.65.1 (Chromium 159.0.8154.6 / Firefox 159.0 / WebKit 27.2), SUT commit `85af3ba`, `http://localhost:5173/checkout`, DB seed mới mỗi lượt chạy. HTML report: [Chromium](../automation/reports/fr09/chromium/index.html) · [Firefox](../automation/reports/fr09/firefox/index.html) · [WebKit](../automation/reports/fr09/webkit/index.html) (lượt chạy 2026-11-16T15:05Z–15:08Z).
+
+Dữ liệu cơ sở: user mới đăng ký cho mỗi test, giỏ 1 × "Bàn phím cơ Keychron Q1" (4.000.000 ₫) thêm ở Trang chủ, đi tới Checkout bằng click. Mọi bug tái hiện trên **cả 3 trình duyệt**.
 
 | Bug ID | Tiêu đề | Severity | TC liên quan | Trình duyệt | GitHub Issue |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| BUG-FR09-01 | | | | | |
+| BUG-FR09-01 | Mã giảm % cho số tiền giảm âm, thành tiền tăng gấp nhiều lần | Critical | AT-02, AT-15 | Chromium, Firefox, WebKit | [#7](https://github.com/vinny2707/eshop-sut-hw04/issues/7) |
+| BUG-FR09-02 | Tổng đơn đúng bằng ngưỡng tối thiểu bị từ chối | Medium | AT-10 | Chromium, Firefox, WebKit | [#8](https://github.com/vinny2707/eshop-sut-hw04/issues/8) |
+| BUG-FR09-03 | Áp dụng được mã khi chưa đăng nhập | High | AT-08 | Chromium, Firefox, WebKit | [#9](https://github.com/vinny2707/eshop-sut-hw04/issues/9) |
+
+### BUG-FR09-01 — Mã giảm % cho số tiền giảm âm, thành tiền tăng gấp nhiều lần
+
+| Rule | Severity | TC | Trình duyệt |
+| :-- | :-- | :-- | :-- |
+| FR-09: loại `percent` — `discount_amount = total × discount_value / 100`, `final_amount = total − discount_amount` | Critical | AT-02, AT-15 | Chromium, Firefox, WebKit |
+
+- **Tái hiện:** đăng nhập → thêm Keychron Q1 vào giỏ → Giỏ hàng → Tiến hành thanh toán → nhập mã `SAVE10` → bấm **Áp dụng**.
+- **Mong đợi** (FR-09): "Tiết kiệm: 400.000 ₫", "Thành tiền: 3.600.000 ₫".
+- **Thực tế:** "Áp dụng thành công! Giảm 10%", nhưng "Tiết kiệm: -36,000,000 ₫" và "Thành tiền: 40,000,000 ₫" (gấp 10 lần tổng đơn). Với tổng 300.005 (AT-15): tiết kiệm −2.700.045 ₫.
+- **Assertion fail:** FR09-AT-02 — `Số tiền giảm phải là 400000` — Expected `400000`, Received `-36000000`; FR09-AT-15 — `Số tiền giảm phải trong khoảng 30000–30001` — Received `-2700045`.
+- **Nghi vấn vị trí:** `backend/server.js`, `POST /api/apply-coupon` — `discount_amount = Math.floor(total_amount * (1 - coupon.discount_value))` thay vì `total_amount * coupon.discount_value / 100`.
+
+**GitHub Issue:** [#7](https://github.com/vinny2707/eshop-sut-hw04/issues/7)
+
+![Issue #7](../evidence/github-issue/issue-7-BUG-FR09-01.png)
+
+---
+
+### BUG-FR09-02 — Tổng đơn đúng bằng ngưỡng tối thiểu bị từ chối
+
+| Rule | Severity | TC | Trình duyệt |
+| :-- | :-- | :-- | :-- |
+| FR-09 C3: tổng đơn **>=** `min_order_amount` | Medium | AT-10 | Chromium, Firefox, WebKit |
+
+- **Tái hiện:** đăng nhập → thêm Keychron Q1 → Checkout → nhập `300000` vào ô "Tổng tiền thanh toán" → nhập mã `VIP100` (ngưỡng 300.000 ₫) → bấm **Áp dụng**.
+- **Mong đợi** (FR-09): áp dụng thành công, giảm 100.000 ₫, thành tiền 200.000 ₫.
+- **Thực tế:** "Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này". Tổng 300.001 (AT-11) thì áp dụng được.
+- **Assertion fail:** FR09-AT-10 — `Phải hiện thông báo áp dụng mã thành công` — không tìm thấy phần tử.
+- **Ghi chú:** tổng được nhập vào ô tổng tiền ở Checkout (ô sửa được là lỗi FR-08, ngoài phạm vi) vì không có sản phẩm nào rẻ hơn 4.000.000 ₫.
+- **Nghi vấn vị trí:** `backend/server.js`, `POST /api/apply-coupon` — điều kiện `if (total_amount > coupon.min_order_amount)` thay vì `>=`.
+
+**GitHub Issue:** [#8](https://github.com/vinny2707/eshop-sut-hw04/issues/8)
+
+![Issue #8](../evidence/github-issue/issue-8-BUG-FR09-02.png)
+
+---
+
+### BUG-FR09-03 — Áp dụng được mã khi chưa đăng nhập
+
+| Rule | Severity | TC | Trình duyệt |
+| :-- | :-- | :-- | :-- |
+| FR-09 C4: người dùng phải có JWT Token hợp lệ | High | AT-08 | Chromium, Firefox, WebKit |
+
+- **Tái hiện:** đăng nhập → thêm Keychron Q1 → Checkout → bấm **Thoát** trên header (header chuyển sang "Đăng nhập", trang vẫn ở Checkout) → nhập `VIP100` → bấm **Áp dụng**.
+- **Mong đợi** (FR-09): từ chối, thông báo yêu cầu đăng nhập, không giảm giá.
+- **Thực tế:** "✅ Áp dụng thành công! Giảm 100,000 ₫", "Thành tiền: 3,900,000 ₫" dù đã thoát.
+- **Assertion fail:** FR09-AT-08 — `Mã phải bị từ chối vì "đăng nhập"` — không có thông báo lỗi.
+- **Ghi chú:** việc trang Checkout vẫn hiển thị sau khi thoát là lỗi của FR-08 (ngoài phạm vi).
+- **Nghi vấn vị trí:** `backend/server.js` — `POST /api/apply-coupon` không dùng `authenticateToken`; khi `user_id` rỗng thì bỏ qua cả kiểm tra lượt dùng (C5).
+
+**GitHub Issue:** [#9](https://github.com/vinny2707/eshop-sut-hw04/issues/9)
+
+![Issue #9](../evidence/github-issue/issue-9-BUG-FR09-03.png)
 
 ---
 

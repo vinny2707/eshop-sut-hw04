@@ -260,6 +260,169 @@ trong bug report chỉ cần trỏ đến ảnh issue với lại là link issue
 
 ---
 
+### AUDIT-06 — FR-09 Discount Coupons — Bước 1: Chọn TC
+
+| Mục | Nội dung |
+| :-- | :-- |
+| Công cụ AI | Claude Code (Opus 5.5) |
+| Thời gian | 2026-11-16 20:50 (UTC+7) |
+| Bước | FR-09 — Bước 1: Chọn TC từ HW02 |
+| Verdict | VALID |
+
+**Prompt (nguyên văn):**
+
+```text
+/playwright-data-driven fr09
+---
+1. A
+2. A
+```
+
+**Output AI (tóm tắt):**
+
+- Đọc HW02 mục 4 (25 TC), đặc tả FR-09 và FR-08, code `Checkout.jsx` và `POST /api/apply-coupon` để xác định TC nào làm được ở tầng UI.
+- Chọn 15 TC (2 Positive, 7 Edge, 6 Negative) FR09-AT-01…15: phủ C1–C5, 2 loại mã, biên C3 (299.999 / 300.000 / 300.001), biên C5, làm tròn %; dữ liệu cơ sở: user test, 1 × Keychron Q1 (4.000.000 ₫) thêm qua UI, mã `VIP100`.
+- Liệt kê 10 TC không chọn / không tự động hóa ở UI: TC-05 (cần sửa DB), TC-11, 24, 25 (chỉ tầng API), TC-16…18 (sửa `expired_at`, phụ thuộc giờ), TC-22, 23 (cần mã thử, thuộc FR-17), TC-09 (trùng nhóm).
+- Nêu 2 điểm cần SV chốt: dùng ô tổng tiền sửa được (bug FR-08) làm input cho biên C3 / làm tròn; dựng lượt đã dùng mã bằng API `POST /api/coupon-usage` hay bằng thanh toán UI.
+
+**Lý do verdict:** Bộ TC phủ đủ 5 điều kiện C1–C5, 2 loại mã và các biên chính của FR-09 (ISTQB FL — phân hoạch tương đương, phân tích giá trị biên); expected bám đặc tả; TC loại bỏ có lý do đúng với giới hạn tầng UI. AI tự chỉ ra rủi ro của ô tổng tiền sửa được và cách dựng trạng thái trước — dùng nguyên, không sửa.
+
+**Bản sửa của sinh viên:** Không sửa bộ TC. Chốt: **dùng ô tổng tiền làm input** cho AT-09, 10, 11, 15 (ghi chú là bug FR-08 ngoài phạm vi); **dựng lượt đã dùng mã bằng API ở bước chuẩn bị** cho AT-12, 13, 14.
+
+---
+
+### AUDIT-07 — FR-09 Discount Coupons — Bước 2: Khảo sát UI + sinh data
+
+| Mục | Nội dung |
+| :-- | :-- |
+| Công cụ AI | Claude Code (Opus 5.5) |
+| Thời gian | 2026-11-16 21:03 (UTC+7) |
+| Bước | FR-09 — Bước 2: Khảo sát UI và sinh data JSON |
+| Verdict | VALID |
+
+**Prompt (nguyên văn):**
+
+```text
+Sang bước 2
+---
+còn điểm nào chưa rõ không
+---
+Điểm 1: Chốt vậy
+Điểm 2: Giữ CSS class và ghi vào checklist đi
+Điểm 3: Ghi chú vào báo cáo
+Điểm 4: Dùng user mới cho mỗi test.
+```
+
+**Output AI (tóm tắt):**
+
+- Khảo sát luồng chuẩn bị Trang chủ → "Thêm vào giỏ" → "Giỏ hàng" → "Tiến hành thanh toán" (không `goto` sau khi thêm hàng); tránh trang chi tiết sản phẩm vì nút thêm giỏ phải bấm 2 lần (bug FR-07).
+- Bảng selector cho trang chủ, header, giỏ hàng, Checkout (ô tổng tiền `spinbutton`, ô mã, nút "Áp dụng", khối thành công, tổng thanh toán); thông báo lỗi coupon chỉ chọn được bằng class CSS.
+- Điểm dễ flaky: định dạng số theo locale (so số đã tách chữ số bằng `expect.poll`), số tiền giảm âm, nhập tổng trước khi áp mã, lượt dùng mã cộng dồn giữa các test.
+- Sinh `data/fr09.json`: 15 TC, `input` (product, code, total, logoutBeforeApply, usage), `expected` (outcome applied / rejected / disabled, total, discount, final); kiểm ID không trùng, không thiếu trường, `final = total − discount`.
+- Khi được hỏi, nêu thêm: `user` tải chậm qua `/api/users/me` có thể làm C5 bị bỏ qua (AT-13, 14 fail sai) → chờ header "Chào, …"; expected AT-04, AT-08 là diễn giải; user mới mỗi test dựa vào API đăng ký chấp nhận mọi mật khẩu.
+- File: [`data/fr09.json`](../automation/data/fr09.json)
+
+**Lý do verdict:** Selector khớp code `Home.jsx`, `Cart.jsx`, `Checkout.jsx`; data đúng bộ 15 TC đã chốt, expected theo công thức FR-09; dùng nguyên, không sửa. Bản khảo sát đầu chưa nêu rủi ro `user` tải chậm làm C5 bị bỏ qua — AI chỉ nêu khi SV hỏi lại; các điểm chốt thêm chỉ ảnh hưởng spec (bước 3) và báo cáo (bước 4).
+
+**Bản sửa của sinh viên:** Không sửa data / selector. Chốt thêm: **chờ header "Chào, …" trước khi thao tác**; **giữ selector class CSS cho thông báo lỗi coupon và đưa vào checklist review**; **ghi chú expected AT-04, AT-08 vào báo cáo**; **mỗi test dùng user mới** đăng ký bằng API.
+
+---
+
+### AUDIT-08 — FR-09 Discount Coupons — Bước 3: Sinh Page Object + spec, chạy, phân loại
+
+| Mục | Nội dung |
+| :-- | :-- |
+| Công cụ AI | Claude Code (Opus 5.5) |
+| Thời gian | 2026-11-16 21:43 (UTC+7) |
+| Bước | FR-09 — Bước 3: Sinh Page Object + spec, chạy 3 trình duyệt, phân loại fail |
+| Verdict | INCOMPLETE |
+
+**Prompt (nguyên văn):**
+
+```text
+Sang bước 3
+---
+à khoan nếu mỗi test sinh 1 user mới thì code handle thế nào nhỉ
+---
+oke vậy sang bước 3 đi
+```
+
+**Output AI (tóm tắt):**
+
+- Khi được hỏi, giải thích thiết kế user mới mỗi test: `registerAndLogin` (đăng ký + đăng nhập qua API, ghi token trước `goto`), `addCouponUsage` (ghi sẵn lượt dùng mã), lỗi chuẩn bị ném `Setup failed`.
+- Sinh `helpers/auth.ts`, sửa `helpers/data.ts` (tách `uniqueEmail`), thêm `NEW_USER` vào `helpers/env.ts`; sinh `pages/ShopPage.ts`, `pages/CheckoutPage.ts` (đọc số tiền theo mọi locale), `tests/fr09.spec.ts`: 15 test, chờ header "Chào, …", 4 assertion pattern (`toBeVisible`/`toHaveCount`, `toBeDisabled`, `expect.poll` số tiền, `toHaveValue`).
+- `--list` 45 test; chạy `npm run test:fr09`: Chromium / Firefox / WebKit mỗi trình duyệt 11 pass, 4 fail, cùng tập TC.
+- Phân loại 4 fail đều là bug SUT: AT-02, 15 (mã % giảm âm: −36.000.000, −2.700.045), AT-08 (áp mã được khi đã thoát), AT-10 (tổng đúng ngưỡng 300.000 bị từ chối).
+- Checklist review: selector class CSS / emoji / `locator('..')`; `toContain` đặt ngược vế làm nhãn Expected/Received đảo; nhánh từ chối không kiểm lý do (C1/C2/C3/C5); mô tả "Mã không hợp lệ" sai nghĩa với AT-08; `applyIfEnabled` dùng `isEnabled()` không chờ.
+- Commit bản AI gốc: `1f566b9`.
+- File: [`fr09.spec.ts`](../automation/tests/fr09.spec.ts), [`ShopPage.ts`](../automation/pages/ShopPage.ts), [`CheckoutPage.ts`](../automation/pages/CheckoutPage.ts), [`auth.ts`](../automation/helpers/auth.ts), report [`reports/fr09/`](../automation/reports/fr09/)
+
+**Lý do verdict:**
+
+- Script chạy được trên 3 trình duyệt, user mới mỗi test giúp các TC độc lập, data tách khỏi script, đủ ≥ 3 assertion pattern; phân loại 4 fail là bug SUT đúng — SV đối chiếu với screenshot (AT-08 vẫn áp mã được dù header đã hiện "Đăng nhập").
+- Chưa dùng nguyên được (Playwright docs — web-first assertions, actionability):
+  - `applyIfEnabled()` dùng `isEnabled()` không chờ, nút tắt thì bỏ qua lặng lẽ → test fail ở bước Kiểm tra với nguyên nhân sai.
+  - Comment nhắc hàm `applyCode` không tồn tại.
+  - Nhận diện thông báo thành công bằng emoji `✅`.
+  - `toContain` đặt ngược vế → report đảo nhãn Expected / Received.
+  - Nhánh bị từ chối không kiểm lý do (C1/C2/C3/C5) → có thể pass sai lý do; mô tả "Mã không hợp lệ" sai nghĩa với AT-08.
+
+**Bản sửa của sinh viên:**
+
+- Commit bản AI gốc `1f566b9` trước khi sửa; tự phát hiện lỗi `applyIfEnabled` và comment sai tên hàm, đối chiếu checklist cho các điểm còn lại.
+- **Đã nhập mã thì `toBeEnabled()` rồi mới bấm `apply()`; sửa comment** — commit `5287e2d`.
+- **Thông báo thành công chọn bằng `getByText(/Áp dụng thành công/)`** — commit `706645a`.
+- **Kiểm số tiền giảm theo khoảng / `toBe`, đúng vế** — commit `7e1bac0`.
+- **Thêm `expected.reason` theo C1–C5 và `toContainText`; mô tả nêu đúng lý do** — commit `24926c4`.
+- Giữ selector `p.text-red-600` và `locator('..')` (SUT không có thuộc tính ổn định, quy ước cấm `nth`); ghi vào báo cáo.
+
+---
+
+### AUDIT-09 — FR-09 Discount Coupons — Bước 4: Sửa theo review, nháp báo cáo, đăng GitHub Issue
+
+| Mục | Nội dung |
+| :-- | :-- |
+| Công cụ AI | Claude Code (Opus 5.5) |
+| Thời gian | 2026-11-16 22:23 (UTC+7) |
+| Bước | FR-09 — Bước 4: Sửa theo review, nháp mục 4 báo cáo, bug report, đăng 3 GitHub Issue |
+| Verdict | VALID |
+
+**Prompt (nguyên văn):**
+
+```text
+Ở các case applied và rejected, nếu nút “Áp dụng” bị tắt ngoài dự kiến, test không bấm. Nó chỉ fail ở bước Kiểm tra với thông báo kiểu “Phải hiện thông báo áp dụng mã thành công” việc này có khiến người dùng hiểu nhầm nguyên nhân không bạn
+---
+Comment trong `CheckoutPage.ts` ghi `applyCode`, nhưng tên hàm thật là `applyIfEnabled`.
+---
+check list đâu vậy
+---
+Đề xuất hướng
+---
+Được sửa đi
+---
+Chia để commit phần code trước nhỉ
+---
+à add cả cái report của play wright nữa chứ
+---
+pushs những casi đã commit và thêm issue chụp lại cho tôi luôn bạn. Chụp cả report luôn
+```
+
+**Output AI (tóm tắt):**
+
+- Xác nhận 2 điểm SV phát hiện (bỏ qua lặng lẽ khi nút tắt, comment sai tên hàm); liệt kê lại checklist 9 điểm kèm trạng thái và đề xuất hướng cho từng điểm.
+- Sửa 6 điểm (ghi ở AUDIT-08), chạy lại FR-09 trên 3 trình duyệt sau khi sửa xong: mỗi trình duyệt 11 pass, 4 fail (AT-02, 08, 10, 15); các TC bị từ chối giờ pass vì đúng lý do.
+- Tách phần sửa thành 4 commit `test(fr09)` (kiểm file sau commit cuối giống bản đã chạy), commit report `7d4a77a`, push `main`.
+- Nháp mục 4 báo cáo chính (quy ước oracle, bảng 15 TC, TC không tự động hóa, kết quả chạy, 3 bug, AI gap analysis 6 dòng) và `bug_report.md` cho 3 bug BUG-FR09-01…03.
+- Đăng issue #7, #8, #9 kèm screenshot lúc fail; chụp trang issue vào `hw04/evidence/github-issue/` và 3 report có "Run by" vào `hw04/evidence/run-by/`; điền link và ảnh vào báo cáo.
+- Sai sót của AI trong bước này: lệnh regex thêm `reason` vào data lỗi và không ghi gì, AI chuyển sang sửa trực tiếp từng TC rồi kiểm lại trước khi chạy.
+- File: [`23120409_HW04_Report.md`](23120409_HW04_Report.md), [`bug_report.md`](bug_report.md), [`evidence/`](../evidence/)
+
+**Lý do verdict:** Báo cáo, bug report và nội dung issue bám kết quả chạy thật và đặc tả FR-09; 3 issue đăng đúng bug kèm bằng chứng; commit tách đúng theo từng điểm sửa. SV dùng nguyên, không phải sửa nội dung; lỗi regex ở data không để lại hậu quả.
+
+**Bản sửa của sinh viên:** Không sửa nội dung. SV chỉ đạo thứ tự: **commit code trước, tách theo từng điểm sửa**, **commit cả Playwright report**, rồi **push, đăng issue và chụp bằng chứng**.
+
+---
+
 ## **4. Tổng kết Độ chính xác AI**
 
 Tổng hợp verdict từ Mục 3 và điền vào bảng dưới.
@@ -293,6 +456,10 @@ I use AI tools for the following tasks,
 | 3 | Claude Code (Opus 5.5) | 2026-11-16 18:42 | FR-01 — Bước 2: Khảo sát UI và sinh data JSON | Xem AUDIT-03 |
 | 4 | Claude Code (Opus 5.5) | 2026-11-16 18:52 | FR-01 — Bước 3: Sinh Page Object + spec, chạy, phân loại | Xem AUDIT-04 |
 | 5 | Claude Code (Opus 5.5) | 2026-11-16 20:18 | FR-01 — Bước 4: Nháp báo cáo, bug report, đăng GitHub Issue | Xem AUDIT-05 |
+| 6 | Claude Code (Opus 5.5) | 2026-11-16 20:50 | FR-09 — Bước 1: Chọn TC từ HW02 | Xem AUDIT-06 |
+| 7 | Claude Code (Opus 5.5) | 2026-11-16 21:03 | FR-09 — Bước 2: Khảo sát UI và sinh data JSON | Xem AUDIT-07 |
+| 8 | Claude Code (Opus 5.5) | 2026-11-16 21:43 | FR-09 — Bước 3: Sinh Page Object + spec, chạy, phân loại | Xem AUDIT-08 |
+| 9 | Claude Code (Opus 5.5) | 2026-11-16 22:23 | FR-09 — Bước 4: Sửa theo review, nháp báo cáo, đăng GitHub Issue | Xem AUDIT-09 |
 
 ## **Chữ ký**
 

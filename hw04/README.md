@@ -26,30 +26,30 @@
 
 Mỗi tính năng chạy trên 3 trình duyệt (Chromium / Firefox / WebKit); một lượt chạy = một tính năng trên một trình duyệt, có HTML report riêng ghi "Run by: 23120409" và ISO timestamp. Dashboard tổng: [automation/reports/index.html](automation/reports/index.html).
 
-_Số liệu cập nhật đến FR-01; FR-09, FR-17 chưa chạy._
+_Số liệu cập nhật đến FR-09; FR-17 chưa chạy._
 
 | Chỉ số | Giá trị |
 | :-- | :-- |
 | Số tính năng | 3 |
-| TC đã tự động hóa | 15 (FR-01) |
-| TC đã chạy (tính trên mọi lượt chạy) | 45 (FR-01: 15 × 3) |
-| Pass | 18 |
-| Fail | 27 |
-| Số lượt chạy trình duyệt | 3 / 9 (3 tính năng × 3 trình duyệt) |
-| Số bug | 6 (FR-01) |
+| TC đã tự động hóa | 30 (FR-01: 15, FR-09: 15) |
+| TC đã chạy (tính trên mọi lượt chạy) | 90 (30 × 3) |
+| Pass | 51 |
+| Fail | 39 |
+| Số lượt chạy trình duyệt | 6 / 9 (3 tính năng × 3 trình duyệt) |
+| Số bug | 9 (FR-01: 6, FR-09: 3) |
 
 | FR | Nền tảng | TC tự động hóa | Trình duyệt | Đã chạy | Pass | Fail | Bug | HTML report |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | FR-01 Registration | Web | 15 | Chromium | 15 | 6 | 9 | 6 | [fr01/chromium](automation/reports/fr01/chromium/index.html) |
 | | | | Firefox | 15 | 6 | 9 | | [fr01/firefox](automation/reports/fr01/firefox/index.html) |
 | | | | WebKit | 15 | 6 | 9 | | [fr01/webkit](automation/reports/fr01/webkit/index.html) |
-| FR-09 Discount Coupons | Web | | Chromium | | | | | |
-| | | | Firefox | | | | | |
-| | | | WebKit | | | | | |
+| FR-09 Discount Coupons | Web | 15 | Chromium | 15 | 11 | 4 | 3 | [fr09/chromium](automation/reports/fr09/chromium/index.html) |
+| | | | Firefox | 15 | 11 | 4 | | [fr09/firefox](automation/reports/fr09/firefox/index.html) |
+| | | | WebKit | 15 | 11 | 4 | | [fr09/webkit](automation/reports/fr09/webkit/index.html) |
 | FR-17 Coupon CRUD | Admin | | Chromium | | | | | |
 | | | | Firefox | | | | | |
 | | | | WebKit | | | | | |
-| **Tổng** | **3 FR** | 15 | **3 / 9 lượt** | 45 | 18 | 27 | 6 | |
+| **Tổng** | **3 FR** | 30 | **6 / 9 lượt** | 90 | 51 | 39 | 9 | |
 
 ## 3. Video demo
 
