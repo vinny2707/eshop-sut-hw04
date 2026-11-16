@@ -1,0 +1,1415 @@
+{
+  "config": {
+    "argv": [
+      "D:\\App Data\\nodejs\\node.exe",
+      "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--project=webkit"
+    ],
+    "configFile": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\playwright.config.ts",
+    "rootDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23120409",
+      "Run at (ISO 8601)": "2026-11-16T16:26:21.966Z",
+      "Feature": "fr17",
+      "Browser": "webkit",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/test-results/fr17-webkit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120409",
+          "Run at (ISO 8601)": "2026-11-16T16:26:21.966Z",
+          "Feature": "fr17",
+          "Browser": "webkit",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "fr17*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/test-results/fr17-webkit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120409",
+          "Run at (ISO 8601)": "2026-11-16T16:26:21.966Z",
+          "Feature": "fr17",
+          "Browser": "webkit",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "fr17*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/test-results/fr17-webkit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120409",
+          "Run at (ISO 8601)": "2026-11-16T16:26:21.966Z",
+          "Feature": "fr17",
+          "Browser": "webkit",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/semester1-year4/software_testing/lab/HW04/eshop-sut-hw04/hw04/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "fr17*.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr17-webkit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120409",
+          "Run at (ISO 8601)": "2026-11-16T16:26:21.966Z",
+          "Feature": "fr17",
+          "Browser": "webkit",
+          "actualWorkers": 1
+        },
+        "name": "webkit",
+        "testDir": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests",
+        "snapshotDir": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests",
+        "testIgnore": [],
+        "testMatch": "fr17*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://localhost:5173",
+          "screenshot": "only-on-failure",
+          "trace": "off",
+          "video": "off",
+          "actionTimeout": 10000,
+          "navigationTimeout": 15000,
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "reports/fr17/webkit",
+          "title": "Run by: 23120409 | fr17-webkit | 2026-11-16T16:26:21.966Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/fr17/webkit.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr17.spec.ts",
+      "file": "fr17.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-17 Quản lý mã giảm giá",
+          "file": "fr17.spec.ts",
+          "line": 54,
+          "column": 6,
+          "specs": [
+            {
+              "title": "FR17-AT-01 | Thêm mã percent 15%",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Positive",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "line": 60,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1718,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 568
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 297
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 221
+                        }
+                      ],
+                      "startTime": "2026-11-16T16:26:29.316Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Positive",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "line": 60,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "93b75f6b7e06f317a4fd-f0e5101c47e53a3d516f",
+              "file": "fr17.spec.ts",
+              "line": 60,
+              "column": 5
+            },
+            {
+              "title": "FR17-AT-02 | Thêm mã fixed 50.000",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Positive",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "line": 60,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1613,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 542
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 266
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 216
+                        }
+                      ],
+                      "startTime": "2026-11-16T16:26:31.205Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Positive",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "line": 60,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "93b75f6b7e06f317a4fd-bd804653a22254bdc478",
+              "file": "fr17.spec.ts",
+              "line": 60,
+              "column": 5
+            },
+            {
+              "title": "FR17-AT-03 | Xem danh sách 4 mã seed",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Positive",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "line": 60,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1265,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 486
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 0
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 120
+                        }
+                      ],
+                      "startTime": "2026-11-16T16:26:32.837Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Positive",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "line": 60,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "93b75f6b7e06f317a4fd-83b7725c36d25f314863",
+              "file": "fr17.spec.ts",
+              "line": 60,
+              "column": 5
+            },
+            {
+              "title": "FR17-AT-04 | Xóa mã BIGBUY",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Positive",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "line": 60,
+                        "column": 5
+                      }
+                    },
+                    {
+                      "type": "note",
+                      "description": "Dựa vào thứ tự chạy tuần tự (workers = 1): AT-03 (Xem, cần BIGBUY) chạy trước AT-04; mỗi lần chạy backend reset DB.",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "line": 60,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1189,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 436
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 104
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 127
+                        }
+                      ],
+                      "startTime": "2026-11-16T16:26:34.120Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Positive",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "line": 60,
+                            "column": 5
+                          }
+                        },
+                        {
+                          "type": "note",
+                          "description": "Dựa vào thứ tự chạy tuần tự (workers = 1): AT-03 (Xem, cần BIGBUY) chạy trước AT-04; mỗi lần chạy backend reset DB.",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "line": 60,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "93b75f6b7e06f317a4fd-e98bbdc523eeb4cd79d4",
+              "file": "fr17.spec.ts",
+              "line": 60,
+              "column": 5
+            },
+            {
+              "title": "FR17-AT-05 | Mã (code) rỗng",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "line": 60,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1282,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 410
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 315
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 69
+                        }
+                      ],
+                      "startTime": "2026-11-16T16:26:35.326Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "line": 60,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "93b75f6b7e06f317a4fd-2e52d7ce060613f3fad9",
+              "file": "fr17.spec.ts",
+              "line": 60,
+              "column": 5
+            },
+            {
+              "title": "FR17-AT-06 | Mã chỉ gồm khoảng trắng",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "line": 60,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11317,
+                      "error": {
+                        "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                        "stack": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
+                        "location": {
+                          "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                          "column": 16,
+                          "line": 137
+                        },
+                        "snippet": " \u001b[90m 135 |\u001b[39m               \u001b[33m.\u001b[39mconfigure({ soft\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\n \u001b[90m 136 |\u001b[39m               \u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m { message\u001b[33m:\u001b[39m \u001b[32m'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ'\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 137 |\u001b[39m               \u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n \u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "column": 16,
+                            "line": 137
+                          },
+                          "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  135 |               .configure({ soft: true })\n  136 |               .poll(() => dialogs.length, { message: 'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ' })\n> 137 |               .toBeGreaterThan(0);\n      |                ^\n  138 |           }\n  139 |           // AP-03 số lượng: không có dòng mới.\n  140 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
+                        },
+                        {
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "column": 93,
+                            "line": 140
+                          },
+                          "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m6\u001b[39m\nReceived: \u001b[31m7\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 7 elements\u001b[22m\n\u001b[2m       - unexpected value \"7\"\u001b[22m\n\n\n  138 |           }\n  139 |           // AP-03 số lượng: không có dòng mới.\n> 140 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n      |                                                                                             ^\n  141 |         }\n  142 |       });\n  143 |     });\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:140:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 461
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 295
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 9936,
+                          "error": {
+                            "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m6\u001b[39m\nReceived: \u001b[31m7\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 7 elements\u001b[22m\n\u001b[2m       - unexpected value \"7\"\u001b[22m\n",
+                            "stack": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m6\u001b[39m\nReceived: \u001b[31m7\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 7 elements\u001b[22m\n\u001b[2m       - unexpected value \"7\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:140:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
+                            "location": {
+                              "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                              "column": 93,
+                              "line": 140
+                            },
+                            "snippet": " \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 141 |\u001b[39m         }\n \u001b[90m 142 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 143 |\u001b[39m     })\u001b[33m;\u001b[39m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-11-16T16:26:36.625Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "line": 60,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr17-webkit\\fr17-FR-17-Quản-lý-mã-giảm-abb26--06-Mã-chỉ-gồm-khoảng-trắng-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr17-webkit\\fr17-FR-17-Quản-lý-mã-giảm-abb26--06-Mã-chỉ-gồm-khoảng-trắng-webkit\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "column": 16,
+                        "line": 137
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "93b75f6b7e06f317a4fd-cad9d590853a276fff73",
+              "file": "fr17.spec.ts",
+              "line": 60,
+              "column": 5
+            },
+            {
+              "title": "FR17-AT-07 | Mã trùng SAVE10",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "line": 60,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1528,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 516
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 280
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 135
+                        }
+                      ],
+                      "startTime": "2026-11-16T16:26:48.792Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "line": 60,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "93b75f6b7e06f317a4fd-60aa92ea4d51f437d93e",
+              "file": "fr17.spec.ts",
+              "line": 60,
+              "column": 5
+            },
+            {
+              "title": "FR17-AT-08 | Giá trị giảm = 0",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "line": 60,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11317,
+                      "error": {
+                        "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                        "stack": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
+                        "location": {
+                          "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                          "column": 16,
+                          "line": 137
+                        },
+                        "snippet": " \u001b[90m 135 |\u001b[39m               \u001b[33m.\u001b[39mconfigure({ soft\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\n \u001b[90m 136 |\u001b[39m               \u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m { message\u001b[33m:\u001b[39m \u001b[32m'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ'\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 137 |\u001b[39m               \u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n \u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "column": 16,
+                            "line": 137
+                          },
+                          "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  135 |               .configure({ soft: true })\n  136 |               .poll(() => dialogs.length, { message: 'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ' })\n> 137 |               .toBeGreaterThan(0);\n      |                ^\n  138 |           }\n  139 |           // AP-03 số lượng: không có dòng mới.\n  140 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
+                        },
+                        {
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "column": 93,
+                            "line": 140
+                          },
+                          "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m7\u001b[39m\nReceived: \u001b[31m8\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 8 elements\u001b[22m\n\u001b[2m       - unexpected value \"8\"\u001b[22m\n\n\n  138 |           }\n  139 |           // AP-03 số lượng: không có dòng mới.\n> 140 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n      |                                                                                             ^\n  141 |         }\n  142 |       });\n  143 |     });\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:140:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 468
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 296
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 9917,
+                          "error": {
+                            "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m7\u001b[39m\nReceived: \u001b[31m8\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 8 elements\u001b[22m\n\u001b[2m       - unexpected value \"8\"\u001b[22m\n",
+                            "stack": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m7\u001b[39m\nReceived: \u001b[31m8\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 8 elements\u001b[22m\n\u001b[2m       - unexpected value \"8\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:140:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
+                            "location": {
+                              "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                              "column": 93,
+                              "line": 140
+                            },
+                            "snippet": " \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 141 |\u001b[39m         }\n \u001b[90m 142 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 143 |\u001b[39m     })\u001b[33m;\u001b[39m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-11-16T16:26:50.469Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "line": 60,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr17-webkit\\fr17-FR-17-Quản-lý-mã-giảm-giá-FR17-AT-08-Giá-trị-giảm-0-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr17-webkit\\fr17-FR-17-Quản-lý-mã-giảm-giá-FR17-AT-08-Giá-trị-giảm-0-webkit\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "column": 16,
+                        "line": 137
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "93b75f6b7e06f317a4fd-332d746ca8d2a9a991ac",
+              "file": "fr17.spec.ts",
+              "line": 60,
+              "column": 5
+            },
+            {
+              "title": "FR17-AT-09 | Percent 101%",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "line": 60,
+                        "column": 5
+                      }
+                    },
+                    {
+                      "type": "note",
+                      "description": "Đặc tả chỉ yêu cầu giá trị dương; giới hạn percent ≤ 100 theo quyết định HW02.",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "line": 60,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11383,
+                      "error": {
+                        "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                        "stack": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
+                        "location": {
+                          "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                          "column": 16,
+                          "line": 137
+                        },
+                        "snippet": " \u001b[90m 135 |\u001b[39m               \u001b[33m.\u001b[39mconfigure({ soft\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\n \u001b[90m 136 |\u001b[39m               \u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m { message\u001b[33m:\u001b[39m \u001b[32m'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ'\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 137 |\u001b[39m               \u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n \u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "column": 16,
+                            "line": 137
+                          },
+                          "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  135 |               .configure({ soft: true })\n  136 |               .poll(() => dialogs.length, { message: 'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ' })\n> 137 |               .toBeGreaterThan(0);\n      |                ^\n  138 |           }\n  139 |           // AP-03 số lượng: không có dòng mới.\n  140 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
+                        },
+                        {
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "column": 93,
+                            "line": 140
+                          },
+                          "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m8\u001b[39m\nReceived: \u001b[31m9\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 9 elements\u001b[22m\n\u001b[2m       - unexpected value \"9\"\u001b[22m\n\n\n  138 |           }\n  139 |           // AP-03 số lượng: không có dòng mới.\n> 140 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n      |                                                                                             ^\n  141 |         }\n  142 |       });\n  143 |     });\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:140:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 506
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 277
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 9907,
+                          "error": {
+                            "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m8\u001b[39m\nReceived: \u001b[31m9\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 9 elements\u001b[22m\n\u001b[2m       - unexpected value \"9\"\u001b[22m\n",
+                            "stack": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m8\u001b[39m\nReceived: \u001b[31m9\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 9 elements\u001b[22m\n\u001b[2m       - unexpected value \"9\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:140:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
+                            "location": {
+                              "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                              "column": 93,
+                              "line": 140
+                            },
+                            "snippet": " \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 141 |\u001b[39m         }\n \u001b[90m 142 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 143 |\u001b[39m     })\u001b[33m;\u001b[39m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-11-16T16:27:02.647Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "line": 60,
+                            "column": 5
+                          }
+                        },
+                        {
+                          "type": "note",
+                          "description": "Đặc tả chỉ yêu cầu giá trị dương; giới hạn percent ≤ 100 theo quyết định HW02.",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "line": 60,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr17-webkit\\fr17-FR-17-Quản-lý-mã-giảm-giá-FR17-AT-09-Percent-101--webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr17-webkit\\fr17-FR-17-Quản-lý-mã-giảm-giá-FR17-AT-09-Percent-101--webkit\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "column": 16,
+                        "line": 137
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "93b75f6b7e06f317a4fd-742dc19a1c8fc8a3f976",
+              "file": "fr17.spec.ts",
+              "line": 60,
+              "column": 5
+            },
+            {
+              "title": "FR17-AT-10 | Đơn tối thiểu = -1",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "line": 60,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11435,
+                      "error": {
+                        "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                        "stack": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
+                        "location": {
+                          "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                          "column": 16,
+                          "line": 137
+                        },
+                        "snippet": " \u001b[90m 135 |\u001b[39m               \u001b[33m.\u001b[39mconfigure({ soft\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\n \u001b[90m 136 |\u001b[39m               \u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m { message\u001b[33m:\u001b[39m \u001b[32m'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ'\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 137 |\u001b[39m               \u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n \u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "column": 16,
+                            "line": 137
+                          },
+                          "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  135 |               .configure({ soft: true })\n  136 |               .poll(() => dialogs.length, { message: 'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ' })\n> 137 |               .toBeGreaterThan(0);\n      |                ^\n  138 |           }\n  139 |           // AP-03 số lượng: không có dòng mới.\n  140 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
+                        },
+                        {
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "column": 93,
+                            "line": 140
+                          },
+                          "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m9\u001b[39m\nReceived: \u001b[31m10\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 10 elements\u001b[22m\n\u001b[2m       - unexpected value \"10\"\u001b[22m\n\n\n  138 |           }\n  139 |           // AP-03 số lượng: không có dòng mới.\n> 140 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n      |                                                                                             ^\n  141 |         }\n  142 |       });\n  143 |     });\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:140:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 532
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 263
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 9919,
+                          "error": {
+                            "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m9\u001b[39m\nReceived: \u001b[31m10\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 10 elements\u001b[22m\n\u001b[2m       - unexpected value \"10\"\u001b[22m\n",
+                            "stack": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m9\u001b[39m\nReceived: \u001b[31m10\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 10 elements\u001b[22m\n\u001b[2m       - unexpected value \"10\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:140:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
+                            "location": {
+                              "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                              "column": 93,
+                              "line": 140
+                            },
+                            "snippet": " \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 141 |\u001b[39m         }\n \u001b[90m 142 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 143 |\u001b[39m     })\u001b[33m;\u001b[39m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-11-16T16:27:15.045Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "line": 60,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr17-webkit\\fr17-FR-17-Quản-lý-mã-giảm-giá-FR17-AT-10-Đơn-tối-thiểu--1-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\test-results\\fr17-webkit\\fr17-FR-17-Quản-lý-mã-giảm-giá-FR17-AT-10-Đơn-tối-thiểu--1-webkit\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "column": 16,
+                        "line": 137
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "93b75f6b7e06f317a4fd-5ce7e7d631533285c97b",
+              "file": "fr17.spec.ts",
+              "line": 60,
+              "column": 5
+            },
+            {
+              "title": "FR17-AT-11 | Số lần dùng tối đa = 0",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Negative",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "line": 60,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1556,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 556
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 305
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 62
+                        }
+                      ],
+                      "startTime": "2026-11-16T16:27:27.479Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Negative",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "line": 60,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "93b75f6b7e06f317a4fd-07e5450fbaed99350246",
+              "file": "fr17.spec.ts",
+              "line": 60,
+              "column": 5
+            },
+            {
+              "title": "FR17-AT-12 | Hạn dùng trong quá khứ (2020-01-01)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Edge",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "line": 60,
+                        "column": 5
+                      }
+                    },
+                    {
+                      "type": "note",
+                      "description": "Đặc tả không cấm ngày quá khứ; expected theo quyết định HW02.",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "line": 60,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1578,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 497
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 303
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 230
+                        }
+                      ],
+                      "startTime": "2026-11-16T16:27:29.194Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Edge",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "line": 60,
+                            "column": 5
+                          }
+                        },
+                        {
+                          "type": "note",
+                          "description": "Đặc tả không cấm ngày quá khứ; expected theo quyết định HW02.",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "line": 60,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "93b75f6b7e06f317a4fd-5739e87d6dcff3851b34",
+              "file": "fr17.spec.ts",
+              "line": 60,
+              "column": 5
+            },
+            {
+              "title": "FR17-AT-13 | Percent 100% (biên trên)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Edge",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "line": 60,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1615,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 498
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 289
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 238
+                        }
+                      ],
+                      "startTime": "2026-11-16T16:27:30.789Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Edge",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "line": 60,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "93b75f6b7e06f317a4fd-72a12a45fd433fc13dc7",
+              "file": "fr17.spec.ts",
+              "line": 60,
+              "column": 5
+            },
+            {
+              "title": "FR17-AT-14 | Đơn tối thiểu = 0 (biên dưới)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "type",
+                      "description": "Edge",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                        "line": 60,
+                        "column": 5
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1568,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Chuẩn bị",
+                          "duration": 481
+                        },
+                        {
+                          "title": "Thực hiện",
+                          "duration": 276
+                        },
+                        {
+                          "title": "Kiểm tra",
+                          "duration": 209
+                        }
+                      ],
+                      "startTime": "2026-11-16T16:27:32.424Z",
+                      "annotations": [
+                        {
+                          "type": "type",
+                          "description": "Edge",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
+                            "line": 60,
+                            "column": 5
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "93b75f6b7e06f317a4fd-77953e3e6b7c573f284b",
+              "file": "fr17.spec.ts",
+              "line": 60,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-16T16:26:24.049Z",
+    "duration": 71343.322,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}
