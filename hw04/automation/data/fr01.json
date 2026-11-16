@@ -1,0 +1,126 @@
+[
+  {
+    "id": "FR01-AT-01",
+    "source": "FR01-TC-01",
+    "type": "Positive",
+    "title": "Dữ liệu hợp lệ, mật khẩu Abcdef1!",
+    "input": { "name": "Nguyen Van A", "email": "{{unique}}", "password": "Abcdef1!" },
+    "expected": { "outcome": "success", "url": "/login" }
+  },
+  {
+    "id": "FR01-AT-02",
+    "source": "FR01-TC-16",
+    "type": "Edge",
+    "title": "Email chỉ khác email đã có ở chữ hoa (TEST@eshop.com)",
+    "note": "Đặc tả không quy định phân biệt hoa/thường email; expected theo quyết định HW02 (gap #6).",
+    "input": { "name": "Nguyen Van A", "email": "TEST@eshop.com", "password": "Abcdef1!" },
+    "expected": { "outcome": "success", "url": "/login" }
+  },
+  {
+    "id": "FR01-AT-03",
+    "source": "FR01-TC-31",
+    "type": "Edge",
+    "title": "Mật khẩu đúng 8 ký tự (biên dưới)",
+    "input": { "name": "Nguyen Van A", "email": "{{unique}}", "password": "ABcd12@$" },
+    "expected": { "outcome": "success", "url": "/login" }
+  },
+  {
+    "id": "FR01-AT-04",
+    "source": "FR01-TC-29",
+    "type": "Edge",
+    "title": "Họ Tên 1 ký tự",
+    "input": { "name": "A", "email": "{{unique}}", "password": "Abcdef1!" },
+    "expected": { "outcome": "success", "url": "/login" }
+  },
+  {
+    "id": "FR01-AT-05",
+    "source": "FR01-TC-17",
+    "type": "Edge",
+    "title": "Mật khẩu 7 ký tự (ngay dưới biên)",
+    "note": "Pass ở UI nhưng bị che khuất bởi BUG-FR01-01.",
+    "input": { "name": "Nguyen Van A", "email": "{{unique}}", "password": "Abcde1!" },
+    "expected": { "outcome": "rejected", "url": "/register", "message": "mật khẩu" }
+  },
+  {
+    "id": "FR01-AT-06",
+    "source": "FR01-TC-08",
+    "type": "Negative",
+    "title": "Họ Tên rỗng",
+    "input": { "name": "", "email": "{{unique}}", "password": "Abcdef1!" },
+    "expected": { "outcome": "rejected", "url": "/register", "invalidField": "name" }
+  },
+  {
+    "id": "FR01-AT-07",
+    "source": "FR01-TC-10",
+    "type": "Negative",
+    "title": "Email rỗng",
+    "input": { "name": "Nguyen Van A", "email": "", "password": "Abcdef1!" },
+    "expected": { "outcome": "rejected", "url": "/register", "invalidField": "email" }
+  },
+  {
+    "id": "FR01-AT-08",
+    "source": "FR01-TC-18",
+    "type": "Negative",
+    "title": "Mật khẩu rỗng",
+    "input": { "name": "Nguyen Van A", "email": "{{unique}}", "password": "" },
+    "expected": { "outcome": "rejected", "url": "/register", "invalidField": "password" }
+  },
+  {
+    "id": "FR01-AT-09",
+    "source": "FR01-TC-09",
+    "type": "Negative",
+    "title": "Họ Tên chỉ gồm khoảng trắng",
+    "input": { "name": "   ", "email": "{{unique}}", "password": "Abcdef1!" },
+    "expected": { "outcome": "rejected", "url": "/register", "message": "tên" }
+  },
+  {
+    "id": "FR01-AT-10",
+    "source": "FR01-TC-11",
+    "type": "Negative",
+    "title": "Email không có @",
+    "input": { "name": "Nguyen Van A", "email": "newuser11.eshop.com", "password": "Abcdef1!" },
+    "expected": { "outcome": "rejected", "url": "/register", "message": "email" }
+  },
+  {
+    "id": "FR01-AT-11",
+    "source": "FR01-TC-15",
+    "type": "Negative",
+    "title": "Email đã tồn tại (test@eshop.com)",
+    "input": { "name": "Nguyen Van A", "email": "test@eshop.com", "password": "Abcdef1!" },
+    "expected": { "outcome": "rejected", "url": "/register", "message": "email" }
+  },
+  {
+    "id": "FR01-AT-12",
+    "source": "FR01-TC-19",
+    "type": "Negative",
+    "title": "Mật khẩu không có chữ hoa",
+    "note": "Pass ở UI nhưng bị che khuất bởi BUG-FR01-01.",
+    "input": { "name": "Nguyen Van A", "email": "{{unique}}", "password": "abcdef1!" },
+    "expected": { "outcome": "rejected", "url": "/register", "message": "mật khẩu" }
+  },
+  {
+    "id": "FR01-AT-13",
+    "source": "FR01-TC-22",
+    "type": "Negative",
+    "title": "Mật khẩu không có ký tự đặc biệt",
+    "note": "Pass ở UI nhưng bị che khuất bởi BUG-FR01-01.",
+    "input": { "name": "Nguyen Van A", "email": "{{unique}}", "password": "Abcdefg1" },
+    "expected": { "outcome": "rejected", "url": "/register", "message": "mật khẩu" }
+  },
+  {
+    "id": "FR01-AT-14",
+    "source": "FR01-TC-24",
+    "type": "Negative",
+    "title": "Khoảng trắng thay cho ký tự đặc biệt",
+    "input": { "name": "Nguyen Van A", "email": "{{unique}}", "password": "Abcdef 1" },
+    "expected": { "outcome": "rejected", "url": "/register", "message": "mật khẩu" }
+  },
+  {
+    "id": "FR01-AT-15",
+    "source": "FR01-TC-25",
+    "type": "Negative",
+    "title": "Xác nhận mật khẩu khác Mật khẩu",
+    "input": { "name": "Nguyen Van A", "email": "{{unique}}", "password": "Abcdef1!", "confirmPassword": "Abcdef1?" },
+    "expected": { "outcome": "rejected", "url": "/register", "message": "xác nhận" }
+  }
+]

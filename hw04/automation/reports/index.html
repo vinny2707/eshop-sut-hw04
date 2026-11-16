@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Run by: 23120409 · EShop HW04 dashboard</title>
+<style>
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --text: #1b1f24; --muted: #5d6673; --line: #e3e6ea;
+  --pass: #1a7f37; --pass-bg: #dcf5e3; --fail: #c2261d; --fail-bg: #fde3e1; --flaky: #9a6700; --flaky-bg: #fff3c4;
+  --accent: #2557d6; --code-bg: #f1f3f5;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1216; --surface: #171b21; --text: #e6e9ee; --muted: #9aa3ae; --line: #2a3039;
+    --pass: #4ac26b; --pass-bg: #12331c; --fail: #ff7b72; --fail-bg: #3d1513; --flaky: #e3b341; --flaky-bg: #3a2d0b;
+    --accent: #79a6ff; --code-bg: #0f1216;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 1180px; margin: 0 auto; padding: 24px 16px 64px; }
+a { color: var(--accent); }
+header.top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: end; margin-bottom: 20px; }
+h1 { margin: 0; font-size: 22px; }
+.runby { font-size: 15px; font-weight: 600; }
+.sub { color: var(--muted); font-size: 13px; }
+h2 { margin: 36px 0 12px; font-size: 18px; }
+h3 { margin: 20px 0 10px; font-size: 15px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+.kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.kpi-value { font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.kpi-label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+.kpi.pass .kpi-value { color: var(--pass); } .kpi.fail .kpi-value { color: var(--fail); }
+.scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+thead th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); background: var(--bg); }
+.matrix td { min-width: 200px; }
+.cell-top { font-variant-numeric: tabular-nums; }
+.fail-text { color: var(--fail); font-weight: 600; }
+.bar { display: flex; height: 8px; border-radius: 4px; background: var(--line); overflow: hidden; margin: 6px 0; }
+.bar-pass { background: var(--pass); } .bar-fail { background: var(--fail); }
+.cell-meta { color: var(--muted); font-size: 12px; }
+.open { font-size: 13px; }
+td.empty { color: var(--muted); font-style: italic; }
+.grid td.tc { min-width: 280px; }
+.type { color: var(--muted); font-size: 12px; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.badge.passed { color: var(--pass); background: var(--pass-bg); }
+.badge.failed { color: var(--fail); background: var(--fail-bg); }
+.badge.flaky { color: var(--flaky); background: var(--flaky-bg); }
+.badge.skipped, .badge.none { color: var(--muted); background: var(--bg); }
+.failures { display: grid; gap: 12px; }
+.failure { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--fail); border-radius: 10px; overflow: hidden; }
+.failure header { padding: 10px 14px; font-weight: 600; border-bottom: 1px solid var(--line); }
+.browser { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; padding: 1px 6px; border: 1px solid var(--line); border-radius: 4px; margin-right: 6px; color: var(--muted); }
+.failure-body { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 14px; padding: 14px; }
+pre { margin: 0; padding: 12px; background: var(--code-bg); border: 1px solid var(--line); border-radius: 8px; white-space: pre-wrap; word-break: break-word; font: 12px/1.5 ui-monospace, Consolas, monospace; max-height: 320px; overflow: auto; }
+.shot img { width: 100%; border: 1px solid var(--line); border-radius: 8px; display: block; }
+.noshot { color: var(--muted); font-style: italic; }
+.allpass { color: var(--pass); }
+@media (max-width: 760px) { .failure-body { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <header class="top">
+    <div>
+      <h1>EShop HW04 · Automation dashboard</h1>
+      <div class="sub">Playwright · data-driven · Chromium / Firefox / WebKit</div>
+    </div>
+    <div style="text-align:right">
+      <div class="runby">Run by: 23120409</div>
+      <div class="sub">Generated at 2026-11-16T11:49:54.957Z</div>
+    </div>
+  </header>
+
+  <div class="kpis">
+    <div class="kpi "><div class="kpi-value">1</div><div class="kpi-label">Tính năng</div></div>
+    <div class="kpi "><div class="kpi-value">3</div><div class="kpi-label">Lượt chạy browser</div></div>
+    <div class="kpi "><div class="kpi-value">45</div><div class="kpi-label">Lượt test đã chạy</div></div>
+    <div class="kpi pass"><div class="kpi-value">18</div><div class="kpi-label">Pass</div></div>
+    <div class="kpi fail"><div class="kpi-value">27</div><div class="kpi-label">Fail</div></div>
+    <div class="kpi "><div class="kpi-value">40%</div><div class="kpi-label">Tỉ lệ pass</div></div>
+  </div>
+
+  <h2>Kết quả theo tính năng × trình duyệt</h2>
+  <div class="scroll">
+<table class="matrix">
+  <thead><tr><th>Feature</th><th>chromium</th><th>firefox</th><th>webkit</th></tr></thead>
+  <tbody>
+  <tr><th scope="row"><a href="#fr01">FR-01 · Registration</a></th><td>
+          <div class="cell-top"><strong>6/15</strong> pass · <span class="fail-text">9 fail</span></div>
+          <div class="bar"><span class="bar-pass" style="width:40%"></span><span class="bar-fail" style="width:60%"></span></div>
+          <div class="cell-meta">2026-11-16T11:45:16.822Z · 69.2s</div>
+          <a class="open" href="fr01/chromium/index.html">Mở HTML report →</a>
+        </td><td>
+          <div class="cell-top"><strong>6/15</strong> pass · <span class="fail-text">9 fail</span></div>
+          <div class="bar"><span class="bar-pass" style="width:40%"></span><span class="bar-fail" style="width:60%"></span></div>
+          <div class="cell-meta">2026-11-16T11:46:28.367Z · 127.4s</div>
+          <a class="open" href="fr01/firefox/index.html">Mở HTML report →</a>
+        </td><td>
+          <div class="cell-top"><strong>6/15</strong> pass · <span class="fail-text">9 fail</span></div>
+          <div class="bar"><span class="bar-pass" style="width:40%"></span><span class="bar-fail" style="width:60%"></span></div>
+          <div class="cell-meta">2026-11-16T11:48:38.013Z · 76.6s</div>
+          <a class="open" href="fr01/webkit/index.html">Mở HTML report →</a>
+        </td></tr>
+  </tbody>
+</table></div>
+
+  <div class="scroll">
+<section id="fr01">
+  <h2>FR-01 · Registration</h2>
+  <table class="grid">
+    <thead><tr><th>Test case</th><th>Loại</th><th>chromium</th><th>firefox</th><th>webkit</th></tr></thead>
+    <tbody>
+    <tr><td class="tc">FR-01 Đăng ký tài khoản › FR01-AT-01 | Dữ liệu hợp lệ, mật khẩu Abcdef1!</td><td><span class="type">Positive</span></td><td><span class="badge failed">✗ Fail</span></td><td><span class="badge failed">✗ Fail</span></td><td><span class="badge failed">✗ Fail</span></td></tr><tr><td class="tc">FR-01 Đăng ký tài khoản › FR01-AT-02 | Email chỉ khác email đã có ở chữ hoa (TEST@eshop.com)</td><td><span class="type">Edge</span></td><td><span class="badge failed">✗ Fail</span></td><td><span class="badge failed">✗ Fail</span></td><td><span class="badge failed">✗ Fail</span></td></tr><tr><td class="tc">FR-01 Đăng ký tài khoản › FR01-AT-03 | Mật khẩu đúng 8 ký tự (biên dưới)</td><td><span class="type">Edge</span></td><td><span class="badge failed">✗ Fail</span></td><td><span class="badge failed">✗ Fail</span></td><td><span class="badge failed">✗ Fail</span></td></tr><tr><td class="tc">FR-01 Đăng ký tài khoản › FR01-AT-04 | Họ Tên 1 ký tự</td><td><span class="type">Edge</span></td><td><span class="badge failed">✗ Fail</span></td><td><span class="badge failed">✗ Fail</span></td><td><span class="badge failed">✗ Fail</span></td></tr><tr><td class="tc">FR-01 Đăng ký tài khoản › FR01-AT-05 | Mật khẩu 7 ký tự (ngay dưới biên)</td><td><span class="type">Edge</span></td><td><span class="badge passed">✓ Pass</span></td><td><span class="badge passed">✓ Pass</span></td><td><span class="badge passed">✓ Pass</span></td></tr><tr><td class="tc">FR-01 Đăng ký tài khoản › FR01-AT-06 | Họ Tên rỗng</td><td><span class="type">Negative</span></td><td><span class="badge passed">✓ Pass</span></td><td><span class="badge passed">✓ Pass</span></td><td><span class="badge passed">✓ Pass</span></td></tr><tr><td class="tc">FR-01 Đăng ký tài khoản › FR01-AT-07 | Email rỗng</td><td><span class="type">Negative</span></td><td><span class="badge passed">✓ Pass</span></td><td><span class="badge passed">✓ Pass</span></td><td><span class="badge passed">✓ Pass</span></td></tr><tr><td class="tc">FR-01 Đăng ký tài khoản › FR01-AT-08 | Mật khẩu rỗng</td><td><span class="type">Negative</span></td><td><span class="badge passed">✓ Pass</span></td><td><span class="badge passed">✓ Pass</span></td><td><span class="badge passed">✓ Pass</span></td></tr><tr><td class="tc">FR-01 Đăng ký tài khoản › FR01-AT-09 | Họ Tên chỉ gồm khoảng trắng</td><td><span class="type">Negative</span></td><td><span class="badge failed">✗ Fail</span></td><td><span class="badge failed">✗ Fail</span></td><td><span class="badge failed">✗ Fail</span></td></tr><tr><td class="tc">FR-01 Đăng ký tài khoản › FR01-AT-10 | Email không có @</td><td><span class="type">Negative</span></td><td><span class="badge failed">✗ Fail</span></td><td><span class="badge failed">✗ Fail</span></td><td><span class="badge failed">✗ Fail</span></td></tr><tr><td class="tc">FR-01 Đăng ký tài khoản › FR01-AT-11 | Email đã tồn tại (test@eshop.com)</td><td><span class="type">Negative</span></td><td><span class="badge failed">✗ Fail</span></td><td><span class="badge failed">✗ Fail</span></td><td><span class="badge failed">✗ Fail</span></td></tr><tr><td class="tc">FR-01 Đăng ký tài khoản › FR01-AT-12 | Mật khẩu không có chữ hoa</td><td><span class="type">Negative</span></td><td><span class="badge passed">✓ Pass</span></td><td><span class="badge passed">✓ Pass</span></td><td><span class="badge passed">✓ Pass</span></td></tr><tr><td class="tc">FR-01 Đăng ký tài khoản › FR01-AT-13 | Mật khẩu không có ký tự đặc biệt</td><td><span class="type">Negative</span></td><td><span class="badge passed">✓ Pass</span></td><td><span class="badge passed">✓ Pass</span></td><td><span class="badge passed">✓ Pass</span></td></tr><tr><td class="tc">FR-01 Đăng ký tài khoản › FR01-AT-14 | Khoảng trắng thay cho ký tự đặc biệt</td><td><span class="type">Negative</span></td><td><span class="badge failed">✗ Fail</span></td><td><span class="badge failed">✗ Fail</span></td><td><span class="badge failed">✗ Fail</span></td></tr><tr><td class="tc">FR-01 Đăng ký tài khoản › FR01-AT-15 | Xác nhận mật khẩu khác Mật khẩu</td><td><span class="type">Negative</span></td><td><span class="badge failed">✗ Fail</span></td><td><span class="badge failed">✗ Fail</span></td><td><span class="badge failed">✗ Fail</span></td></tr>
+    </tbody>
+  </table>
+  <h3>Lỗi phát hiện (27)</h3>
+  <div class="failures">
+  <article class="failure">
+      <header><span class="browser">chromium</span> FR-01 Đăng ký tài khoản › FR01-AT-01 | Dữ liệu hợp lệ, mật khẩu Abcdef1!</header>
+      <div class="failure-body">
+        <pre>Error: expect(page).toHaveURL(expected) failed
+
+Expected pattern: /\/login$/
+Received string:  &quot;http://localhost:5173/register&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toHaveURL&quot; with timeout 5000ms
+    14 × locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;
+       - unexpected value &quot;http://localhost:5173/register&quot;
+
+
+  35 |         if (tc.expected.outcome === &#39;success&#39;) {
+  36 |           // AP-01 URL: chuyển tới trang Đăng nhập.
+&gt; 37 |           await expect(page).toHaveURL(new RegExp(`${tc.expected.url}$`));
+     |                              ^
+  38 |           return;
+  39 |         }
+  40 |
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:37:30
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/chromium-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-01-D-li-u-h-p-l-m-t-kh-u-Abcdef1.png"><img src="fr01/chromium-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-01-D-li-u-h-p-l-m-t-kh-u-Abcdef1.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-01 | Dữ liệu hợp lệ, mật khẩu Abcdef1! trên chromium" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">chromium</span> FR-01 Đăng ký tài khoản › FR01-AT-02 | Email chỉ khác email đã có ở chữ hoa (TEST@eshop.com)</header>
+      <div class="failure-body">
+        <pre>Error: expect(page).toHaveURL(expected) failed
+
+Expected pattern: /\/login$/
+Received string:  &quot;http://localhost:5173/register&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toHaveURL&quot; with timeout 5000ms
+    14 × locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;
+       - unexpected value &quot;http://localhost:5173/register&quot;
+
+
+  35 |         if (tc.expected.outcome === &#39;success&#39;) {
+  36 |           // AP-01 URL: chuyển tới trang Đăng nhập.
+&gt; 37 |           await expect(page).toHaveURL(new RegExp(`${tc.expected.url}$`));
+     |                              ^
+  38 |           return;
+  39 |         }
+  40 |
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:37:30
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/chromium-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-02-Email-ch-kh-c-email-c-ch-hoa-TEST-eshop-com.png"><img src="fr01/chromium-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-02-Email-ch-kh-c-email-c-ch-hoa-TEST-eshop-com.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-02 | Email chỉ khác email đã có ở chữ hoa (TEST@eshop.com) trên chromium" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">chromium</span> FR-01 Đăng ký tài khoản › FR01-AT-03 | Mật khẩu đúng 8 ký tự (biên dưới)</header>
+      <div class="failure-body">
+        <pre>Error: expect(page).toHaveURL(expected) failed
+
+Expected pattern: /\/login$/
+Received string:  &quot;http://localhost:5173/register&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toHaveURL&quot; with timeout 5000ms
+    14 × locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;
+       - unexpected value &quot;http://localhost:5173/register&quot;
+
+
+  35 |         if (tc.expected.outcome === &#39;success&#39;) {
+  36 |           // AP-01 URL: chuyển tới trang Đăng nhập.
+&gt; 37 |           await expect(page).toHaveURL(new RegExp(`${tc.expected.url}$`));
+     |                              ^
+  38 |           return;
+  39 |         }
+  40 |
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:37:30
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/chromium-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-03-M-t-kh-u-ng-8-k-t-bi-n-d-i.png"><img src="fr01/chromium-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-03-M-t-kh-u-ng-8-k-t-bi-n-d-i.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-03 | Mật khẩu đúng 8 ký tự (biên dưới) trên chromium" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">chromium</span> FR-01 Đăng ký tài khoản › FR01-AT-04 | Họ Tên 1 ký tự</header>
+      <div class="failure-body">
+        <pre>Error: expect(page).toHaveURL(expected) failed
+
+Expected pattern: /\/login$/
+Received string:  &quot;http://localhost:5173/register&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toHaveURL&quot; with timeout 5000ms
+    14 × locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;
+       - unexpected value &quot;http://localhost:5173/register&quot;
+
+
+  35 |         if (tc.expected.outcome === &#39;success&#39;) {
+  36 |           // AP-01 URL: chuyển tới trang Đăng nhập.
+&gt; 37 |           await expect(page).toHaveURL(new RegExp(`${tc.expected.url}$`));
+     |                              ^
+  38 |           return;
+  39 |         }
+  40 |
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:37:30
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/chromium-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-04-H-T-n-1-k-t.png"><img src="fr01/chromium-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-04-H-T-n-1-k-t.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-04 | Họ Tên 1 ký tự trên chromium" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">chromium</span> FR-01 Đăng ký tài khoản › FR01-AT-09 | Họ Tên chỉ gồm khoảng trắng</header>
+      <div class="failure-body">
+        <pre>Error: expect(locator).toContainText(expected) failed
+
+Locator: locator(&#39;div:has(&gt; form) &gt; div&#39;)
+Expected pattern: /tên/i
+Received string:  &quot;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toContainText&quot; locator(&#39;div:has(&gt; form) &gt; div&#39;) with timeout 5000ms
+  - waiting for locator(&#39;div:has(&gt; form) &gt; div&#39;)
+    14 × locator resolved to &lt;div class=&quot;bg-red-100 text-red-700 p-3 mb-4 rounded&quot;&gt;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…&lt;/div&gt;
+       - unexpected value &quot;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.&quot;
+
+
+  50 |           // AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.
+  51 |           await expect(p.errorMessage).toBeVisible();
+&gt; 52 |           await expect(p.errorMessage).toContainText(new RegExp(tc.expected.message, &#39;i&#39;));
+     |                                        ^
+  53 |         }
+  54 |
+  55 |         // AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:52:40
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/chromium-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-09-H-T-n-ch-g-m-kho-ng-tr-ng.png"><img src="fr01/chromium-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-09-H-T-n-ch-g-m-kho-ng-tr-ng.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-09 | Họ Tên chỉ gồm khoảng trắng trên chromium" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">chromium</span> FR-01 Đăng ký tài khoản › FR01-AT-10 | Email không có @</header>
+      <div class="failure-body">
+        <pre>Error: expect(locator).toContainText(expected) failed
+
+Locator: locator(&#39;div:has(&gt; form) &gt; div&#39;)
+Expected pattern: /email/i
+Received string:  &quot;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toContainText&quot; locator(&#39;div:has(&gt; form) &gt; div&#39;) with timeout 5000ms
+  - waiting for locator(&#39;div:has(&gt; form) &gt; div&#39;)
+    14 × locator resolved to &lt;div class=&quot;bg-red-100 text-red-700 p-3 mb-4 rounded&quot;&gt;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…&lt;/div&gt;
+       - unexpected value &quot;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.&quot;
+
+
+  50 |           // AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.
+  51 |           await expect(p.errorMessage).toBeVisible();
+&gt; 52 |           await expect(p.errorMessage).toContainText(new RegExp(tc.expected.message, &#39;i&#39;));
+     |                                        ^
+  53 |         }
+  54 |
+  55 |         // AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:52:40
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/chromium-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-10-Email-kh-ng-c.png"><img src="fr01/chromium-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-10-Email-kh-ng-c.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-10 | Email không có @ trên chromium" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">chromium</span> FR-01 Đăng ký tài khoản › FR01-AT-11 | Email đã tồn tại (test@eshop.com)</header>
+      <div class="failure-body">
+        <pre>Error: expect(locator).toContainText(expected) failed
+
+Locator: locator(&#39;div:has(&gt; form) &gt; div&#39;)
+Expected pattern: /email/i
+Received string:  &quot;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toContainText&quot; locator(&#39;div:has(&gt; form) &gt; div&#39;) with timeout 5000ms
+  - waiting for locator(&#39;div:has(&gt; form) &gt; div&#39;)
+    14 × locator resolved to &lt;div class=&quot;bg-red-100 text-red-700 p-3 mb-4 rounded&quot;&gt;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…&lt;/div&gt;
+       - unexpected value &quot;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.&quot;
+
+
+  50 |           // AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.
+  51 |           await expect(p.errorMessage).toBeVisible();
+&gt; 52 |           await expect(p.errorMessage).toContainText(new RegExp(tc.expected.message, &#39;i&#39;));
+     |                                        ^
+  53 |         }
+  54 |
+  55 |         // AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:52:40
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/chromium-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-11-Email-t-n-t-i-test-eshop-com.png"><img src="fr01/chromium-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-11-Email-t-n-t-i-test-eshop-com.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-11 | Email đã tồn tại (test@eshop.com) trên chromium" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">chromium</span> FR-01 Đăng ký tài khoản › FR01-AT-14 | Khoảng trắng thay cho ký tự đặc biệt</header>
+      <div class="failure-body">
+        <pre>Error: expect(locator).toBeVisible() failed
+
+Locator: locator(&#39;div:has(&gt; form) &gt; div&#39;)
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect &quot;toBeVisible&quot; locator(&#39;div:has(&gt; form) &gt; div&#39;) with timeout 5000ms
+  - waiting for locator(&#39;div:has(&gt; form) &gt; div&#39;)
+
+
+  49 |         if (tc.expected.message) {
+  50 |           // AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.
+&gt; 51 |           await expect(p.errorMessage).toBeVisible();
+     |                                        ^
+  52 |           await expect(p.errorMessage).toContainText(new RegExp(tc.expected.message, &#39;i&#39;));
+  53 |         }
+  54 |
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:51:40
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/chromium-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-14-Kho-ng-tr-ng-thay-cho-k-t-c-bi-t.png"><img src="fr01/chromium-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-14-Kho-ng-tr-ng-thay-cho-k-t-c-bi-t.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-14 | Khoảng trắng thay cho ký tự đặc biệt trên chromium" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">chromium</span> FR-01 Đăng ký tài khoản › FR01-AT-15 | Xác nhận mật khẩu khác Mật khẩu</header>
+      <div class="failure-body">
+        <pre>Error: Form phải có trường &quot;Xác nhận mật khẩu&quot; (FR-01)
+
+expect(locator).toBeVisible() failed
+
+Locator: locator(&#39;label:text-is(&quot;Xác nhận mật khẩu&quot;) + input&#39;)
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Form phải có trường &quot;Xác nhận mật khẩu&quot; (FR-01) locator(&#39;label:text-is(&quot;Xác nhận mật khẩu&quot;) + input&#39;) with timeout 5000ms
+  - waiting for locator(&#39;label:text-is(&quot;Xác nhận mật khẩu&quot;) + input&#39;)
+
+
+  25 |         if (tc.input.confirmPassword !== undefined) {
+  26 |           // AP-02 hiển thị: FR-01 yêu cầu form có trường Xác nhận mật khẩu.
+&gt; 27 |           await expect(p.confirmPasswordInput, &#39;Form phải có trường &quot;Xác nhận mật khẩu&quot; (FR-01)&#39;).toBeVisible();
+     |                                                                                                   ^
+  28 |         }
+  29 |         await p.fillForm(tc.input);
+  30 |         await p.submit();
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:27:99
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:24:7</pre>
+        <a class="shot" href="fr01/chromium-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-15-X-c-nh-n-m-t-kh-u-kh-c-M-t-kh-u.png"><img src="fr01/chromium-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-15-X-c-nh-n-m-t-kh-u-kh-c-M-t-kh-u.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-15 | Xác nhận mật khẩu khác Mật khẩu trên chromium" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">firefox</span> FR-01 Đăng ký tài khoản › FR01-AT-01 | Dữ liệu hợp lệ, mật khẩu Abcdef1!</header>
+      <div class="failure-body">
+        <pre>Error: expect(page).toHaveURL(expected) failed
+
+Expected pattern: /\/login$/
+Received string:  &quot;http://localhost:5173/register&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toHaveURL&quot; with timeout 5000ms
+    13 × locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;
+       - unexpected value &quot;http://localhost:5173/register&quot;
+
+
+  35 |         if (tc.expected.outcome === &#39;success&#39;) {
+  36 |           // AP-01 URL: chuyển tới trang Đăng nhập.
+&gt; 37 |           await expect(page).toHaveURL(new RegExp(`${tc.expected.url}$`));
+     |                              ^
+  38 |           return;
+  39 |         }
+  40 |
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:37:30
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/firefox-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-01-D-li-u-h-p-l-m-t-kh-u-Abcdef1.png"><img src="fr01/firefox-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-01-D-li-u-h-p-l-m-t-kh-u-Abcdef1.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-01 | Dữ liệu hợp lệ, mật khẩu Abcdef1! trên firefox" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">firefox</span> FR-01 Đăng ký tài khoản › FR01-AT-02 | Email chỉ khác email đã có ở chữ hoa (TEST@eshop.com)</header>
+      <div class="failure-body">
+        <pre>Error: expect(page).toHaveURL(expected) failed
+
+Expected pattern: /\/login$/
+Received string:  &quot;http://localhost:5173/register&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toHaveURL&quot; with timeout 5000ms
+    13 × locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;
+       - unexpected value &quot;http://localhost:5173/register&quot;
+
+
+  35 |         if (tc.expected.outcome === &#39;success&#39;) {
+  36 |           // AP-01 URL: chuyển tới trang Đăng nhập.
+&gt; 37 |           await expect(page).toHaveURL(new RegExp(`${tc.expected.url}$`));
+     |                              ^
+  38 |           return;
+  39 |         }
+  40 |
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:37:30
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/firefox-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-02-Email-ch-kh-c-email-c-ch-hoa-TEST-eshop-com.png"><img src="fr01/firefox-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-02-Email-ch-kh-c-email-c-ch-hoa-TEST-eshop-com.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-02 | Email chỉ khác email đã có ở chữ hoa (TEST@eshop.com) trên firefox" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">firefox</span> FR-01 Đăng ký tài khoản › FR01-AT-03 | Mật khẩu đúng 8 ký tự (biên dưới)</header>
+      <div class="failure-body">
+        <pre>Error: expect(page).toHaveURL(expected) failed
+
+Expected pattern: /\/login$/
+Received string:  &quot;http://localhost:5173/register&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toHaveURL&quot; with timeout 5000ms
+    13 × locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;
+       - unexpected value &quot;http://localhost:5173/register&quot;
+
+
+  35 |         if (tc.expected.outcome === &#39;success&#39;) {
+  36 |           // AP-01 URL: chuyển tới trang Đăng nhập.
+&gt; 37 |           await expect(page).toHaveURL(new RegExp(`${tc.expected.url}$`));
+     |                              ^
+  38 |           return;
+  39 |         }
+  40 |
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:37:30
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/firefox-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-03-M-t-kh-u-ng-8-k-t-bi-n-d-i.png"><img src="fr01/firefox-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-03-M-t-kh-u-ng-8-k-t-bi-n-d-i.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-03 | Mật khẩu đúng 8 ký tự (biên dưới) trên firefox" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">firefox</span> FR-01 Đăng ký tài khoản › FR01-AT-04 | Họ Tên 1 ký tự</header>
+      <div class="failure-body">
+        <pre>Error: expect(page).toHaveURL(expected) failed
+
+Expected pattern: /\/login$/
+Received string:  &quot;http://localhost:5173/register&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toHaveURL&quot; with timeout 5000ms
+    13 × locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;
+       - unexpected value &quot;http://localhost:5173/register&quot;
+
+
+  35 |         if (tc.expected.outcome === &#39;success&#39;) {
+  36 |           // AP-01 URL: chuyển tới trang Đăng nhập.
+&gt; 37 |           await expect(page).toHaveURL(new RegExp(`${tc.expected.url}$`));
+     |                              ^
+  38 |           return;
+  39 |         }
+  40 |
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:37:30
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/firefox-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-04-H-T-n-1-k-t.png"><img src="fr01/firefox-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-04-H-T-n-1-k-t.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-04 | Họ Tên 1 ký tự trên firefox" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">firefox</span> FR-01 Đăng ký tài khoản › FR01-AT-09 | Họ Tên chỉ gồm khoảng trắng</header>
+      <div class="failure-body">
+        <pre>Error: expect(locator).toContainText(expected) failed
+
+Locator: locator(&#39;div:has(&gt; form) &gt; div&#39;)
+Expected pattern: /tên/i
+Received string:  &quot;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toContainText&quot; locator(&#39;div:has(&gt; form) &gt; div&#39;) with timeout 5000ms
+  - waiting for locator(&#39;div:has(&gt; form) &gt; div&#39;)
+    13 × locator resolved to &lt;div class=&quot;bg-red-100 text-red-700 p-3 mb-4 rounded&quot;&gt;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…&lt;/div&gt;
+       - unexpected value &quot;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.&quot;
+
+
+  50 |           // AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.
+  51 |           await expect(p.errorMessage).toBeVisible();
+&gt; 52 |           await expect(p.errorMessage).toContainText(new RegExp(tc.expected.message, &#39;i&#39;));
+     |                                        ^
+  53 |         }
+  54 |
+  55 |         // AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:52:40
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/firefox-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-09-H-T-n-ch-g-m-kho-ng-tr-ng.png"><img src="fr01/firefox-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-09-H-T-n-ch-g-m-kho-ng-tr-ng.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-09 | Họ Tên chỉ gồm khoảng trắng trên firefox" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">firefox</span> FR-01 Đăng ký tài khoản › FR01-AT-10 | Email không có @</header>
+      <div class="failure-body">
+        <pre>Error: expect(locator).toContainText(expected) failed
+
+Locator: locator(&#39;div:has(&gt; form) &gt; div&#39;)
+Expected pattern: /email/i
+Received string:  &quot;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toContainText&quot; locator(&#39;div:has(&gt; form) &gt; div&#39;) with timeout 5000ms
+  - waiting for locator(&#39;div:has(&gt; form) &gt; div&#39;)
+    13 × locator resolved to &lt;div class=&quot;bg-red-100 text-red-700 p-3 mb-4 rounded&quot;&gt;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…&lt;/div&gt;
+       - unexpected value &quot;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.&quot;
+
+
+  50 |           // AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.
+  51 |           await expect(p.errorMessage).toBeVisible();
+&gt; 52 |           await expect(p.errorMessage).toContainText(new RegExp(tc.expected.message, &#39;i&#39;));
+     |                                        ^
+  53 |         }
+  54 |
+  55 |         // AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:52:40
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/firefox-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-10-Email-kh-ng-c.png"><img src="fr01/firefox-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-10-Email-kh-ng-c.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-10 | Email không có @ trên firefox" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">firefox</span> FR-01 Đăng ký tài khoản › FR01-AT-11 | Email đã tồn tại (test@eshop.com)</header>
+      <div class="failure-body">
+        <pre>Error: expect(locator).toContainText(expected) failed
+
+Locator: locator(&#39;div:has(&gt; form) &gt; div&#39;)
+Expected pattern: /email/i
+Received string:  &quot;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toContainText&quot; locator(&#39;div:has(&gt; form) &gt; div&#39;) with timeout 5000ms
+  - waiting for locator(&#39;div:has(&gt; form) &gt; div&#39;)
+    13 × locator resolved to &lt;div class=&quot;bg-red-100 text-red-700 p-3 mb-4 rounded&quot;&gt;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…&lt;/div&gt;
+       - unexpected value &quot;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.&quot;
+
+
+  50 |           // AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.
+  51 |           await expect(p.errorMessage).toBeVisible();
+&gt; 52 |           await expect(p.errorMessage).toContainText(new RegExp(tc.expected.message, &#39;i&#39;));
+     |                                        ^
+  53 |         }
+  54 |
+  55 |         // AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:52:40
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/firefox-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-11-Email-t-n-t-i-test-eshop-com.png"><img src="fr01/firefox-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-11-Email-t-n-t-i-test-eshop-com.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-11 | Email đã tồn tại (test@eshop.com) trên firefox" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">firefox</span> FR-01 Đăng ký tài khoản › FR01-AT-14 | Khoảng trắng thay cho ký tự đặc biệt</header>
+      <div class="failure-body">
+        <pre>Error: expect(locator).toBeVisible() failed
+
+Locator: locator(&#39;div:has(&gt; form) &gt; div&#39;)
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect &quot;toBeVisible&quot; locator(&#39;div:has(&gt; form) &gt; div&#39;) with timeout 5000ms
+  - waiting for locator(&#39;div:has(&gt; form) &gt; div&#39;)
+
+
+  49 |         if (tc.expected.message) {
+  50 |           // AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.
+&gt; 51 |           await expect(p.errorMessage).toBeVisible();
+     |                                        ^
+  52 |           await expect(p.errorMessage).toContainText(new RegExp(tc.expected.message, &#39;i&#39;));
+  53 |         }
+  54 |
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:51:40
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/firefox-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-14-Kho-ng-tr-ng-thay-cho-k-t-c-bi-t.png"><img src="fr01/firefox-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-14-Kho-ng-tr-ng-thay-cho-k-t-c-bi-t.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-14 | Khoảng trắng thay cho ký tự đặc biệt trên firefox" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">firefox</span> FR-01 Đăng ký tài khoản › FR01-AT-15 | Xác nhận mật khẩu khác Mật khẩu</header>
+      <div class="failure-body">
+        <pre>Error: Form phải có trường &quot;Xác nhận mật khẩu&quot; (FR-01)
+
+expect(locator).toBeVisible() failed
+
+Locator: locator(&#39;label:text-is(&quot;Xác nhận mật khẩu&quot;) + input&#39;)
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Form phải có trường &quot;Xác nhận mật khẩu&quot; (FR-01) locator(&#39;label:text-is(&quot;Xác nhận mật khẩu&quot;) + input&#39;) with timeout 5000ms
+  - waiting for locator(&#39;label:text-is(&quot;Xác nhận mật khẩu&quot;) + input&#39;)
+
+
+  25 |         if (tc.input.confirmPassword !== undefined) {
+  26 |           // AP-02 hiển thị: FR-01 yêu cầu form có trường Xác nhận mật khẩu.
+&gt; 27 |           await expect(p.confirmPasswordInput, &#39;Form phải có trường &quot;Xác nhận mật khẩu&quot; (FR-01)&#39;).toBeVisible();
+     |                                                                                                   ^
+  28 |         }
+  29 |         await p.fillForm(tc.input);
+  30 |         await p.submit();
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:27:99
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:24:7</pre>
+        <a class="shot" href="fr01/firefox-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-15-X-c-nh-n-m-t-kh-u-kh-c-M-t-kh-u.png"><img src="fr01/firefox-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-15-X-c-nh-n-m-t-kh-u-kh-c-M-t-kh-u.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-15 | Xác nhận mật khẩu khác Mật khẩu trên firefox" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">webkit</span> FR-01 Đăng ký tài khoản › FR01-AT-01 | Dữ liệu hợp lệ, mật khẩu Abcdef1!</header>
+      <div class="failure-body">
+        <pre>Error: expect(page).toHaveURL(expected) failed
+
+Expected pattern: /\/login$/
+Received string:  &quot;http://localhost:5173/register&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toHaveURL&quot; with timeout 5000ms
+    13 × locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;
+       - unexpected value &quot;http://localhost:5173/register&quot;
+
+
+  35 |         if (tc.expected.outcome === &#39;success&#39;) {
+  36 |           // AP-01 URL: chuyển tới trang Đăng nhập.
+&gt; 37 |           await expect(page).toHaveURL(new RegExp(`${tc.expected.url}$`));
+     |                              ^
+  38 |           return;
+  39 |         }
+  40 |
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:37:30
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/webkit-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-01-D-li-u-h-p-l-m-t-kh-u-Abcdef1.png"><img src="fr01/webkit-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-01-D-li-u-h-p-l-m-t-kh-u-Abcdef1.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-01 | Dữ liệu hợp lệ, mật khẩu Abcdef1! trên webkit" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">webkit</span> FR-01 Đăng ký tài khoản › FR01-AT-02 | Email chỉ khác email đã có ở chữ hoa (TEST@eshop.com)</header>
+      <div class="failure-body">
+        <pre>Error: expect(page).toHaveURL(expected) failed
+
+Expected pattern: /\/login$/
+Received string:  &quot;http://localhost:5173/register&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toHaveURL&quot; with timeout 5000ms
+    13 × locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;
+       - unexpected value &quot;http://localhost:5173/register&quot;
+
+
+  35 |         if (tc.expected.outcome === &#39;success&#39;) {
+  36 |           // AP-01 URL: chuyển tới trang Đăng nhập.
+&gt; 37 |           await expect(page).toHaveURL(new RegExp(`${tc.expected.url}$`));
+     |                              ^
+  38 |           return;
+  39 |         }
+  40 |
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:37:30
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/webkit-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-02-Email-ch-kh-c-email-c-ch-hoa-TEST-eshop-com.png"><img src="fr01/webkit-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-02-Email-ch-kh-c-email-c-ch-hoa-TEST-eshop-com.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-02 | Email chỉ khác email đã có ở chữ hoa (TEST@eshop.com) trên webkit" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">webkit</span> FR-01 Đăng ký tài khoản › FR01-AT-03 | Mật khẩu đúng 8 ký tự (biên dưới)</header>
+      <div class="failure-body">
+        <pre>Error: expect(page).toHaveURL(expected) failed
+
+Expected pattern: /\/login$/
+Received string:  &quot;http://localhost:5173/register&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toHaveURL&quot; with timeout 5000ms
+    13 × locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;
+       - unexpected value &quot;http://localhost:5173/register&quot;
+
+
+  35 |         if (tc.expected.outcome === &#39;success&#39;) {
+  36 |           // AP-01 URL: chuyển tới trang Đăng nhập.
+&gt; 37 |           await expect(page).toHaveURL(new RegExp(`${tc.expected.url}$`));
+     |                              ^
+  38 |           return;
+  39 |         }
+  40 |
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:37:30
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/webkit-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-03-M-t-kh-u-ng-8-k-t-bi-n-d-i.png"><img src="fr01/webkit-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-03-M-t-kh-u-ng-8-k-t-bi-n-d-i.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-03 | Mật khẩu đúng 8 ký tự (biên dưới) trên webkit" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">webkit</span> FR-01 Đăng ký tài khoản › FR01-AT-04 | Họ Tên 1 ký tự</header>
+      <div class="failure-body">
+        <pre>Error: expect(page).toHaveURL(expected) failed
+
+Expected pattern: /\/login$/
+Received string:  &quot;http://localhost:5173/register&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toHaveURL&quot; with timeout 5000ms
+    13 × locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;
+       - unexpected value &quot;http://localhost:5173/register&quot;
+
+
+  35 |         if (tc.expected.outcome === &#39;success&#39;) {
+  36 |           // AP-01 URL: chuyển tới trang Đăng nhập.
+&gt; 37 |           await expect(page).toHaveURL(new RegExp(`${tc.expected.url}$`));
+     |                              ^
+  38 |           return;
+  39 |         }
+  40 |
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:37:30
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/webkit-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-04-H-T-n-1-k-t.png"><img src="fr01/webkit-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-04-H-T-n-1-k-t.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-04 | Họ Tên 1 ký tự trên webkit" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">webkit</span> FR-01 Đăng ký tài khoản › FR01-AT-09 | Họ Tên chỉ gồm khoảng trắng</header>
+      <div class="failure-body">
+        <pre>Error: expect(locator).toContainText(expected) failed
+
+Locator: locator(&#39;div:has(&gt; form) &gt; div&#39;)
+Expected pattern: /tên/i
+Received string:  &quot;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toContainText&quot; locator(&#39;div:has(&gt; form) &gt; div&#39;) with timeout 5000ms
+  - waiting for locator(&#39;div:has(&gt; form) &gt; div&#39;)
+    14 × locator resolved to &lt;div class=&quot;bg-red-100 text-red-700 p-3 mb-4 rounded&quot;&gt;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…&lt;/div&gt;
+       - unexpected value &quot;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.&quot;
+
+
+  50 |           // AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.
+  51 |           await expect(p.errorMessage).toBeVisible();
+&gt; 52 |           await expect(p.errorMessage).toContainText(new RegExp(tc.expected.message, &#39;i&#39;));
+     |                                        ^
+  53 |         }
+  54 |
+  55 |         // AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:52:40
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/webkit-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-09-H-T-n-ch-g-m-kho-ng-tr-ng.png"><img src="fr01/webkit-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-09-H-T-n-ch-g-m-kho-ng-tr-ng.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-09 | Họ Tên chỉ gồm khoảng trắng trên webkit" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">webkit</span> FR-01 Đăng ký tài khoản › FR01-AT-10 | Email không có @</header>
+      <div class="failure-body">
+        <pre>Error: expect(locator).toContainText(expected) failed
+
+Locator: locator(&#39;div:has(&gt; form) &gt; div&#39;)
+Expected pattern: /email/i
+Received string:  &quot;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toContainText&quot; locator(&#39;div:has(&gt; form) &gt; div&#39;) with timeout 5000ms
+  - waiting for locator(&#39;div:has(&gt; form) &gt; div&#39;)
+    14 × locator resolved to &lt;div class=&quot;bg-red-100 text-red-700 p-3 mb-4 rounded&quot;&gt;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…&lt;/div&gt;
+       - unexpected value &quot;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.&quot;
+
+
+  50 |           // AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.
+  51 |           await expect(p.errorMessage).toBeVisible();
+&gt; 52 |           await expect(p.errorMessage).toContainText(new RegExp(tc.expected.message, &#39;i&#39;));
+     |                                        ^
+  53 |         }
+  54 |
+  55 |         // AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:52:40
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/webkit-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-10-Email-kh-ng-c.png"><img src="fr01/webkit-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-10-Email-kh-ng-c.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-10 | Email không có @ trên webkit" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">webkit</span> FR-01 Đăng ký tài khoản › FR01-AT-11 | Email đã tồn tại (test@eshop.com)</header>
+      <div class="failure-body">
+        <pre>Error: expect(locator).toContainText(expected) failed
+
+Locator: locator(&#39;div:has(&gt; form) &gt; div&#39;)
+Expected pattern: /email/i
+Received string:  &quot;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.&quot;
+Timeout: 5000ms
+
+Call log:
+  - Expect &quot;toContainText&quot; locator(&#39;div:has(&gt; form) &gt; div&#39;) with timeout 5000ms
+  - waiting for locator(&#39;div:has(&gt; form) &gt; div&#39;)
+    14 × locator resolved to &lt;div class=&quot;bg-red-100 text-red-700 p-3 mb-4 rounded&quot;&gt;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…&lt;/div&gt;
+       - unexpected value &quot;Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.&quot;
+
+
+  50 |           // AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.
+  51 |           await expect(p.errorMessage).toBeVisible();
+&gt; 52 |           await expect(p.errorMessage).toContainText(new RegExp(tc.expected.message, &#39;i&#39;));
+     |                                        ^
+  53 |         }
+  54 |
+  55 |         // AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:52:40
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/webkit-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-11-Email-t-n-t-i-test-eshop-com.png"><img src="fr01/webkit-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-11-Email-t-n-t-i-test-eshop-com.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-11 | Email đã tồn tại (test@eshop.com) trên webkit" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">webkit</span> FR-01 Đăng ký tài khoản › FR01-AT-14 | Khoảng trắng thay cho ký tự đặc biệt</header>
+      <div class="failure-body">
+        <pre>Error: expect(locator).toBeVisible() failed
+
+Locator: locator(&#39;div:has(&gt; form) &gt; div&#39;)
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect &quot;toBeVisible&quot; locator(&#39;div:has(&gt; form) &gt; div&#39;) with timeout 5000ms
+  - waiting for locator(&#39;div:has(&gt; form) &gt; div&#39;)
+
+
+  49 |         if (tc.expected.message) {
+  50 |           // AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.
+&gt; 51 |           await expect(p.errorMessage).toBeVisible();
+     |                                        ^
+  52 |           await expect(p.errorMessage).toContainText(new RegExp(tc.expected.message, &#39;i&#39;));
+  53 |         }
+  54 |
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:51:40
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:33:7</pre>
+        <a class="shot" href="fr01/webkit-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-14-Kho-ng-tr-ng-thay-cho-k-t-c-bi-t.png"><img src="fr01/webkit-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-14-Kho-ng-tr-ng-thay-cho-k-t-c-bi-t.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-14 | Khoảng trắng thay cho ký tự đặc biệt trên webkit" loading="lazy"></a>
+      </div>
+    </article><article class="failure">
+      <header><span class="browser">webkit</span> FR-01 Đăng ký tài khoản › FR01-AT-15 | Xác nhận mật khẩu khác Mật khẩu</header>
+      <div class="failure-body">
+        <pre>Error: Form phải có trường &quot;Xác nhận mật khẩu&quot; (FR-01)
+
+expect(locator).toBeVisible() failed
+
+Locator: locator(&#39;label:text-is(&quot;Xác nhận mật khẩu&quot;) + input&#39;)
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Form phải có trường &quot;Xác nhận mật khẩu&quot; (FR-01) locator(&#39;label:text-is(&quot;Xác nhận mật khẩu&quot;) + input&#39;) with timeout 5000ms
+  - waiting for locator(&#39;label:text-is(&quot;Xác nhận mật khẩu&quot;) + input&#39;)
+
+
+  25 |         if (tc.input.confirmPassword !== undefined) {
+  26 |           // AP-02 hiển thị: FR-01 yêu cầu form có trường Xác nhận mật khẩu.
+&gt; 27 |           await expect(p.confirmPasswordInput, &#39;Form phải có trường &quot;Xác nhận mật khẩu&quot; (FR-01)&#39;).toBeVisible();
+     |                                                                                                   ^
+  28 |         }
+  29 |         await p.fillForm(tc.input);
+  30 |         await p.submit();
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:27:99
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr01.spec.ts:24:7</pre>
+        <a class="shot" href="fr01/webkit-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-15-X-c-nh-n-m-t-kh-u-kh-c-M-t-kh-u.png"><img src="fr01/webkit-shots/FR-01-ng-k-t-i-kho-n-FR01-AT-15-X-c-nh-n-m-t-kh-u-kh-c-M-t-kh-u.png" alt="Screenshot lúc fail: FR-01 Đăng ký tài khoản › FR01-AT-15 | Xác nhận mật khẩu khác Mật khẩu trên webkit" loading="lazy"></a>
+      </div>
+    </article>
+  </div>
+</section></div>
+</main>
+</body>
+</html>
