@@ -14,7 +14,10 @@ const cases = loadCases<RegisterInput, Expected>('fr01');
 
 test.describe('FR-01 Đăng ký tài khoản', () => {
   for (const tc of cases) {
-    test(`${tc.id} | ${tc.title}`, { annotation: [{ type: 'type', description: tc.type }] }, async ({ page }) => {
+    // Ghi chú trong data (vd. "bị che khuất bởi BUG-FR01-01") hiện thành annotation trong report và dashboard.
+    const annotation = [{ type: 'type', description: tc.type }, ...(tc.note ? [{ type: 'note', description: tc.note }] : [])];
+
+    test(`${tc.id} | ${tc.title}`, { annotation }, async ({ page }) => {
       const p = new RegisterPage(page);
 
       await test.step('Chuẩn bị', async () => {

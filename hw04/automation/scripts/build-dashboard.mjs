@@ -93,6 +93,7 @@ if (fs.existsSync(REPORTS)) {
               duration: last.duration ?? 0,
               error: stripAnsi((last.errors ?? []).map((e) => e.message).join('\n\n')).trim(),
               type: ann.type ?? '',
+              note: ann.note ?? '',
               shot,
             });
           }
@@ -165,7 +166,8 @@ const featureSection = (f) => {
           const t = runOf(f, b)?.tests.find((x) => x.key === k.key);
           return `<td>${t ? badge(t.status) : '<span class="badge none">—</span>'}</td>`;
         }).join('');
-        return `<tr><td class="tc">${esc(k.title)}</td><td><span class="type">${esc(k.type || '—')}</span></td>${cells}</tr>`;
+        const note = k.note ? `<div class="note">${esc(k.note)}</div>` : '';
+        return `<tr><td class="tc">${esc(k.title)}${note}</td><td><span class="type">${esc(k.type || '—')}</span></td>${cells}</tr>`;
       })
       .join('')}
     </tbody>
@@ -239,6 +241,7 @@ thead th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; co
 td.empty { color: var(--muted); font-style: italic; }
 .grid td.tc { min-width: 280px; }
 .type { color: var(--muted); font-size: 12px; }
+.note { color: var(--flaky); font-size: 12px; margin-top: 2px; }
 .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; white-space: nowrap; }
 .badge.passed { color: var(--pass); background: var(--pass-bg); }
 .badge.failed { color: var(--fail); background: var(--fail-bg); }
