@@ -129,13 +129,15 @@ test.describe('FR-17 Quản lý mã giảm giá', () => {
             await expect(field, `Trình duyệt phải focus vào trường "${expected.invalidField}"`).toBeFocused();
           }
           if (expected.rejectedBy === 'app') {
-            // AP-01 thông báo: app phải báo lỗi (alert).
+            // AP-01 thông báo: app phải báo lỗi (alert). Dùng soft để test vẫn chạy tiếp tới phần
+            // kiểm số dòng → report ghi cả bằng chứng mã sai đã được lưu.
             await expect
+              .configure({ soft: true })
               .poll(() => dialogs.length, { message: 'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ' })
               .toBeGreaterThan(0);
           }
           // AP-03 số lượng: không có dòng mới.
-          await expect(p.rows, 'Không được tạo thêm mã').toHaveCount(rowsBefore);
+          await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);
         }
       });
     });
