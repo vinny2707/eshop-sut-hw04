@@ -1,0 +1,126 @@
+[
+  {
+    "id": "FR09-AT-01",
+    "source": "FR09-TC-02",
+    "type": "Positive",
+    "title": "Mã VIP100 (fixed 100.000)",
+    "input": { "product": "Bàn phím cơ Keychron Q1", "code": "VIP100" },
+    "expected": { "outcome": "applied", "total": 4000000, "discount": 100000, "final": 3900000 }
+  },
+  {
+    "id": "FR09-AT-02",
+    "source": "FR09-TC-01",
+    "type": "Positive",
+    "title": "Mã SAVE10 (percent 10%)",
+    "input": { "product": "Bàn phím cơ Keychron Q1", "code": "SAVE10" },
+    "expected": { "outcome": "applied", "total": 4000000, "discount": 400000, "final": 3600000 }
+  },
+  {
+    "id": "FR09-AT-03",
+    "source": "FR09-TC-03",
+    "type": "Negative",
+    "title": "Mã không tồn tại (NOTEXIST)",
+    "input": { "product": "Bàn phím cơ Keychron Q1", "code": "NOTEXIST" },
+    "expected": { "outcome": "rejected", "total": 4000000 }
+  },
+  {
+    "id": "FR09-AT-04",
+    "source": "FR09-TC-04",
+    "type": "Negative",
+    "title": "Mã rỗng",
+    "input": { "product": "Bàn phím cơ Keychron Q1", "code": "" },
+    "expected": { "outcome": "disabled", "total": 4000000 }
+  },
+  {
+    "id": "FR09-AT-05",
+    "source": "FR09-TC-06",
+    "type": "Edge",
+    "title": "Mã viết thường (vip100)",
+    "input": { "product": "Bàn phím cơ Keychron Q1", "code": "vip100" },
+    "expected": { "outcome": "applied", "total": 4000000, "discount": 100000, "final": 3900000 }
+  },
+  {
+    "id": "FR09-AT-06",
+    "source": "FR09-TC-07",
+    "type": "Edge",
+    "title": "Mã có khoảng trắng đầu/cuối",
+    "input": { "product": "Bàn phím cơ Keychron Q1", "code": " VIP100 " },
+    "expected": { "outcome": "applied", "total": 4000000, "discount": 100000, "final": 3900000 }
+  },
+  {
+    "id": "FR09-AT-07",
+    "source": "FR09-TC-08",
+    "type": "Negative",
+    "title": "Mã hết hạn (EXPIRED)",
+    "input": { "product": "Bàn phím cơ Keychron Q1", "code": "EXPIRED" },
+    "expected": { "outcome": "rejected", "total": 4000000 }
+  },
+  {
+    "id": "FR09-AT-08",
+    "source": "FR09-TC-10",
+    "type": "Negative",
+    "title": "Chưa đăng nhập (Thoát khi đang ở Checkout)",
+    "input": { "product": "Bàn phím cơ Keychron Q1", "code": "VIP100", "logoutBeforeApply": true },
+    "expected": { "outcome": "rejected", "total": 4000000 }
+  },
+  {
+    "id": "FR09-AT-09",
+    "source": "FR09-TC-13",
+    "type": "Edge",
+    "title": "Tổng 299.999 (dưới ngưỡng 300.000)",
+    "note": "Tổng được nhập vào ô tổng tiền ở Checkout — ô này sửa được là bug FR-08 (ngoài phạm vi).",
+    "input": { "product": "Bàn phím cơ Keychron Q1", "code": "VIP100", "total": 299999 },
+    "expected": { "outcome": "rejected", "total": 299999 }
+  },
+  {
+    "id": "FR09-AT-10",
+    "source": "FR09-TC-14",
+    "type": "Edge",
+    "title": "Tổng đúng bằng ngưỡng 300.000",
+    "note": "Tổng được nhập vào ô tổng tiền ở Checkout — ô này sửa được là bug FR-08 (ngoài phạm vi).",
+    "input": { "product": "Bàn phím cơ Keychron Q1", "code": "VIP100", "total": 300000 },
+    "expected": { "outcome": "applied", "total": 300000, "discount": 100000, "final": 200000 }
+  },
+  {
+    "id": "FR09-AT-11",
+    "source": "FR09-TC-15",
+    "type": "Edge",
+    "title": "Tổng 300.001 (ngay trên ngưỡng)",
+    "note": "Tổng được nhập vào ô tổng tiền ở Checkout — ô này sửa được là bug FR-08 (ngoài phạm vi).",
+    "input": { "product": "Bàn phím cơ Keychron Q1", "code": "VIP100", "total": 300001 },
+    "expected": { "outcome": "applied", "total": 300001, "discount": 100000, "final": 200001 }
+  },
+  {
+    "id": "FR09-AT-12",
+    "source": "FR09-TC-19",
+    "type": "Edge",
+    "title": "Đã dùng VIP100 1 lần (giới hạn 2)",
+    "input": { "product": "Bàn phím cơ Keychron Q1", "code": "VIP100", "usage": { "couponId": 3, "times": 1 } },
+    "expected": { "outcome": "applied", "total": 4000000, "discount": 100000, "final": 3900000 }
+  },
+  {
+    "id": "FR09-AT-13",
+    "source": "FR09-TC-12",
+    "type": "Negative",
+    "title": "Đã dùng VIP100 2 lần (đạt giới hạn)",
+    "input": { "product": "Bàn phím cơ Keychron Q1", "code": "VIP100", "usage": { "couponId": 3, "times": 2 } },
+    "expected": { "outcome": "rejected", "total": 4000000 }
+  },
+  {
+    "id": "FR09-AT-14",
+    "source": "FR09-TC-20",
+    "type": "Negative",
+    "title": "Đã dùng SAVE10 1 lần (giới hạn 1)",
+    "input": { "product": "Bàn phím cơ Keychron Q1", "code": "SAVE10", "usage": { "couponId": 1, "times": 1 } },
+    "expected": { "outcome": "rejected", "total": 4000000 }
+  },
+  {
+    "id": "FR09-AT-15",
+    "source": "FR09-TC-21",
+    "type": "Edge",
+    "title": "SAVE10 với tổng 300.005 (giảm % ra số lẻ)",
+    "note": "Đặc tả không quy định làm tròn; chấp nhận làm tròn xuống hoặc gần nhất (quyết định HW02). Tổng nhập vào ô tổng tiền (bug FR-08).",
+    "input": { "product": "Bàn phím cơ Keychron Q1", "code": "SAVE10", "total": 300005 },
+    "expected": { "outcome": "applied", "total": 300005, "discount": [30000, 30001] }
+  }
+]
