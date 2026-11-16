@@ -1,0 +1,161 @@
+[
+  {
+    "id": "FR17-AT-01",
+    "source": "FR17-TC-01",
+    "type": "Positive",
+    "title": "Thêm mã percent 15%",
+    "input": {
+      "action": "create",
+      "coupon": { "code": "CP01", "type": "percent", "discount_value": "15", "min_order_amount": "200000", "expired_at": "2099-12-31", "max_uses_per_user": "1" }
+    },
+    "expected": { "outcome": "created", "row": ["CP01", "Phần trăm", "15%", "200000 ₫", "2099-12-31", "1 lần"] }
+  },
+  {
+    "id": "FR17-AT-02",
+    "source": "FR17-TC-02",
+    "type": "Positive",
+    "title": "Thêm mã fixed 50.000",
+    "input": {
+      "action": "create",
+      "coupon": { "code": "CP02", "type": "fixed", "discount_value": "50000", "min_order_amount": "200000", "expired_at": "2099-12-31", "max_uses_per_user": "1" }
+    },
+    "expected": { "outcome": "created", "row": ["CP02", "Cố định", "50000 ₫", "200000 ₫", "2099-12-31", "1 lần"] }
+  },
+  {
+    "id": "FR17-AT-03",
+    "source": "FR17-TC-03",
+    "type": "Positive",
+    "title": "Xem danh sách 4 mã seed",
+    "input": { "action": "view" },
+    "expected": {
+      "outcome": "listed",
+      "rows": [
+        ["SAVE10", "Phần trăm", "10%", "300000 ₫", "2099-12-31", "1 lần"],
+        ["BIGBUY", "Cố định", "50000 ₫", "500000 ₫", "2099-12-31", "1 lần"],
+        ["VIP100", "Cố định", "100000 ₫", "300000 ₫", "2099-12-31", "2 lần"],
+        ["EXPIRED", "Phần trăm", "20%", "100000 ₫", "Hết hạn", "1 lần"]
+      ]
+    }
+  },
+  {
+    "id": "FR17-AT-04",
+    "source": "FR17-TC-04",
+    "type": "Positive",
+    "title": "Xóa mã BIGBUY",
+    "note": "Dựa vào thứ tự chạy tuần tự (workers = 1): AT-03 (Xem, cần BIGBUY) chạy trước AT-04; mỗi lần chạy backend reset DB.",
+    "input": { "action": "delete", "code": "BIGBUY" },
+    "expected": { "outcome": "deleted", "remaining": ["SAVE10", "VIP100", "EXPIRED"] }
+  },
+  {
+    "id": "FR17-AT-05",
+    "source": "FR17-TC-05",
+    "type": "Negative",
+    "title": "Mã (code) rỗng",
+    "input": {
+      "action": "create",
+      "coupon": { "code": "", "type": "percent", "discount_value": "15", "min_order_amount": "200000", "expired_at": "2099-12-31", "max_uses_per_user": "1" }
+    },
+    "expected": { "outcome": "rejected", "rejectedBy": "browser", "invalidField": "code" }
+  },
+  {
+    "id": "FR17-AT-06",
+    "source": "FR17-TC-06",
+    "type": "Negative",
+    "title": "Mã chỉ gồm khoảng trắng",
+    "input": {
+      "action": "create",
+      "coupon": { "code": "   ", "type": "percent", "discount_value": "15", "min_order_amount": "200000", "expired_at": "2099-12-31", "max_uses_per_user": "1" }
+    },
+    "expected": { "outcome": "rejected", "rejectedBy": "app" }
+  },
+  {
+    "id": "FR17-AT-07",
+    "source": "FR17-TC-07",
+    "type": "Negative",
+    "title": "Mã trùng SAVE10",
+    "input": {
+      "action": "create",
+      "coupon": { "code": "SAVE10", "type": "percent", "discount_value": "15", "min_order_amount": "200000", "expired_at": "2099-12-31", "max_uses_per_user": "1" }
+    },
+    "expected": { "outcome": "rejected", "rejectedBy": "app" }
+  },
+  {
+    "id": "FR17-AT-08",
+    "source": "FR17-TC-11",
+    "type": "Negative",
+    "title": "Giá trị giảm = 0",
+    "input": {
+      "action": "create",
+      "coupon": { "code": "CP08", "type": "percent", "discount_value": "0", "min_order_amount": "200000", "expired_at": "2099-12-31", "max_uses_per_user": "1" }
+    },
+    "expected": { "outcome": "rejected", "rejectedBy": "app" }
+  },
+  {
+    "id": "FR17-AT-09",
+    "source": "FR17-TC-14",
+    "type": "Negative",
+    "title": "Percent 101%",
+    "note": "Đặc tả chỉ yêu cầu giá trị dương; giới hạn percent ≤ 100 theo quyết định HW02.",
+    "input": {
+      "action": "create",
+      "coupon": { "code": "CP09", "type": "percent", "discount_value": "101", "min_order_amount": "200000", "expired_at": "2099-12-31", "max_uses_per_user": "1" }
+    },
+    "expected": { "outcome": "rejected", "rejectedBy": "app" }
+  },
+  {
+    "id": "FR17-AT-10",
+    "source": "FR17-TC-18",
+    "type": "Negative",
+    "title": "Đơn tối thiểu = -1",
+    "input": {
+      "action": "create",
+      "coupon": { "code": "CP10", "type": "percent", "discount_value": "15", "min_order_amount": "-1", "expired_at": "2099-12-31", "max_uses_per_user": "1" }
+    },
+    "expected": { "outcome": "rejected", "rejectedBy": "app" }
+  },
+  {
+    "id": "FR17-AT-11",
+    "source": "FR17-TC-20",
+    "type": "Negative",
+    "title": "Số lần dùng tối đa = 0",
+    "input": {
+      "action": "create",
+      "coupon": { "code": "CP11", "type": "percent", "discount_value": "15", "min_order_amount": "200000", "expired_at": "2099-12-31", "max_uses_per_user": "0" }
+    },
+    "expected": { "outcome": "rejected", "rejectedBy": "browser", "invalidField": "max_uses_per_user" }
+  },
+  {
+    "id": "FR17-AT-12",
+    "source": "FR17-TC-17",
+    "type": "Edge",
+    "title": "Hạn dùng trong quá khứ (2020-01-01)",
+    "note": "Đặc tả không cấm ngày quá khứ; expected theo quyết định HW02.",
+    "input": {
+      "action": "create",
+      "coupon": { "code": "CP12", "type": "percent", "discount_value": "15", "min_order_amount": "200000", "expired_at": "2020-01-01", "max_uses_per_user": "1" }
+    },
+    "expected": { "outcome": "created", "row": ["CP12", "Phần trăm", "15%", "200000 ₫", "Hết hạn", "1 lần"] }
+  },
+  {
+    "id": "FR17-AT-13",
+    "source": "FR17-TC-31",
+    "type": "Edge",
+    "title": "Percent 100% (biên trên)",
+    "input": {
+      "action": "create",
+      "coupon": { "code": "CP13", "type": "percent", "discount_value": "100", "min_order_amount": "200000", "expired_at": "2099-12-31", "max_uses_per_user": "1" }
+    },
+    "expected": { "outcome": "created", "row": ["CP13", "Phần trăm", "100%", "200000 ₫", "2099-12-31", "1 lần"] }
+  },
+  {
+    "id": "FR17-AT-14",
+    "source": "FR17-TC-32",
+    "type": "Edge",
+    "title": "Đơn tối thiểu = 0 (biên dưới)",
+    "input": {
+      "action": "create",
+      "coupon": { "code": "CP14", "type": "percent", "discount_value": "15", "min_order_amount": "0", "expired_at": "2099-12-31", "max_uses_per_user": "1" }
+    },
+    "expected": { "outcome": "created", "row": ["CP14", "Phần trăm", "15%", "0 ₫", "2099-12-31", "1 lần"] }
+  }
+]

@@ -1,6 +1,6 @@
 // Helper chuẩn bị trạng thái qua API (không dùng để kiểm tra kết quả).
 import type { Page } from '@playwright/test';
-import { API_URL, NEW_USER } from './env';
+import { API_URL, NEW_USER, ADMIN } from './env';
 import { uniqueEmail } from './data';
 
 export type SessionUser = { token: string; user: { id: number; name: string; email: string } };
@@ -34,4 +34,16 @@ export async function addCouponUsage(page: Page, token: string, couponId: number
     });
     if (!res.ok()) throw new Error(`Setup failed: coupon-usage HTTP ${res.status()}`);
   }
+}
+
+/**
+ * FR-17: đăng nhập admin seed qua API và ghi token vào localStorage["adminToken"]
+ * (khóa mà frontend-admin đọc khi tải trang) TRƯỚC goto đầu tiên.
+ */
+export async function loginAs(page: Page, role: 'admin'): Promise<void> {
+  const account = { admin: ADMIN }[role];
+  const res = await page.request.post(`${API_URL}/api/login`, { data: account });
+  if (!res.ok()) throw new Error(`Setup failed: login ${role} HTTP ${res.status()}`);
+  const { token } = (await res.json()) as { token: string };
+  await page.addInitScript(([key, value]) => window.localStorage.setItem(key, value), ['adminToken', token]);
 }
