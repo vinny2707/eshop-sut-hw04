@@ -19,7 +19,7 @@ export class CheckoutPage {
     this.totalInput = page.getByRole('spinbutton'); // ô số duy nhất trên trang (Tổng tiền thanh toán)
     this.codeInput = page.getByPlaceholder('Nhập mã giảm giá...');
     this.applyButton = page.getByRole('button', { name: 'Áp dụng' });
-    this.successMessage = page.getByText(/^✅/);
+    this.successMessage = page.getByText(/Áp dụng thành công/);
     this.savings = page.getByText(/^Tiết kiệm:/);
     this.finalAmount = page.getByText(/^Thành tiền:/);
     this.grandTotal = page.getByText(/^Tổng thanh toán:/);
