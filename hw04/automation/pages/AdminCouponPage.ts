@@ -70,6 +70,12 @@ export class AdminCouponPage {
     await this.submitButton.click();
   }
 
+  // Nội dung trang cuộn trong khung riêng (không phải window): đưa đáy bảng vào khung nhìn
+  // để ảnh chụp lúc fail thấy được các dòng mới nhất.
+  async scrollTableToEnd() {
+    await this.page.getByRole('table').evaluate((el) => el.scrollIntoView({ block: 'end' }));
+  }
+
   async deleteRow(code: string) {
     await this.row(code).getByRole('button', { name: 'Xóa' }).click();
   }

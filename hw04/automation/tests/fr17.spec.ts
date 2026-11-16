@@ -136,6 +136,8 @@ test.describe('FR-17 Quản lý mã giảm giá', () => {
               .poll(() => dialogs.length, { message: 'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ' })
               .toBeGreaterThan(0);
           }
+          // Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.
+          await p.scrollTableToEnd();
           // AP-03 số lượng: không có dòng mới.
           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);
         }
