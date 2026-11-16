@@ -19,7 +19,7 @@
     "maxFailures": 0,
     "metadata": {
       "Run by": "23120409",
-      "Run at (ISO 8601)": "2026-11-16T11:46:26.213Z",
+      "Run at (ISO 8601)": "2026-11-16T12:28:21.184Z",
       "Feature": "fr01",
       "Browser": "firefox",
       "actualWorkers": 1
@@ -32,7 +32,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23120409",
-          "Run at (ISO 8601)": "2026-11-16T11:46:26.213Z",
+          "Run at (ISO 8601)": "2026-11-16T12:28:21.184Z",
           "Feature": "fr01",
           "Browser": "firefox",
           "actualWorkers": 1
@@ -52,7 +52,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23120409",
-          "Run at (ISO 8601)": "2026-11-16T11:46:26.213Z",
+          "Run at (ISO 8601)": "2026-11-16T12:28:21.184Z",
           "Feature": "fr01",
           "Browser": "firefox",
           "actualWorkers": 1
@@ -72,7 +72,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23120409",
-          "Run at (ISO 8601)": "2026-11-16T11:46:26.213Z",
+          "Run at (ISO 8601)": "2026-11-16T12:28:21.184Z",
           "Feature": "fr01",
           "Browser": "firefox",
           "actualWorkers": 1
@@ -96,7 +96,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23120409",
-          "Run at (ISO 8601)": "2026-11-16T11:46:26.213Z",
+          "Run at (ISO 8601)": "2026-11-16T12:28:21.184Z",
           "Feature": "fr01",
           "Browser": "firefox",
           "actualWorkers": 1
@@ -143,7 +143,7 @@
         "html",
         {
           "outputFolder": "reports/fr01/firefox",
-          "title": "Run by: 23120409 | fr01-firefox | 2026-11-16T11:46:26.213Z",
+          "title": "Run by: 23120409 | fr01-firefox | 2026-11-16T12:28:21.184Z",
           "open": "never"
         }
       ],
@@ -193,7 +193,7 @@
                       "description": "Positive",
                       "location": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "line": 17,
+                        "line": 20,
                         "column": 5
                       }
                     }
@@ -206,25 +206,25 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 9280,
+                      "duration": 9643,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:37:30\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7",
+                        "message": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
+                        "stack": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:40:87\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7",
                         "location": {
                           "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                          "column": 30,
-                          "line": 37
+                          "column": 87,
+                          "line": 40
                         },
-                        "snippet": " \u001b[90m 35 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'success'\u001b[39m) {\n \u001b[90m 36 |\u001b[39m           \u001b[90m// AP-01 URL: chuyển tới trang Đăng nhập.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(\u001b[32m`${tc.expected.url}$`\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m           \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m         }\n \u001b[90m 40 |\u001b[39m"
+                        "snippet": " \u001b[90m 38 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'success'\u001b[39m) {\n \u001b[90m 39 |\u001b[39m           \u001b[90m// AP-01 URL: chuyển tới trang Đăng nhập.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page\u001b[33m,\u001b[39m \u001b[32m`Đăng ký thành công phải chuyển tới ${tc.expected.url}`\u001b[39m)\u001b[33m.\u001b[39mtoHaveURL(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(\u001b[32m`${tc.expected.url}$`\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m           \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m         }\n \u001b[90m 43 |\u001b[39m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "column": 30,
-                            "line": 37
+                            "column": 87,
+                            "line": 40
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n\n  35 |         if (tc.expected.outcome === 'success') {\n  36 |           // AP-01 URL: chuyển tới trang Đăng nhập.\n> 37 |           await expect(page).toHaveURL(new RegExp(`${tc.expected.url}$`));\n     |                              ^\n  38 |           return;\n  39 |         }\n  40 |\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:37:30\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7"
+                          "message": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n\n  38 |         if (tc.expected.outcome === 'success') {\n  39 |           // AP-01 URL: chuyển tới trang Đăng nhập.\n> 40 |           await expect(page, `Đăng ký thành công phải chuyển tới ${tc.expected.url}`).toHaveURL(new RegExp(`${tc.expected.url}$`));\n     |                                                                                       ^\n  41 |           return;\n  42 |         }\n  43 |\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:40:87\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7"
                         }
                       ],
                       "stdout": [],
@@ -233,35 +233,35 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 2394
+                          "duration": 2483
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 277
+                          "duration": 292
                         },
                         {
                           "title": "Kiểm tra",
                           "duration": 5022,
                           "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:37:30\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7",
+                            "message": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
+                            "stack": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:40:87\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7",
                             "location": {
                               "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                              "column": 30,
-                              "line": 37
+                              "column": 87,
+                              "line": 40
                             },
-                            "snippet": " \u001b[90m 35 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'success'\u001b[39m) {\n \u001b[90m 36 |\u001b[39m           \u001b[90m// AP-01 URL: chuyển tới trang Đăng nhập.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(\u001b[32m`${tc.expected.url}$`\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m           \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m         }\n \u001b[90m 40 |\u001b[39m"
+                            "snippet": " \u001b[90m 38 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'success'\u001b[39m) {\n \u001b[90m 39 |\u001b[39m           \u001b[90m// AP-01 URL: chuyển tới trang Đăng nhập.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page\u001b[33m,\u001b[39m \u001b[32m`Đăng ký thành công phải chuyển tới ${tc.expected.url}`\u001b[39m)\u001b[33m.\u001b[39mtoHaveURL(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(\u001b[32m`${tc.expected.url}$`\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m           \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m         }\n \u001b[90m 43 |\u001b[39m"
                           }
                         }
                       ],
-                      "startTime": "2026-11-16T11:46:33.581Z",
+                      "startTime": "2026-11-16T12:28:28.508Z",
                       "annotations": [
                         {
                           "type": "type",
                           "description": "Positive",
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "line": 17,
+                            "line": 20,
                             "column": 5
                           }
                         }
@@ -280,8 +280,8 @@
                       ],
                       "errorLocation": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "column": 30,
-                        "line": 37
+                        "column": 87,
+                        "line": 40
                       }
                     }
                   ],
@@ -290,7 +290,7 @@
               ],
               "id": "1188b511a180e624c749-3059e6ca1bfdbf5c9c3f",
               "file": "fr01.spec.ts",
-              "line": 17,
+              "line": 20,
               "column": 5
             },
             {
@@ -308,7 +308,16 @@
                       "description": "Edge",
                       "location": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "line": 17,
+                        "line": 20,
+                        "column": 5
+                      }
+                    },
+                    {
+                      "type": "note",
+                      "description": "Đặc tả không quy định phân biệt hoa/thường email; expected theo quyết định HW02 (gap #6).",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
+                        "line": 20,
                         "column": 5
                       }
                     }
@@ -321,25 +330,25 @@
                       "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 9207,
+                      "duration": 9041,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:37:30\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7",
+                        "message": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
+                        "stack": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:40:87\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7",
                         "location": {
                           "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                          "column": 30,
-                          "line": 37
+                          "column": 87,
+                          "line": 40
                         },
-                        "snippet": " \u001b[90m 35 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'success'\u001b[39m) {\n \u001b[90m 36 |\u001b[39m           \u001b[90m// AP-01 URL: chuyển tới trang Đăng nhập.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(\u001b[32m`${tc.expected.url}$`\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m           \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m         }\n \u001b[90m 40 |\u001b[39m"
+                        "snippet": " \u001b[90m 38 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'success'\u001b[39m) {\n \u001b[90m 39 |\u001b[39m           \u001b[90m// AP-01 URL: chuyển tới trang Đăng nhập.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page\u001b[33m,\u001b[39m \u001b[32m`Đăng ký thành công phải chuyển tới ${tc.expected.url}`\u001b[39m)\u001b[33m.\u001b[39mtoHaveURL(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(\u001b[32m`${tc.expected.url}$`\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m           \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m         }\n \u001b[90m 43 |\u001b[39m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "column": 30,
-                            "line": 37
+                            "column": 87,
+                            "line": 40
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n\n  35 |         if (tc.expected.outcome === 'success') {\n  36 |           // AP-01 URL: chuyển tới trang Đăng nhập.\n> 37 |           await expect(page).toHaveURL(new RegExp(`${tc.expected.url}$`));\n     |                              ^\n  38 |           return;\n  39 |         }\n  40 |\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:37:30\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7"
+                          "message": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n\n  38 |         if (tc.expected.outcome === 'success') {\n  39 |           // AP-01 URL: chuyển tới trang Đăng nhập.\n> 40 |           await expect(page, `Đăng ký thành công phải chuyển tới ${tc.expected.url}`).toHaveURL(new RegExp(`${tc.expected.url}$`));\n     |                                                                                       ^\n  41 |           return;\n  42 |         }\n  43 |\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:40:87\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7"
                         }
                       ],
                       "stdout": [],
@@ -348,35 +357,44 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 2494
+                          "duration": 2318
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 240
+                          "duration": 222
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 5031,
+                          "duration": 5028,
                           "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:37:30\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7",
+                            "message": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
+                            "stack": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:40:87\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7",
                             "location": {
                               "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                              "column": 30,
-                              "line": 37
+                              "column": 87,
+                              "line": 40
                             },
-                            "snippet": " \u001b[90m 35 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'success'\u001b[39m) {\n \u001b[90m 36 |\u001b[39m           \u001b[90m// AP-01 URL: chuyển tới trang Đăng nhập.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(\u001b[32m`${tc.expected.url}$`\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m           \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m         }\n \u001b[90m 40 |\u001b[39m"
+                            "snippet": " \u001b[90m 38 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'success'\u001b[39m) {\n \u001b[90m 39 |\u001b[39m           \u001b[90m// AP-01 URL: chuyển tới trang Đăng nhập.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page\u001b[33m,\u001b[39m \u001b[32m`Đăng ký thành công phải chuyển tới ${tc.expected.url}`\u001b[39m)\u001b[33m.\u001b[39mtoHaveURL(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(\u001b[32m`${tc.expected.url}$`\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m           \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m         }\n \u001b[90m 43 |\u001b[39m"
                           }
                         }
                       ],
-                      "startTime": "2026-11-16T11:46:45.382Z",
+                      "startTime": "2026-11-16T12:28:40.507Z",
                       "annotations": [
                         {
                           "type": "type",
                           "description": "Edge",
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "line": 17,
+                            "line": 20,
+                            "column": 5
+                          }
+                        },
+                        {
+                          "type": "note",
+                          "description": "Đặc tả không quy định phân biệt hoa/thường email; expected theo quyết định HW02 (gap #6).",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
+                            "line": 20,
                             "column": 5
                           }
                         }
@@ -395,8 +413,8 @@
                       ],
                       "errorLocation": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "column": 30,
-                        "line": 37
+                        "column": 87,
+                        "line": 40
                       }
                     }
                   ],
@@ -405,7 +423,7 @@
               ],
               "id": "1188b511a180e624c749-eabf1cdce329035e87bc",
               "file": "fr01.spec.ts",
-              "line": 17,
+              "line": 20,
               "column": 5
             },
             {
@@ -421,7 +439,7 @@
                       "description": "Edge",
                       "location": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "line": 17,
+                        "line": 20,
                         "column": 5
                       }
                     }
@@ -434,25 +452,25 @@
                       "workerIndex": 2,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 9510,
+                      "duration": 9569,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:37:30\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7",
+                        "message": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
+                        "stack": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:40:87\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7",
                         "location": {
                           "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                          "column": 30,
-                          "line": 37
+                          "column": 87,
+                          "line": 40
                         },
-                        "snippet": " \u001b[90m 35 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'success'\u001b[39m) {\n \u001b[90m 36 |\u001b[39m           \u001b[90m// AP-01 URL: chuyển tới trang Đăng nhập.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(\u001b[32m`${tc.expected.url}$`\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m           \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m         }\n \u001b[90m 40 |\u001b[39m"
+                        "snippet": " \u001b[90m 38 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'success'\u001b[39m) {\n \u001b[90m 39 |\u001b[39m           \u001b[90m// AP-01 URL: chuyển tới trang Đăng nhập.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page\u001b[33m,\u001b[39m \u001b[32m`Đăng ký thành công phải chuyển tới ${tc.expected.url}`\u001b[39m)\u001b[33m.\u001b[39mtoHaveURL(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(\u001b[32m`${tc.expected.url}$`\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m           \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m         }\n \u001b[90m 43 |\u001b[39m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "column": 30,
-                            "line": 37
+                            "column": 87,
+                            "line": 40
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n\n  35 |         if (tc.expected.outcome === 'success') {\n  36 |           // AP-01 URL: chuyển tới trang Đăng nhập.\n> 37 |           await expect(page).toHaveURL(new RegExp(`${tc.expected.url}$`));\n     |                              ^\n  38 |           return;\n  39 |         }\n  40 |\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:37:30\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7"
+                          "message": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n\n  38 |         if (tc.expected.outcome === 'success') {\n  39 |           // AP-01 URL: chuyển tới trang Đăng nhập.\n> 40 |           await expect(page, `Đăng ký thành công phải chuyển tới ${tc.expected.url}`).toHaveURL(new RegExp(`${tc.expected.url}$`));\n     |                                                                                       ^\n  41 |           return;\n  42 |         }\n  43 |\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:40:87\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7"
                         }
                       ],
                       "stdout": [],
@@ -461,35 +479,35 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 2393
+                          "duration": 2495
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 314
+                          "duration": 287
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 5018,
+                          "duration": 5013,
                           "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:37:30\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7",
+                            "message": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
+                            "stack": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:40:87\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7",
                             "location": {
                               "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                              "column": 30,
-                              "line": 37
+                              "column": 87,
+                              "line": 40
                             },
-                            "snippet": " \u001b[90m 35 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'success'\u001b[39m) {\n \u001b[90m 36 |\u001b[39m           \u001b[90m// AP-01 URL: chuyển tới trang Đăng nhập.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(\u001b[32m`${tc.expected.url}$`\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m           \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m         }\n \u001b[90m 40 |\u001b[39m"
+                            "snippet": " \u001b[90m 38 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'success'\u001b[39m) {\n \u001b[90m 39 |\u001b[39m           \u001b[90m// AP-01 URL: chuyển tới trang Đăng nhập.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page\u001b[33m,\u001b[39m \u001b[32m`Đăng ký thành công phải chuyển tới ${tc.expected.url}`\u001b[39m)\u001b[33m.\u001b[39mtoHaveURL(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(\u001b[32m`${tc.expected.url}$`\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m           \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m         }\n \u001b[90m 43 |\u001b[39m"
                           }
                         }
                       ],
-                      "startTime": "2026-11-16T11:46:57.250Z",
+                      "startTime": "2026-11-16T12:28:51.847Z",
                       "annotations": [
                         {
                           "type": "type",
                           "description": "Edge",
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "line": 17,
+                            "line": 20,
                             "column": 5
                           }
                         }
@@ -508,8 +526,8 @@
                       ],
                       "errorLocation": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "column": 30,
-                        "line": 37
+                        "column": 87,
+                        "line": 40
                       }
                     }
                   ],
@@ -518,7 +536,7 @@
               ],
               "id": "1188b511a180e624c749-dae3d8af46b0f7a05956",
               "file": "fr01.spec.ts",
-              "line": 17,
+              "line": 20,
               "column": 5
             },
             {
@@ -534,7 +552,7 @@
                       "description": "Edge",
                       "location": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "line": 17,
+                        "line": 20,
                         "column": 5
                       }
                     }
@@ -547,25 +565,25 @@
                       "workerIndex": 3,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 9073,
+                      "duration": 9210,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:37:30\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7",
+                        "message": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
+                        "stack": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:40:87\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7",
                         "location": {
                           "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                          "column": 30,
-                          "line": 37
+                          "column": 87,
+                          "line": 40
                         },
-                        "snippet": " \u001b[90m 35 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'success'\u001b[39m) {\n \u001b[90m 36 |\u001b[39m           \u001b[90m// AP-01 URL: chuyển tới trang Đăng nhập.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(\u001b[32m`${tc.expected.url}$`\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m           \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m         }\n \u001b[90m 40 |\u001b[39m"
+                        "snippet": " \u001b[90m 38 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'success'\u001b[39m) {\n \u001b[90m 39 |\u001b[39m           \u001b[90m// AP-01 URL: chuyển tới trang Đăng nhập.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page\u001b[33m,\u001b[39m \u001b[32m`Đăng ký thành công phải chuyển tới ${tc.expected.url}`\u001b[39m)\u001b[33m.\u001b[39mtoHaveURL(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(\u001b[32m`${tc.expected.url}$`\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m           \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m         }\n \u001b[90m 43 |\u001b[39m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "column": 30,
-                            "line": 37
+                            "column": 87,
+                            "line": 40
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n\n  35 |         if (tc.expected.outcome === 'success') {\n  36 |           // AP-01 URL: chuyển tới trang Đăng nhập.\n> 37 |           await expect(page).toHaveURL(new RegExp(`${tc.expected.url}$`));\n     |                              ^\n  38 |           return;\n  39 |         }\n  40 |\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:37:30\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7"
+                          "message": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n\n  38 |         if (tc.expected.outcome === 'success') {\n  39 |           // AP-01 URL: chuyển tới trang Đăng nhập.\n> 40 |           await expect(page, `Đăng ký thành công phải chuyển tới ${tc.expected.url}`).toHaveURL(new RegExp(`${tc.expected.url}$`));\n     |                                                                                       ^\n  41 |           return;\n  42 |         }\n  43 |\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:40:87\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7"
                         }
                       ],
                       "stdout": [],
@@ -574,35 +592,35 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 2388
+                          "duration": 2351
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 359
+                          "duration": 397
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 5018,
+                          "duration": 5023,
                           "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:37:30\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7",
+                            "message": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
+                            "stack": "Error: Đăng ký thành công phải chuyển tới /login\n\n\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Đăng ký thành công phải chuyển tới /login with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:40:87\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7",
                             "location": {
                               "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                              "column": 30,
-                              "line": 37
+                              "column": 87,
+                              "line": 40
                             },
-                            "snippet": " \u001b[90m 35 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'success'\u001b[39m) {\n \u001b[90m 36 |\u001b[39m           \u001b[90m// AP-01 URL: chuyển tới trang Đăng nhập.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(\u001b[32m`${tc.expected.url}$`\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m           \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m         }\n \u001b[90m 40 |\u001b[39m"
+                            "snippet": " \u001b[90m 38 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39moutcome \u001b[33m===\u001b[39m \u001b[32m'success'\u001b[39m) {\n \u001b[90m 39 |\u001b[39m           \u001b[90m// AP-01 URL: chuyển tới trang Đăng nhập.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page\u001b[33m,\u001b[39m \u001b[32m`Đăng ký thành công phải chuyển tới ${tc.expected.url}`\u001b[39m)\u001b[33m.\u001b[39mtoHaveURL(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(\u001b[32m`${tc.expected.url}$`\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m           \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m         }\n \u001b[90m 43 |\u001b[39m"
                           }
                         }
                       ],
-                      "startTime": "2026-11-16T11:47:09.212Z",
+                      "startTime": "2026-11-16T12:29:03.676Z",
                       "annotations": [
                         {
                           "type": "type",
                           "description": "Edge",
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "line": 17,
+                            "line": 20,
                             "column": 5
                           }
                         }
@@ -621,8 +639,8 @@
                       ],
                       "errorLocation": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "column": 30,
-                        "line": 37
+                        "column": 87,
+                        "line": 40
                       }
                     }
                   ],
@@ -631,7 +649,7 @@
               ],
               "id": "1188b511a180e624c749-d3cf903dba8f26a08c62",
               "file": "fr01.spec.ts",
-              "line": 17,
+              "line": 20,
               "column": 5
             },
             {
@@ -647,7 +665,16 @@
                       "description": "Edge",
                       "location": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "line": 17,
+                        "line": 20,
+                        "column": 5
+                      }
+                    },
+                    {
+                      "type": "note",
+                      "description": "Pass ở UI nhưng bị che khuất bởi BUG-FR01-01.",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
+                        "line": 20,
                         "column": 5
                       }
                     }
@@ -660,7 +687,7 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4063,
+                      "duration": 4230,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -668,25 +695,34 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 2403
+                          "duration": 2431
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 238
+                          "duration": 275
                         },
                         {
                           "title": "Kiểm tra",
                           "duration": 38
                         }
                       ],
-                      "startTime": "2026-11-16T11:47:20.421Z",
+                      "startTime": "2026-11-16T12:29:15.260Z",
                       "annotations": [
                         {
                           "type": "type",
                           "description": "Edge",
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "line": 17,
+                            "line": 20,
+                            "column": 5
+                          }
+                        },
+                        {
+                          "type": "note",
+                          "description": "Pass ở UI nhưng bị che khuất bởi BUG-FR01-01.",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
+                            "line": 20,
                             "column": 5
                           }
                         }
@@ -699,7 +735,7 @@
               ],
               "id": "1188b511a180e624c749-1ee4223becb19514b865",
               "file": "fr01.spec.ts",
-              "line": 17,
+              "line": 20,
               "column": 5
             },
             {
@@ -715,7 +751,7 @@
                       "description": "Negative",
                       "location": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "line": 17,
+                        "line": 20,
                         "column": 5
                       }
                     }
@@ -728,7 +764,7 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3017,
+                      "duration": 3148,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -736,25 +772,25 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 2367
+                          "duration": 2374
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 187
+                          "duration": 244
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 66
+                          "duration": 92
                         }
                       ],
-                      "startTime": "2026-11-16T11:47:25.382Z",
+                      "startTime": "2026-11-16T12:29:20.441Z",
                       "annotations": [
                         {
                           "type": "type",
                           "description": "Negative",
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "line": 17,
+                            "line": 20,
                             "column": 5
                           }
                         }
@@ -767,7 +803,7 @@
               ],
               "id": "1188b511a180e624c749-abbb4f591def28770460",
               "file": "fr01.spec.ts",
-              "line": 17,
+              "line": 20,
               "column": 5
             },
             {
@@ -783,7 +819,7 @@
                       "description": "Negative",
                       "location": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "line": 17,
+                        "line": 20,
                         "column": 5
                       }
                     }
@@ -796,7 +832,7 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2971,
+                      "duration": 3198,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -804,25 +840,25 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 2306
+                          "duration": 2422
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 208
+                          "duration": 223
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 74
+                          "duration": 105
                         }
                       ],
-                      "startTime": "2026-11-16T11:47:28.414Z",
+                      "startTime": "2026-11-16T12:29:23.607Z",
                       "annotations": [
                         {
                           "type": "type",
                           "description": "Negative",
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "line": 17,
+                            "line": 20,
                             "column": 5
                           }
                         }
@@ -835,7 +871,7 @@
               ],
               "id": "1188b511a180e624c749-77251ef691eada5de837",
               "file": "fr01.spec.ts",
-              "line": 17,
+              "line": 20,
               "column": 5
             },
             {
@@ -851,7 +887,7 @@
                       "description": "Negative",
                       "location": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "line": 17,
+                        "line": 20,
                         "column": 5
                       }
                     }
@@ -864,7 +900,7 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3045,
+                      "duration": 3250,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -872,25 +908,25 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 2283
+                          "duration": 2369
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 212
+                          "duration": 215
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 76
+                          "duration": 84
                         }
                       ],
-                      "startTime": "2026-11-16T11:47:31.401Z",
+                      "startTime": "2026-11-16T12:29:26.822Z",
                       "annotations": [
                         {
                           "type": "type",
                           "description": "Negative",
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "line": 17,
+                            "line": 20,
                             "column": 5
                           }
                         }
@@ -903,7 +939,7 @@
               ],
               "id": "1188b511a180e624c749-e0948beb098f580bbada",
               "file": "fr01.spec.ts",
-              "line": 17,
+              "line": 20,
               "column": 5
             },
             {
@@ -919,7 +955,7 @@
                       "description": "Negative",
                       "location": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "line": 17,
+                        "line": 20,
                         "column": 5
                       }
                     }
@@ -932,25 +968,25 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 7953,
+                      "duration": 8018,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/tên/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/tên/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:52:40\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7",
+                        "message": "Error: Thông báo lỗi phải nêu đúng trường bị sai (chứa \"tên\")\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/tên/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Thông báo lỗi phải nêu đúng trường bị sai (chứa \"tên\") locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n",
+                        "stack": "Error: Thông báo lỗi phải nêu đúng trường bị sai (chứa \"tên\")\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/tên/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Thông báo lỗi phải nêu đúng trường bị sai (chứa \"tên\") locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:61:13\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7",
                         "location": {
                           "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                          "column": 40,
-                          "line": 52
+                          "column": 13,
+                          "line": 61
                         },
-                        "snippet": " \u001b[90m 50 |\u001b[39m           \u001b[90m// AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.\u001b[39m\n \u001b[90m 51 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39merrorMessage)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 52 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39merrorMessage)\u001b[33m.\u001b[39mtoContainText(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mmessage\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 53 |\u001b[39m         }\n \u001b[90m 54 |\u001b[39m\n \u001b[90m 55 |\u001b[39m         \u001b[90m// AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.\u001b[39m"
+                        "snippet": " \u001b[90m 59 |\u001b[39m             p\u001b[33m.\u001b[39merrorMessage\u001b[33m,\u001b[39m\n \u001b[90m 60 |\u001b[39m             \u001b[32m`Thông báo lỗi phải nêu đúng trường bị sai (chứa \"${tc.expected.message}\")`\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 61 |\u001b[39m           )\u001b[33m.\u001b[39mtoContainText(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mmessage\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 62 |\u001b[39m         }\n \u001b[90m 63 |\u001b[39m\n \u001b[90m 64 |\u001b[39m         \u001b[90m// AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.\u001b[39m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "column": 40,
-                            "line": 52
+                            "column": 13,
+                            "line": 61
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/tên/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n\n\n  50 |           // AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.\n  51 |           await expect(p.errorMessage).toBeVisible();\n> 52 |           await expect(p.errorMessage).toContainText(new RegExp(tc.expected.message, 'i'));\n     |                                        ^\n  53 |         }\n  54 |\n  55 |         // AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:52:40\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7"
+                          "message": "Error: Thông báo lỗi phải nêu đúng trường bị sai (chứa \"tên\")\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/tên/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Thông báo lỗi phải nêu đúng trường bị sai (chứa \"tên\") locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n\n\n  59 |             p.errorMessage,\n  60 |             `Thông báo lỗi phải nêu đúng trường bị sai (chứa \"${tc.expected.message}\")`,\n> 61 |           ).toContainText(new RegExp(tc.expected.message, 'i'));\n     |             ^\n  62 |         }\n  63 |\n  64 |         // AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:61:13\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7"
                         }
                       ],
                       "stdout": [],
@@ -959,35 +995,35 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 2343
+                          "duration": 2283
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 193
+                          "duration": 219
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 5023,
+                          "duration": 5021,
                           "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/tên/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/tên/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:52:40\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7",
+                            "message": "Error: Thông báo lỗi phải nêu đúng trường bị sai (chứa \"tên\")\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/tên/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Thông báo lỗi phải nêu đúng trường bị sai (chứa \"tên\") locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n",
+                            "stack": "Error: Thông báo lỗi phải nêu đúng trường bị sai (chứa \"tên\")\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/tên/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Thông báo lỗi phải nêu đúng trường bị sai (chứa \"tên\") locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:61:13\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7",
                             "location": {
                               "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                              "column": 40,
-                              "line": 52
+                              "column": 13,
+                              "line": 61
                             },
-                            "snippet": " \u001b[90m 50 |\u001b[39m           \u001b[90m// AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.\u001b[39m\n \u001b[90m 51 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39merrorMessage)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 52 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39merrorMessage)\u001b[33m.\u001b[39mtoContainText(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mmessage\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 53 |\u001b[39m         }\n \u001b[90m 54 |\u001b[39m\n \u001b[90m 55 |\u001b[39m         \u001b[90m// AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.\u001b[39m"
+                            "snippet": " \u001b[90m 59 |\u001b[39m             p\u001b[33m.\u001b[39merrorMessage\u001b[33m,\u001b[39m\n \u001b[90m 60 |\u001b[39m             \u001b[32m`Thông báo lỗi phải nêu đúng trường bị sai (chứa \"${tc.expected.message}\")`\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 61 |\u001b[39m           )\u001b[33m.\u001b[39mtoContainText(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mmessage\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 62 |\u001b[39m         }\n \u001b[90m 63 |\u001b[39m\n \u001b[90m 64 |\u001b[39m         \u001b[90m// AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.\u001b[39m"
                           }
                         }
                       ],
-                      "startTime": "2026-11-16T11:47:34.461Z",
+                      "startTime": "2026-11-16T12:29:30.087Z",
                       "annotations": [
                         {
                           "type": "type",
                           "description": "Negative",
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "line": 17,
+                            "line": 20,
                             "column": 5
                           }
                         }
@@ -1006,8 +1042,8 @@
                       ],
                       "errorLocation": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "column": 40,
-                        "line": 52
+                        "column": 13,
+                        "line": 61
                       }
                     }
                   ],
@@ -1016,7 +1052,7 @@
               ],
               "id": "1188b511a180e624c749-7179d3fed3be80a38241",
               "file": "fr01.spec.ts",
-              "line": 17,
+              "line": 20,
               "column": 5
             },
             {
@@ -1032,7 +1068,7 @@
                       "description": "Negative",
                       "location": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "line": 17,
+                        "line": 20,
                         "column": 5
                       }
                     }
@@ -1045,25 +1081,25 @@
                       "workerIndex": 5,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 9216,
+                      "duration": 9158,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:52:40\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7",
+                        "message": "Error: Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\")\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\") locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n",
+                        "stack": "Error: Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\")\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\") locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:61:13\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7",
                         "location": {
                           "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                          "column": 40,
-                          "line": 52
+                          "column": 13,
+                          "line": 61
                         },
-                        "snippet": " \u001b[90m 50 |\u001b[39m           \u001b[90m// AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.\u001b[39m\n \u001b[90m 51 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39merrorMessage)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 52 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39merrorMessage)\u001b[33m.\u001b[39mtoContainText(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mmessage\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 53 |\u001b[39m         }\n \u001b[90m 54 |\u001b[39m\n \u001b[90m 55 |\u001b[39m         \u001b[90m// AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.\u001b[39m"
+                        "snippet": " \u001b[90m 59 |\u001b[39m             p\u001b[33m.\u001b[39merrorMessage\u001b[33m,\u001b[39m\n \u001b[90m 60 |\u001b[39m             \u001b[32m`Thông báo lỗi phải nêu đúng trường bị sai (chứa \"${tc.expected.message}\")`\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 61 |\u001b[39m           )\u001b[33m.\u001b[39mtoContainText(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mmessage\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 62 |\u001b[39m         }\n \u001b[90m 63 |\u001b[39m\n \u001b[90m 64 |\u001b[39m         \u001b[90m// AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.\u001b[39m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "column": 40,
-                            "line": 52
+                            "column": 13,
+                            "line": 61
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n\n\n  50 |           // AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.\n  51 |           await expect(p.errorMessage).toBeVisible();\n> 52 |           await expect(p.errorMessage).toContainText(new RegExp(tc.expected.message, 'i'));\n     |                                        ^\n  53 |         }\n  54 |\n  55 |         // AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:52:40\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7"
+                          "message": "Error: Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\")\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\") locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n\n\n  59 |             p.errorMessage,\n  60 |             `Thông báo lỗi phải nêu đúng trường bị sai (chứa \"${tc.expected.message}\")`,\n> 61 |           ).toContainText(new RegExp(tc.expected.message, 'i'));\n     |             ^\n  62 |         }\n  63 |\n  64 |         // AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:61:13\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7"
                         }
                       ],
                       "stdout": [],
@@ -1072,35 +1108,35 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 2435
+                          "duration": 2372
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 295
+                          "duration": 293
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 5032,
+                          "duration": 5036,
                           "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:52:40\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7",
+                            "message": "Error: Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\")\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\") locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n",
+                            "stack": "Error: Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\")\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\") locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:61:13\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7",
                             "location": {
                               "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                              "column": 40,
-                              "line": 52
+                              "column": 13,
+                              "line": 61
                             },
-                            "snippet": " \u001b[90m 50 |\u001b[39m           \u001b[90m// AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.\u001b[39m\n \u001b[90m 51 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39merrorMessage)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 52 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39merrorMessage)\u001b[33m.\u001b[39mtoContainText(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mmessage\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 53 |\u001b[39m         }\n \u001b[90m 54 |\u001b[39m\n \u001b[90m 55 |\u001b[39m         \u001b[90m// AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.\u001b[39m"
+                            "snippet": " \u001b[90m 59 |\u001b[39m             p\u001b[33m.\u001b[39merrorMessage\u001b[33m,\u001b[39m\n \u001b[90m 60 |\u001b[39m             \u001b[32m`Thông báo lỗi phải nêu đúng trường bị sai (chứa \"${tc.expected.message}\")`\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 61 |\u001b[39m           )\u001b[33m.\u001b[39mtoContainText(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mmessage\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 62 |\u001b[39m         }\n \u001b[90m 63 |\u001b[39m\n \u001b[90m 64 |\u001b[39m         \u001b[90m// AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.\u001b[39m"
                           }
                         }
                       ],
-                      "startTime": "2026-11-16T11:47:43.670Z",
+                      "startTime": "2026-11-16T12:29:39.509Z",
                       "annotations": [
                         {
                           "type": "type",
                           "description": "Negative",
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "line": 17,
+                            "line": 20,
                             "column": 5
                           }
                         }
@@ -1119,8 +1155,8 @@
                       ],
                       "errorLocation": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "column": 40,
-                        "line": 52
+                        "column": 13,
+                        "line": 61
                       }
                     }
                   ],
@@ -1129,7 +1165,7 @@
               ],
               "id": "1188b511a180e624c749-4283722e0e5aaee78ca7",
               "file": "fr01.spec.ts",
-              "line": 17,
+              "line": 20,
               "column": 5
             },
             {
@@ -1147,7 +1183,7 @@
                       "description": "Negative",
                       "location": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "line": 17,
+                        "line": 20,
                         "column": 5
                       }
                     }
@@ -1160,25 +1196,25 @@
                       "workerIndex": 6,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 8990,
+                      "duration": 9248,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:52:40\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7",
+                        "message": "Error: Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\")\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\") locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n",
+                        "stack": "Error: Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\")\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\") locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:61:13\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7",
                         "location": {
                           "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                          "column": 40,
-                          "line": 52
+                          "column": 13,
+                          "line": 61
                         },
-                        "snippet": " \u001b[90m 50 |\u001b[39m           \u001b[90m// AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.\u001b[39m\n \u001b[90m 51 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39merrorMessage)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 52 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39merrorMessage)\u001b[33m.\u001b[39mtoContainText(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mmessage\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 53 |\u001b[39m         }\n \u001b[90m 54 |\u001b[39m\n \u001b[90m 55 |\u001b[39m         \u001b[90m// AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.\u001b[39m"
+                        "snippet": " \u001b[90m 59 |\u001b[39m             p\u001b[33m.\u001b[39merrorMessage\u001b[33m,\u001b[39m\n \u001b[90m 60 |\u001b[39m             \u001b[32m`Thông báo lỗi phải nêu đúng trường bị sai (chứa \"${tc.expected.message}\")`\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 61 |\u001b[39m           )\u001b[33m.\u001b[39mtoContainText(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mmessage\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 62 |\u001b[39m         }\n \u001b[90m 63 |\u001b[39m\n \u001b[90m 64 |\u001b[39m         \u001b[90m// AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.\u001b[39m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "column": 40,
-                            "line": 52
+                            "column": 13,
+                            "line": 61
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n\n\n  50 |           // AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.\n  51 |           await expect(p.errorMessage).toBeVisible();\n> 52 |           await expect(p.errorMessage).toContainText(new RegExp(tc.expected.message, 'i'));\n     |                                        ^\n  53 |         }\n  54 |\n  55 |         // AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:52:40\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7"
+                          "message": "Error: Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\")\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\") locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n\n\n  59 |             p.errorMessage,\n  60 |             `Thông báo lỗi phải nêu đúng trường bị sai (chứa \"${tc.expected.message}\")`,\n> 61 |           ).toContainText(new RegExp(tc.expected.message, 'i'));\n     |             ^\n  62 |         }\n  63 |\n  64 |         // AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:61:13\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7"
                         }
                       ],
                       "stdout": [],
@@ -1187,35 +1223,35 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 2375
+                          "duration": 2389
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 232
+                          "duration": 303
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 5027,
+                          "duration": 5045,
                           "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:52:40\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7",
+                            "message": "Error: Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\")\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\") locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n",
+                            "stack": "Error: Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\")\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected pattern: \u001b[32m/email/i\u001b[39m\nReceived string:  \u001b[31m\"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Thông báo lỗi phải nêu đúng trường bị sai (chứa \"email\") locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mb-4 rounded\">Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Mật khẩu quá yếu! Phải dài tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số và KÝ TỰ ĐẶC BIỆT.\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:61:13\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7",
                             "location": {
                               "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                              "column": 40,
-                              "line": 52
+                              "column": 13,
+                              "line": 61
                             },
-                            "snippet": " \u001b[90m 50 |\u001b[39m           \u001b[90m// AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.\u001b[39m\n \u001b[90m 51 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39merrorMessage)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 52 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39merrorMessage)\u001b[33m.\u001b[39mtoContainText(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mmessage\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 53 |\u001b[39m         }\n \u001b[90m 54 |\u001b[39m\n \u001b[90m 55 |\u001b[39m         \u001b[90m// AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.\u001b[39m"
+                            "snippet": " \u001b[90m 59 |\u001b[39m             p\u001b[33m.\u001b[39merrorMessage\u001b[33m,\u001b[39m\n \u001b[90m 60 |\u001b[39m             \u001b[32m`Thông báo lỗi phải nêu đúng trường bị sai (chứa \"${tc.expected.message}\")`\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 61 |\u001b[39m           )\u001b[33m.\u001b[39mtoContainText(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mmessage\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 62 |\u001b[39m         }\n \u001b[90m 63 |\u001b[39m\n \u001b[90m 64 |\u001b[39m         \u001b[90m// AP-01 URL: kiểm sau cùng để không pass sớm khi trang còn đang xử lý.\u001b[39m"
                           }
                         }
                       ],
-                      "startTime": "2026-11-16T11:47:55.092Z",
+                      "startTime": "2026-11-16T12:29:51.117Z",
                       "annotations": [
                         {
                           "type": "type",
                           "description": "Negative",
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "line": 17,
+                            "line": 20,
                             "column": 5
                           }
                         }
@@ -1234,8 +1270,8 @@
                       ],
                       "errorLocation": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "column": 40,
-                        "line": 52
+                        "column": 13,
+                        "line": 61
                       }
                     }
                   ],
@@ -1244,7 +1280,7 @@
               ],
               "id": "1188b511a180e624c749-3171eb4ad14ae80aa171",
               "file": "fr01.spec.ts",
-              "line": 17,
+              "line": 20,
               "column": 5
             },
             {
@@ -1260,7 +1296,16 @@
                       "description": "Negative",
                       "location": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "line": 17,
+                        "line": 20,
+                        "column": 5
+                      }
+                    },
+                    {
+                      "type": "note",
+                      "description": "Pass ở UI nhưng bị che khuất bởi BUG-FR01-01.",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
+                        "line": 20,
                         "column": 5
                       }
                     }
@@ -1273,7 +1318,7 @@
                       "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4094,
+                      "duration": 4096,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -1281,25 +1326,34 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 2366
+                          "duration": 2380
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 259
+                          "duration": 265
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 36
+                          "duration": 38
                         }
                       ],
-                      "startTime": "2026-11-16T11:48:06.391Z",
+                      "startTime": "2026-11-16T12:30:02.764Z",
                       "annotations": [
                         {
                           "type": "type",
                           "description": "Negative",
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "line": 17,
+                            "line": 20,
+                            "column": 5
+                          }
+                        },
+                        {
+                          "type": "note",
+                          "description": "Pass ở UI nhưng bị che khuất bởi BUG-FR01-01.",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
+                            "line": 20,
                             "column": 5
                           }
                         }
@@ -1312,7 +1366,7 @@
               ],
               "id": "1188b511a180e624c749-25424b5b380257e2cfec",
               "file": "fr01.spec.ts",
-              "line": 17,
+              "line": 20,
               "column": 5
             },
             {
@@ -1328,7 +1382,16 @@
                       "description": "Negative",
                       "location": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "line": 17,
+                        "line": 20,
+                        "column": 5
+                      }
+                    },
+                    {
+                      "type": "note",
+                      "description": "Pass ở UI nhưng bị che khuất bởi BUG-FR01-01.",
+                      "location": {
+                        "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
+                        "line": 20,
                         "column": 5
                       }
                     }
@@ -1341,7 +1404,7 @@
                       "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3088,
+                      "duration": 3052,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -1349,25 +1412,34 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 2377
+                          "duration": 2344
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 252
+                          "duration": 254
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 22
+                          "duration": 29
                         }
                       ],
-                      "startTime": "2026-11-16T11:48:11.448Z",
+                      "startTime": "2026-11-16T12:30:07.864Z",
                       "annotations": [
                         {
                           "type": "type",
                           "description": "Negative",
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "line": 17,
+                            "line": 20,
+                            "column": 5
+                          }
+                        },
+                        {
+                          "type": "note",
+                          "description": "Pass ở UI nhưng bị che khuất bởi BUG-FR01-01.",
+                          "location": {
+                            "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
+                            "line": 20,
                             "column": 5
                           }
                         }
@@ -1380,7 +1452,7 @@
               ],
               "id": "1188b511a180e624c749-f49b53da41abf763d173",
               "file": "fr01.spec.ts",
-              "line": 17,
+              "line": 20,
               "column": 5
             },
             {
@@ -1396,7 +1468,7 @@
                       "description": "Negative",
                       "location": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "line": 17,
+                        "line": 20,
                         "column": 5
                       }
                     }
@@ -1409,25 +1481,25 @@
                       "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 8018,
+                      "duration": 7901,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:51:40\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7",
+                        "message": "Error: Phải hiện thông báo lỗi và ở lại trang đăng ký\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Phải hiện thông báo lỗi và ở lại trang đăng ký locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n",
+                        "stack": "Error: Phải hiện thông báo lỗi và ở lại trang đăng ký\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Phải hiện thông báo lỗi và ở lại trang đăng ký locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:57:90\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7",
                         "location": {
                           "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                          "column": 40,
-                          "line": 51
+                          "column": 90,
+                          "line": 57
                         },
-                        "snippet": " \u001b[90m 49 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mmessage) {\n \u001b[90m 50 |\u001b[39m           \u001b[90m// AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 51 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39merrorMessage)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 52 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39merrorMessage)\u001b[33m.\u001b[39mtoContainText(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mmessage\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 53 |\u001b[39m         }\n \u001b[90m 54 |\u001b[39m"
+                        "snippet": " \u001b[90m 55 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mmessage) {\n \u001b[90m 56 |\u001b[39m           \u001b[90m// AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39merrorMessage\u001b[33m,\u001b[39m \u001b[32m'Phải hiện thông báo lỗi và ở lại trang đăng ký'\u001b[39m)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 58 |\u001b[39m           \u001b[36mawait\u001b[39m expect(\n \u001b[90m 59 |\u001b[39m             p\u001b[33m.\u001b[39merrorMessage\u001b[33m,\u001b[39m\n \u001b[90m 60 |\u001b[39m             \u001b[32m`Thông báo lỗi phải nêu đúng trường bị sai (chứa \"${tc.expected.message}\")`\u001b[39m\u001b[33m,\u001b[39m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "column": 40,
-                            "line": 51
+                            "column": 90,
+                            "line": 57
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\n\n  49 |         if (tc.expected.message) {\n  50 |           // AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.\n> 51 |           await expect(p.errorMessage).toBeVisible();\n     |                                        ^\n  52 |           await expect(p.errorMessage).toContainText(new RegExp(tc.expected.message, 'i'));\n  53 |         }\n  54 |\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:51:40\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7"
+                          "message": "Error: Phải hiện thông báo lỗi và ở lại trang đăng ký\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Phải hiện thông báo lỗi và ở lại trang đăng ký locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\n\n  55 |         if (tc.expected.message) {\n  56 |           // AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.\n> 57 |           await expect(p.errorMessage, 'Phải hiện thông báo lỗi và ở lại trang đăng ký').toBeVisible();\n     |                                                                                          ^\n  58 |           await expect(\n  59 |             p.errorMessage,\n  60 |             `Thông báo lỗi phải nêu đúng trường bị sai (chứa \"${tc.expected.message}\")`,\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:57:90\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7"
                         }
                       ],
                       "stdout": [],
@@ -1436,35 +1508,35 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 2373
+                          "duration": 2255
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 216
+                          "duration": 208
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 5013,
+                          "duration": 5010,
                           "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:51:40\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:33:7",
+                            "message": "Error: Phải hiện thông báo lỗi và ở lại trang đăng ký\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Phải hiện thông báo lỗi và ở lại trang đăng ký locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n",
+                            "stack": "Error: Phải hiện thông báo lỗi và ở lại trang đăng ký\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div:has(> form) > div')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Phải hiện thông báo lỗi và ở lại trang đăng ký locator('div:has(> form) > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div:has(> form) > div')\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:57:90\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:36:7",
                             "location": {
                               "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                              "column": 40,
-                              "line": 51
+                              "column": 90,
+                              "line": 57
                             },
-                            "snippet": " \u001b[90m 49 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mmessage) {\n \u001b[90m 50 |\u001b[39m           \u001b[90m// AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 51 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39merrorMessage)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 52 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39merrorMessage)\u001b[33m.\u001b[39mtoContainText(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mmessage\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 53 |\u001b[39m         }\n \u001b[90m 54 |\u001b[39m"
+                            "snippet": " \u001b[90m 55 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mmessage) {\n \u001b[90m 56 |\u001b[39m           \u001b[90m// AP-02 nội dung: thông báo lỗi nêu đúng trường bị sai.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39merrorMessage\u001b[33m,\u001b[39m \u001b[32m'Phải hiện thông báo lỗi và ở lại trang đăng ký'\u001b[39m)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 58 |\u001b[39m           \u001b[36mawait\u001b[39m expect(\n \u001b[90m 59 |\u001b[39m             p\u001b[33m.\u001b[39merrorMessage\u001b[33m,\u001b[39m\n \u001b[90m 60 |\u001b[39m             \u001b[32m`Thông báo lỗi phải nêu đúng trường bị sai (chứa \"${tc.expected.message}\")`\u001b[39m\u001b[33m,\u001b[39m"
                           }
                         }
                       ],
-                      "startTime": "2026-11-16T11:48:14.555Z",
+                      "startTime": "2026-11-16T12:30:10.935Z",
                       "annotations": [
                         {
                           "type": "type",
                           "description": "Negative",
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "line": 17,
+                            "line": 20,
                             "column": 5
                           }
                         }
@@ -1483,8 +1555,8 @@
                       ],
                       "errorLocation": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "column": 40,
-                        "line": 51
+                        "column": 90,
+                        "line": 57
                       }
                     }
                   ],
@@ -1493,7 +1565,7 @@
               ],
               "id": "1188b511a180e624c749-ec6029c02b12a4f56a88",
               "file": "fr01.spec.ts",
-              "line": 17,
+              "line": 20,
               "column": 5
             },
             {
@@ -1509,7 +1581,7 @@
                       "description": "Negative",
                       "location": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                        "line": 17,
+                        "line": 20,
                         "column": 5
                       }
                     }
@@ -1522,25 +1594,25 @@
                       "workerIndex": 8,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 8837,
+                      "duration": 8948,
                       "error": {
                         "message": "Error: Form phải có trường \"Xác nhận mật khẩu\" (FR-01)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('label:text-is(\"Xác nhận mật khẩu\") + input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Form phải có trường \"Xác nhận mật khẩu\" (FR-01) locator('label:text-is(\"Xác nhận mật khẩu\") + input') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('label:text-is(\"Xác nhận mật khẩu\") + input')\u001b[22m\n",
-                        "stack": "Error: Form phải có trường \"Xác nhận mật khẩu\" (FR-01)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('label:text-is(\"Xác nhận mật khẩu\") + input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Form phải có trường \"Xác nhận mật khẩu\" (FR-01) locator('label:text-is(\"Xác nhận mật khẩu\") + input') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('label:text-is(\"Xác nhận mật khẩu\") + input')\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:27:99\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:24:7",
+                        "stack": "Error: Form phải có trường \"Xác nhận mật khẩu\" (FR-01)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('label:text-is(\"Xác nhận mật khẩu\") + input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Form phải có trường \"Xác nhận mật khẩu\" (FR-01) locator('label:text-is(\"Xác nhận mật khẩu\") + input') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('label:text-is(\"Xác nhận mật khẩu\") + input')\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:30:99\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:27:7",
                         "location": {
                           "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
                           "column": 99,
-                          "line": 27
+                          "line": 30
                         },
-                        "snippet": " \u001b[90m 25 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39minput\u001b[33m.\u001b[39mconfirmPassword \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 26 |\u001b[39m           \u001b[90m// AP-02 hiển thị: FR-01 yêu cầu form có trường Xác nhận mật khẩu.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mconfirmPasswordInput\u001b[33m,\u001b[39m \u001b[32m'Form phải có trường \"Xác nhận mật khẩu\" (FR-01)'\u001b[39m)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m         }\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m p\u001b[33m.\u001b[39mfillForm(tc\u001b[33m.\u001b[39minput)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m p\u001b[33m.\u001b[39msubmit()\u001b[33m;\u001b[39m"
+                        "snippet": " \u001b[90m 28 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39minput\u001b[33m.\u001b[39mconfirmPassword \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 29 |\u001b[39m           \u001b[90m// AP-02 hiển thị: FR-01 yêu cầu form có trường Xác nhận mật khẩu.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mconfirmPasswordInput\u001b[33m,\u001b[39m \u001b[32m'Form phải có trường \"Xác nhận mật khẩu\" (FR-01)'\u001b[39m)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m         }\n \u001b[90m 32 |\u001b[39m         \u001b[36mawait\u001b[39m p\u001b[33m.\u001b[39mfillForm(tc\u001b[33m.\u001b[39minput)\u001b[33m;\u001b[39m\n \u001b[90m 33 |\u001b[39m         \u001b[36mawait\u001b[39m p\u001b[33m.\u001b[39msubmit()\u001b[33m;\u001b[39m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
                             "column": 99,
-                            "line": 27
+                            "line": 30
                           },
-                          "message": "Error: Form phải có trường \"Xác nhận mật khẩu\" (FR-01)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('label:text-is(\"Xác nhận mật khẩu\") + input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Form phải có trường \"Xác nhận mật khẩu\" (FR-01) locator('label:text-is(\"Xác nhận mật khẩu\") + input') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('label:text-is(\"Xác nhận mật khẩu\") + input')\u001b[22m\n\n\n  25 |         if (tc.input.confirmPassword !== undefined) {\n  26 |           // AP-02 hiển thị: FR-01 yêu cầu form có trường Xác nhận mật khẩu.\n> 27 |           await expect(p.confirmPasswordInput, 'Form phải có trường \"Xác nhận mật khẩu\" (FR-01)').toBeVisible();\n     |                                                                                                   ^\n  28 |         }\n  29 |         await p.fillForm(tc.input);\n  30 |         await p.submit();\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:27:99\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:24:7"
+                          "message": "Error: Form phải có trường \"Xác nhận mật khẩu\" (FR-01)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('label:text-is(\"Xác nhận mật khẩu\") + input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Form phải có trường \"Xác nhận mật khẩu\" (FR-01) locator('label:text-is(\"Xác nhận mật khẩu\") + input') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('label:text-is(\"Xác nhận mật khẩu\") + input')\u001b[22m\n\n\n  28 |         if (tc.input.confirmPassword !== undefined) {\n  29 |           // AP-02 hiển thị: FR-01 yêu cầu form có trường Xác nhận mật khẩu.\n> 30 |           await expect(p.confirmPasswordInput, 'Form phải có trường \"Xác nhận mật khẩu\" (FR-01)').toBeVisible();\n     |                                                                                                   ^\n  31 |         }\n  32 |         await p.fillForm(tc.input);\n  33 |         await p.submit();\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:30:99\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:27:7"
                         }
                       ],
                       "stdout": [],
@@ -1549,31 +1621,31 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 2432
+                          "duration": 2398
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 5026,
+                          "duration": 5031,
                           "error": {
                             "message": "Error: Form phải có trường \"Xác nhận mật khẩu\" (FR-01)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('label:text-is(\"Xác nhận mật khẩu\") + input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Form phải có trường \"Xác nhận mật khẩu\" (FR-01) locator('label:text-is(\"Xác nhận mật khẩu\") + input') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('label:text-is(\"Xác nhận mật khẩu\") + input')\u001b[22m\n",
-                            "stack": "Error: Form phải có trường \"Xác nhận mật khẩu\" (FR-01)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('label:text-is(\"Xác nhận mật khẩu\") + input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Form phải có trường \"Xác nhận mật khẩu\" (FR-01) locator('label:text-is(\"Xác nhận mật khẩu\") + input') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('label:text-is(\"Xác nhận mật khẩu\") + input')\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:27:99\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:24:7",
+                            "stack": "Error: Form phải có trường \"Xác nhận mật khẩu\" (FR-01)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('label:text-is(\"Xác nhận mật khẩu\") + input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Form phải có trường \"Xác nhận mật khẩu\" (FR-01) locator('label:text-is(\"Xác nhận mật khẩu\") + input') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('label:text-is(\"Xác nhận mật khẩu\") + input')\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:30:99\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts:27:7",
                             "location": {
                               "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
                               "column": 99,
-                              "line": 27
+                              "line": 30
                             },
-                            "snippet": " \u001b[90m 25 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39minput\u001b[33m.\u001b[39mconfirmPassword \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 26 |\u001b[39m           \u001b[90m// AP-02 hiển thị: FR-01 yêu cầu form có trường Xác nhận mật khẩu.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mconfirmPasswordInput\u001b[33m,\u001b[39m \u001b[32m'Form phải có trường \"Xác nhận mật khẩu\" (FR-01)'\u001b[39m)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m         }\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m p\u001b[33m.\u001b[39mfillForm(tc\u001b[33m.\u001b[39minput)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m p\u001b[33m.\u001b[39msubmit()\u001b[33m;\u001b[39m"
+                            "snippet": " \u001b[90m 28 |\u001b[39m         \u001b[36mif\u001b[39m (tc\u001b[33m.\u001b[39minput\u001b[33m.\u001b[39mconfirmPassword \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 29 |\u001b[39m           \u001b[90m// AP-02 hiển thị: FR-01 yêu cầu form có trường Xác nhận mật khẩu.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mconfirmPasswordInput\u001b[33m,\u001b[39m \u001b[32m'Form phải có trường \"Xác nhận mật khẩu\" (FR-01)'\u001b[39m)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m         }\n \u001b[90m 32 |\u001b[39m         \u001b[36mawait\u001b[39m p\u001b[33m.\u001b[39mfillForm(tc\u001b[33m.\u001b[39minput)\u001b[33m;\u001b[39m\n \u001b[90m 33 |\u001b[39m         \u001b[36mawait\u001b[39m p\u001b[33m.\u001b[39msubmit()\u001b[33m;\u001b[39m"
                           }
                         }
                       ],
-                      "startTime": "2026-11-16T11:48:23.951Z",
+                      "startTime": "2026-11-16T12:30:20.234Z",
                       "annotations": [
                         {
                           "type": "type",
                           "description": "Negative",
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
-                            "line": 17,
+                            "line": 20,
                             "column": 5
                           }
                         }
@@ -1593,7 +1665,7 @@
                       "errorLocation": {
                         "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr01.spec.ts",
                         "column": 99,
-                        "line": 27
+                        "line": 30
                       }
                     }
                   ],
@@ -1602,7 +1674,7 @@
               ],
               "id": "1188b511a180e624c749-b870d9f12da63325a02d",
               "file": "fr01.spec.ts",
-              "line": 17,
+              "line": 20,
               "column": 5
             }
           ]
@@ -1612,8 +1684,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-16T11:46:28.367Z",
-    "duration": 127431.739,
+    "startTime": "2026-11-16T12:28:23.198Z",
+    "duration": 129013.632,
     "expected": 6,
     "skipped": 0,
     "unexpected": 9,
