@@ -73,7 +73,7 @@ pre { margin: 0; padding: 12px; background: var(--code-bg); border: 1px solid va
     </div>
     <div style="text-align:right">
       <div class="runby">Run by: 23120409</div>
-      <div class="sub">Generated at 2026-11-16T16:27:35.893Z</div>
+      <div class="sub">Generated at 2026-11-16T16:57:31.608Z</div>
     </div>
   </header>
 
@@ -124,17 +124,17 @@ pre { margin: 0; padding: 12px; background: var(--code-bg); border: 1px solid va
         </td></tr><tr><th scope="row"><a href="#fr17">FR-17 · Coupon CRUD (Admin)</a></th><td>
           <div class="cell-top"><strong>10/14</strong> pass · <span class="fail-text">4 fail</span></div>
           <div class="bar"><span class="bar-pass" style="width:71%"></span><span class="bar-fail" style="width:29%"></span></div>
-          <div class="cell-meta">2026-11-16T16:23:25.590Z · 63.0s</div>
+          <div class="cell-meta">2026-11-16T16:53:19.111Z · 63.9s</div>
           <a class="open" href="fr17/chromium/index.html">Mở HTML report →</a>
         </td><td>
           <div class="cell-top"><strong>10/14</strong> pass · <span class="fail-text">4 fail</span></div>
           <div class="bar"><span class="bar-pass" style="width:71%"></span><span class="bar-fail" style="width:29%"></span></div>
-          <div class="cell-meta">2026-11-16T16:24:30.732Z · 111.1s</div>
+          <div class="cell-meta">2026-11-16T16:54:25.209Z · 111.5s</div>
           <a class="open" href="fr17/firefox/index.html">Mở HTML report →</a>
         </td><td>
           <div class="cell-top"><strong>10/14</strong> pass · <span class="fail-text">4 fail</span></div>
           <div class="bar"><span class="bar-pass" style="width:71%"></span><span class="bar-fail" style="width:29%"></span></div>
-          <div class="cell-meta">2026-11-16T16:26:24.049Z · 71.3s</div>
+          <div class="cell-meta">2026-11-16T16:56:18.769Z · 72.3s</div>
           <a class="open" href="fr17/webkit/index.html">Mở HTML report →</a>
         </td></tr>
   </tbody>
@@ -1265,8 +1265,8 @@ Call Log:
 &gt; 137 |               .toBeGreaterThan(0);
       |                ^
   138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-  140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  139 |           // Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.
+  140 |           await p.scrollTableToEnd();
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:137:16
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7
 
@@ -1286,14 +1286,14 @@ Call log:
        - unexpected value &quot;7&quot;
 
 
-  138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-&gt; 140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  140 |           await p.scrollTableToEnd();
+  141 |           // AP-03 số lượng: không có dòng mới.
+&gt; 142 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
       |                                                                                             ^
-  141 |         }
-  142 |       });
-  143 |     });
-    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:140:93
+  143 |         }
+  144 |       });
+  145 |     });
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:142:93
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7</pre>
         <a class="shot" href="fr17/chromium-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-06-M-ch-g-m-kho-ng-tr-ng.png"><img src="fr17/chromium-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-06-M-ch-g-m-kho-ng-tr-ng.png" alt="Screenshot lúc fail: FR-17 Quản lý mã giảm giá › FR17-AT-06 | Mã chỉ gồm khoảng trắng trên chromium" loading="lazy"></a>
       </div>
@@ -1317,8 +1317,8 @@ Call Log:
 &gt; 137 |               .toBeGreaterThan(0);
       |                ^
   138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-  140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  139 |           // Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.
+  140 |           await p.scrollTableToEnd();
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:137:16
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7
 
@@ -1338,14 +1338,14 @@ Call log:
        - unexpected value &quot;8&quot;
 
 
-  138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-&gt; 140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  140 |           await p.scrollTableToEnd();
+  141 |           // AP-03 số lượng: không có dòng mới.
+&gt; 142 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
       |                                                                                             ^
-  141 |         }
-  142 |       });
-  143 |     });
-    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:140:93
+  143 |         }
+  144 |       });
+  145 |     });
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:142:93
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7</pre>
         <a class="shot" href="fr17/chromium-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-08-Gi-tr-gi-m-0.png"><img src="fr17/chromium-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-08-Gi-tr-gi-m-0.png" alt="Screenshot lúc fail: FR-17 Quản lý mã giảm giá › FR17-AT-08 | Giá trị giảm = 0 trên chromium" loading="lazy"></a>
       </div>
@@ -1369,8 +1369,8 @@ Call Log:
 &gt; 137 |               .toBeGreaterThan(0);
       |                ^
   138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-  140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  139 |           // Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.
+  140 |           await p.scrollTableToEnd();
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:137:16
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7
 
@@ -1390,14 +1390,14 @@ Call log:
        - unexpected value &quot;9&quot;
 
 
-  138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-&gt; 140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  140 |           await p.scrollTableToEnd();
+  141 |           // AP-03 số lượng: không có dòng mới.
+&gt; 142 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
       |                                                                                             ^
-  141 |         }
-  142 |       });
-  143 |     });
-    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:140:93
+  143 |         }
+  144 |       });
+  145 |     });
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:142:93
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7</pre>
         <a class="shot" href="fr17/chromium-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-09-Percent-101.png"><img src="fr17/chromium-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-09-Percent-101.png" alt="Screenshot lúc fail: FR-17 Quản lý mã giảm giá › FR17-AT-09 | Percent 101% trên chromium" loading="lazy"></a>
       </div>
@@ -1421,8 +1421,8 @@ Call Log:
 &gt; 137 |               .toBeGreaterThan(0);
       |                ^
   138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-  140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  139 |           // Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.
+  140 |           await p.scrollTableToEnd();
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:137:16
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7
 
@@ -1442,14 +1442,14 @@ Call log:
        - unexpected value &quot;10&quot;
 
 
-  138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-&gt; 140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  140 |           await p.scrollTableToEnd();
+  141 |           // AP-03 số lượng: không có dòng mới.
+&gt; 142 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
       |                                                                                             ^
-  141 |         }
-  142 |       });
-  143 |     });
-    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:140:93
+  143 |         }
+  144 |       });
+  145 |     });
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:142:93
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7</pre>
         <a class="shot" href="fr17/chromium-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-10-n-t-i-thi-u-1.png"><img src="fr17/chromium-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-10-n-t-i-thi-u-1.png" alt="Screenshot lúc fail: FR-17 Quản lý mã giảm giá › FR17-AT-10 | Đơn tối thiểu = -1 trên chromium" loading="lazy"></a>
       </div>
@@ -1473,8 +1473,8 @@ Call Log:
 &gt; 137 |               .toBeGreaterThan(0);
       |                ^
   138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-  140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  139 |           // Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.
+  140 |           await p.scrollTableToEnd();
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:137:16
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7
 
@@ -1494,14 +1494,14 @@ Call log:
        - unexpected value &quot;7&quot;
 
 
-  138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-&gt; 140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  140 |           await p.scrollTableToEnd();
+  141 |           // AP-03 số lượng: không có dòng mới.
+&gt; 142 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
       |                                                                                             ^
-  141 |         }
-  142 |       });
-  143 |     });
-    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:140:93
+  143 |         }
+  144 |       });
+  145 |     });
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:142:93
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7</pre>
         <a class="shot" href="fr17/firefox-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-06-M-ch-g-m-kho-ng-tr-ng.png"><img src="fr17/firefox-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-06-M-ch-g-m-kho-ng-tr-ng.png" alt="Screenshot lúc fail: FR-17 Quản lý mã giảm giá › FR17-AT-06 | Mã chỉ gồm khoảng trắng trên firefox" loading="lazy"></a>
       </div>
@@ -1525,8 +1525,8 @@ Call Log:
 &gt; 137 |               .toBeGreaterThan(0);
       |                ^
   138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-  140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  139 |           // Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.
+  140 |           await p.scrollTableToEnd();
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:137:16
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7
 
@@ -1546,14 +1546,14 @@ Call log:
        - unexpected value &quot;8&quot;
 
 
-  138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-&gt; 140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  140 |           await p.scrollTableToEnd();
+  141 |           // AP-03 số lượng: không có dòng mới.
+&gt; 142 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
       |                                                                                             ^
-  141 |         }
-  142 |       });
-  143 |     });
-    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:140:93
+  143 |         }
+  144 |       });
+  145 |     });
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:142:93
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7</pre>
         <a class="shot" href="fr17/firefox-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-08-Gi-tr-gi-m-0.png"><img src="fr17/firefox-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-08-Gi-tr-gi-m-0.png" alt="Screenshot lúc fail: FR-17 Quản lý mã giảm giá › FR17-AT-08 | Giá trị giảm = 0 trên firefox" loading="lazy"></a>
       </div>
@@ -1577,8 +1577,8 @@ Call Log:
 &gt; 137 |               .toBeGreaterThan(0);
       |                ^
   138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-  140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  139 |           // Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.
+  140 |           await p.scrollTableToEnd();
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:137:16
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7
 
@@ -1598,14 +1598,14 @@ Call log:
        - unexpected value &quot;9&quot;
 
 
-  138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-&gt; 140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  140 |           await p.scrollTableToEnd();
+  141 |           // AP-03 số lượng: không có dòng mới.
+&gt; 142 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
       |                                                                                             ^
-  141 |         }
-  142 |       });
-  143 |     });
-    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:140:93
+  143 |         }
+  144 |       });
+  145 |     });
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:142:93
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7</pre>
         <a class="shot" href="fr17/firefox-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-09-Percent-101.png"><img src="fr17/firefox-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-09-Percent-101.png" alt="Screenshot lúc fail: FR-17 Quản lý mã giảm giá › FR17-AT-09 | Percent 101% trên firefox" loading="lazy"></a>
       </div>
@@ -1629,8 +1629,8 @@ Call Log:
 &gt; 137 |               .toBeGreaterThan(0);
       |                ^
   138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-  140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  139 |           // Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.
+  140 |           await p.scrollTableToEnd();
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:137:16
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7
 
@@ -1650,14 +1650,14 @@ Call log:
        - unexpected value &quot;10&quot;
 
 
-  138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-&gt; 140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  140 |           await p.scrollTableToEnd();
+  141 |           // AP-03 số lượng: không có dòng mới.
+&gt; 142 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
       |                                                                                             ^
-  141 |         }
-  142 |       });
-  143 |     });
-    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:140:93
+  143 |         }
+  144 |       });
+  145 |     });
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:142:93
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7</pre>
         <a class="shot" href="fr17/firefox-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-10-n-t-i-thi-u-1.png"><img src="fr17/firefox-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-10-n-t-i-thi-u-1.png" alt="Screenshot lúc fail: FR-17 Quản lý mã giảm giá › FR17-AT-10 | Đơn tối thiểu = -1 trên firefox" loading="lazy"></a>
       </div>
@@ -1681,8 +1681,8 @@ Call Log:
 &gt; 137 |               .toBeGreaterThan(0);
       |                ^
   138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-  140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  139 |           // Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.
+  140 |           await p.scrollTableToEnd();
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:137:16
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7
 
@@ -1702,14 +1702,14 @@ Call log:
        - unexpected value &quot;7&quot;
 
 
-  138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-&gt; 140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  140 |           await p.scrollTableToEnd();
+  141 |           // AP-03 số lượng: không có dòng mới.
+&gt; 142 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
       |                                                                                             ^
-  141 |         }
-  142 |       });
-  143 |     });
-    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:140:93
+  143 |         }
+  144 |       });
+  145 |     });
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:142:93
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7</pre>
         <a class="shot" href="fr17/webkit-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-06-M-ch-g-m-kho-ng-tr-ng.png"><img src="fr17/webkit-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-06-M-ch-g-m-kho-ng-tr-ng.png" alt="Screenshot lúc fail: FR-17 Quản lý mã giảm giá › FR17-AT-06 | Mã chỉ gồm khoảng trắng trên webkit" loading="lazy"></a>
       </div>
@@ -1733,8 +1733,8 @@ Call Log:
 &gt; 137 |               .toBeGreaterThan(0);
       |                ^
   138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-  140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  139 |           // Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.
+  140 |           await p.scrollTableToEnd();
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:137:16
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7
 
@@ -1754,14 +1754,14 @@ Call log:
        - unexpected value &quot;8&quot;
 
 
-  138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-&gt; 140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  140 |           await p.scrollTableToEnd();
+  141 |           // AP-03 số lượng: không có dòng mới.
+&gt; 142 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
       |                                                                                             ^
-  141 |         }
-  142 |       });
-  143 |     });
-    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:140:93
+  143 |         }
+  144 |       });
+  145 |     });
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:142:93
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7</pre>
         <a class="shot" href="fr17/webkit-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-08-Gi-tr-gi-m-0.png"><img src="fr17/webkit-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-08-Gi-tr-gi-m-0.png" alt="Screenshot lúc fail: FR-17 Quản lý mã giảm giá › FR17-AT-08 | Giá trị giảm = 0 trên webkit" loading="lazy"></a>
       </div>
@@ -1785,8 +1785,8 @@ Call Log:
 &gt; 137 |               .toBeGreaterThan(0);
       |                ^
   138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-  140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  139 |           // Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.
+  140 |           await p.scrollTableToEnd();
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:137:16
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7
 
@@ -1806,14 +1806,14 @@ Call log:
        - unexpected value &quot;9&quot;
 
 
-  138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-&gt; 140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  140 |           await p.scrollTableToEnd();
+  141 |           // AP-03 số lượng: không có dòng mới.
+&gt; 142 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
       |                                                                                             ^
-  141 |         }
-  142 |       });
-  143 |     });
-    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:140:93
+  143 |         }
+  144 |       });
+  145 |     });
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:142:93
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7</pre>
         <a class="shot" href="fr17/webkit-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-09-Percent-101.png"><img src="fr17/webkit-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-09-Percent-101.png" alt="Screenshot lúc fail: FR-17 Quản lý mã giảm giá › FR17-AT-09 | Percent 101% trên webkit" loading="lazy"></a>
       </div>
@@ -1837,8 +1837,8 @@ Call Log:
 &gt; 137 |               .toBeGreaterThan(0);
       |                ^
   138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-  140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  139 |           // Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.
+  140 |           await p.scrollTableToEnd();
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:137:16
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7
 
@@ -1858,14 +1858,14 @@ Call log:
        - unexpected value &quot;10&quot;
 
 
-  138 |           }
-  139 |           // AP-03 số lượng: không có dòng mới.
-&gt; 140 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
+  140 |           await p.scrollTableToEnd();
+  141 |           // AP-03 số lượng: không có dòng mới.
+&gt; 142 |           await expect(p.rows, &#39;Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)&#39;).toHaveCount(rowsBefore);
       |                                                                                             ^
-  141 |         }
-  142 |       });
-  143 |     });
-    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:140:93
+  143 |         }
+  144 |       });
+  145 |     });
+    at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:142:93
     at D:\semester1-year4\software_testing\lab\HW04\eshop-sut-hw04\hw04\automation\tests\fr17.spec.ts:94:7</pre>
         <a class="shot" href="fr17/webkit-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-10-n-t-i-thi-u-1.png"><img src="fr17/webkit-shots/FR-17-Qu-n-l-m-gi-m-gi-FR17-AT-10-n-t-i-thi-u-1.png" alt="Screenshot lúc fail: FR-17 Quản lý mã giảm giá › FR17-AT-10 | Đơn tối thiểu = -1 trên webkit" loading="lazy"></a>
       </div>

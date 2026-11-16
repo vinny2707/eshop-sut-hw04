@@ -19,7 +19,7 @@
     "maxFailures": 0,
     "metadata": {
       "Run by": "23120409",
-      "Run at (ISO 8601)": "2026-11-16T16:23:23.468Z",
+      "Run at (ISO 8601)": "2026-11-16T16:53:17.006Z",
       "Feature": "fr17",
       "Browser": "chromium",
       "actualWorkers": 1
@@ -32,7 +32,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23120409",
-          "Run at (ISO 8601)": "2026-11-16T16:23:23.468Z",
+          "Run at (ISO 8601)": "2026-11-16T16:53:17.006Z",
           "Feature": "fr17",
           "Browser": "chromium",
           "actualWorkers": 1
@@ -52,7 +52,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23120409",
-          "Run at (ISO 8601)": "2026-11-16T16:23:23.468Z",
+          "Run at (ISO 8601)": "2026-11-16T16:53:17.006Z",
           "Feature": "fr17",
           "Browser": "chromium",
           "actualWorkers": 1
@@ -72,7 +72,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23120409",
-          "Run at (ISO 8601)": "2026-11-16T16:23:23.468Z",
+          "Run at (ISO 8601)": "2026-11-16T16:53:17.006Z",
           "Feature": "fr17",
           "Browser": "chromium",
           "actualWorkers": 1
@@ -96,7 +96,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23120409",
-          "Run at (ISO 8601)": "2026-11-16T16:23:23.468Z",
+          "Run at (ISO 8601)": "2026-11-16T16:53:17.006Z",
           "Feature": "fr17",
           "Browser": "chromium",
           "actualWorkers": 1
@@ -143,7 +143,7 @@
         "html",
         {
           "outputFolder": "reports/fr17/chromium",
-          "title": "Run by: 23120409 | fr17-chromium | 2026-11-16T16:23:23.468Z",
+          "title": "Run by: 23120409 | fr17-chromium | 2026-11-16T16:53:17.006Z",
           "open": "never"
         }
       ],
@@ -206,7 +206,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1044,
+                      "duration": 1068,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -214,18 +214,18 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 412
+                          "duration": 445
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 179
+                          "duration": 193
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 210
+                          "duration": 222
                         }
                       ],
-                      "startTime": "2026-11-16T16:23:30.824Z",
+                      "startTime": "2026-11-16T16:53:24.369Z",
                       "annotations": [
                         {
                           "type": "type",
@@ -274,7 +274,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 908,
+                      "duration": 942,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -282,18 +282,18 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 360
+                          "duration": 371
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 167
+                          "duration": 170
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 207
+                          "duration": 219
                         }
                       ],
-                      "startTime": "2026-11-16T16:23:32.130Z",
+                      "startTime": "2026-11-16T16:53:25.670Z",
                       "annotations": [
                         {
                           "type": "type",
@@ -342,7 +342,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 591,
+                      "duration": 620,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -350,7 +350,7 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 340
+                          "duration": 346
                         },
                         {
                           "title": "Thực hiện",
@@ -358,10 +358,10 @@
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 91
+                          "duration": 88
                         }
                       ],
-                      "startTime": "2026-11-16T16:23:33.054Z",
+                      "startTime": "2026-11-16T16:53:26.629Z",
                       "annotations": [
                         {
                           "type": "type",
@@ -419,7 +419,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 746,
+                      "duration": 701,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -427,18 +427,18 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 358
+                          "duration": 365
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 53
+                          "duration": 45
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 169
+                          "duration": 141
                         }
                       ],
-                      "startTime": "2026-11-16T16:23:33.661Z",
+                      "startTime": "2026-11-16T16:53:27.262Z",
                       "annotations": [
                         {
                           "type": "type",
@@ -496,7 +496,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 747,
+                      "duration": 765,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -504,18 +504,18 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 360
+                          "duration": 356
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 158
+                          "duration": 178
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 52
+                          "duration": 60
                         }
                       ],
-                      "startTime": "2026-11-16T16:23:34.426Z",
+                      "startTime": "2026-11-16T16:53:27.980Z",
                       "annotations": [
                         {
                           "type": "type",
@@ -564,7 +564,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 10658,
+                      "duration": 10739,
                       "error": {
                         "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
                         "stack": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
@@ -573,7 +573,7 @@
                           "column": 16,
                           "line": 137
                         },
-                        "snippet": " \u001b[90m 135 |\u001b[39m               \u001b[33m.\u001b[39mconfigure({ soft\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\n \u001b[90m 136 |\u001b[39m               \u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m { message\u001b[33m:\u001b[39m \u001b[32m'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ'\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 137 |\u001b[39m               \u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n \u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m"
+                        "snippet": " \u001b[90m 135 |\u001b[39m               \u001b[33m.\u001b[39mconfigure({ soft\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\n \u001b[90m 136 |\u001b[39m               \u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m { message\u001b[33m:\u001b[39m \u001b[32m'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ'\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 137 |\u001b[39m               \u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.\u001b[39m\n \u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m p\u001b[33m.\u001b[39mscrollTableToEnd()\u001b[33m;\u001b[39m"
                       },
                       "errors": [
                         {
@@ -582,15 +582,15 @@
                             "column": 16,
                             "line": 137
                           },
-                          "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  135 |               .configure({ soft: true })\n  136 |               .poll(() => dialogs.length, { message: 'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ' })\n> 137 |               .toBeGreaterThan(0);\n      |                ^\n  138 |           }\n  139 |           // AP-03 số lượng: không có dòng mới.\n  140 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
+                          "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  135 |               .configure({ soft: true })\n  136 |               .poll(() => dialogs.length, { message: 'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ' })\n> 137 |               .toBeGreaterThan(0);\n      |                ^\n  138 |           }\n  139 |           // Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.\n  140 |           await p.scrollTableToEnd();\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
                         },
                         {
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
                             "column": 93,
-                            "line": 140
+                            "line": 142
                           },
-                          "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m6\u001b[39m\nReceived: \u001b[31m7\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 7 elements\u001b[22m\n\u001b[2m       - unexpected value \"7\"\u001b[22m\n\n\n  138 |           }\n  139 |           // AP-03 số lượng: không có dòng mới.\n> 140 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n      |                                                                                             ^\n  141 |         }\n  142 |       });\n  143 |     });\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:140:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
+                          "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m6\u001b[39m\nReceived: \u001b[31m7\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 7 elements\u001b[22m\n\u001b[2m       - unexpected value \"7\"\u001b[22m\n\n\n  140 |           await p.scrollTableToEnd();\n  141 |           // AP-03 số lượng: không có dòng mới.\n> 142 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n      |                                                                                             ^\n  143 |         }\n  144 |       });\n  145 |     });\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:142:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
                         }
                       ],
                       "stdout": [],
@@ -599,28 +599,28 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 352
+                          "duration": 381
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 167
+                          "duration": 184
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 9944,
+                          "duration": 9973,
                           "error": {
                             "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m6\u001b[39m\nReceived: \u001b[31m7\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 7 elements\u001b[22m\n\u001b[2m       - unexpected value \"7\"\u001b[22m\n",
-                            "stack": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m6\u001b[39m\nReceived: \u001b[31m7\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 7 elements\u001b[22m\n\u001b[2m       - unexpected value \"7\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:140:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
+                            "stack": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m6\u001b[39m\nReceived: \u001b[31m7\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 7 elements\u001b[22m\n\u001b[2m       - unexpected value \"7\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:142:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
                             "location": {
                               "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
                               "column": 93,
-                              "line": 140
+                              "line": 142
                             },
-                            "snippet": " \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 141 |\u001b[39m         }\n \u001b[90m 142 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 143 |\u001b[39m     })\u001b[33m;\u001b[39m"
+                            "snippet": " \u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m p\u001b[33m.\u001b[39mscrollTableToEnd()\u001b[33m;\u001b[39m\n \u001b[90m 141 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m         }\n \u001b[90m 144 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m     })\u001b[33m;\u001b[39m"
                           }
                         }
                       ],
-                      "startTime": "2026-11-16T16:23:35.190Z",
+                      "startTime": "2026-11-16T16:53:28.760Z",
                       "annotations": [
                         {
                           "type": "type",
@@ -685,7 +685,7 @@
                       "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 970,
+                      "duration": 1009,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -693,18 +693,18 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 381
+                          "duration": 418
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 223
+                          "duration": 198
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 129
+                          "duration": 174
                         }
                       ],
-                      "startTime": "2026-11-16T16:23:46.740Z",
+                      "startTime": "2026-11-16T16:53:40.454Z",
                       "annotations": [
                         {
                           "type": "type",
@@ -753,7 +753,7 @@
                       "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 10639,
+                      "duration": 10752,
                       "error": {
                         "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
                         "stack": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
@@ -762,7 +762,7 @@
                           "column": 16,
                           "line": 137
                         },
-                        "snippet": " \u001b[90m 135 |\u001b[39m               \u001b[33m.\u001b[39mconfigure({ soft\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\n \u001b[90m 136 |\u001b[39m               \u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m { message\u001b[33m:\u001b[39m \u001b[32m'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ'\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 137 |\u001b[39m               \u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n \u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m"
+                        "snippet": " \u001b[90m 135 |\u001b[39m               \u001b[33m.\u001b[39mconfigure({ soft\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\n \u001b[90m 136 |\u001b[39m               \u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m { message\u001b[33m:\u001b[39m \u001b[32m'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ'\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 137 |\u001b[39m               \u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.\u001b[39m\n \u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m p\u001b[33m.\u001b[39mscrollTableToEnd()\u001b[33m;\u001b[39m"
                       },
                       "errors": [
                         {
@@ -771,15 +771,15 @@
                             "column": 16,
                             "line": 137
                           },
-                          "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  135 |               .configure({ soft: true })\n  136 |               .poll(() => dialogs.length, { message: 'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ' })\n> 137 |               .toBeGreaterThan(0);\n      |                ^\n  138 |           }\n  139 |           // AP-03 số lượng: không có dòng mới.\n  140 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
+                          "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  135 |               .configure({ soft: true })\n  136 |               .poll(() => dialogs.length, { message: 'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ' })\n> 137 |               .toBeGreaterThan(0);\n      |                ^\n  138 |           }\n  139 |           // Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.\n  140 |           await p.scrollTableToEnd();\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
                         },
                         {
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
                             "column": 93,
-                            "line": 140
+                            "line": 142
                           },
-                          "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m7\u001b[39m\nReceived: \u001b[31m8\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 8 elements\u001b[22m\n\u001b[2m       - unexpected value \"8\"\u001b[22m\n\n\n  138 |           }\n  139 |           // AP-03 số lượng: không có dòng mới.\n> 140 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n      |                                                                                             ^\n  141 |         }\n  142 |       });\n  143 |     });\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:140:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
+                          "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m7\u001b[39m\nReceived: \u001b[31m8\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 8 elements\u001b[22m\n\u001b[2m       - unexpected value \"8\"\u001b[22m\n\n\n  140 |           await p.scrollTableToEnd();\n  141 |           // AP-03 số lượng: không có dòng mới.\n> 142 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n      |                                                                                             ^\n  143 |         }\n  144 |       });\n  145 |     });\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:142:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
                         }
                       ],
                       "stdout": [],
@@ -788,28 +788,28 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 353
+                          "duration": 374
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 181
+                          "duration": 182
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 9912,
+                          "duration": 10002,
                           "error": {
                             "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m7\u001b[39m\nReceived: \u001b[31m8\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 8 elements\u001b[22m\n\u001b[2m       - unexpected value \"8\"\u001b[22m\n",
-                            "stack": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m7\u001b[39m\nReceived: \u001b[31m8\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 8 elements\u001b[22m\n\u001b[2m       - unexpected value \"8\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:140:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
+                            "stack": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m7\u001b[39m\nReceived: \u001b[31m8\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 8 elements\u001b[22m\n\u001b[2m       - unexpected value \"8\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:142:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
                             "location": {
                               "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
                               "column": 93,
-                              "line": 140
+                              "line": 142
                             },
-                            "snippet": " \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 141 |\u001b[39m         }\n \u001b[90m 142 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 143 |\u001b[39m     })\u001b[33m;\u001b[39m"
+                            "snippet": " \u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m p\u001b[33m.\u001b[39mscrollTableToEnd()\u001b[33m;\u001b[39m\n \u001b[90m 141 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m         }\n \u001b[90m 144 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m     })\u001b[33m;\u001b[39m"
                           }
                         }
                       ],
-                      "startTime": "2026-11-16T16:23:47.950Z",
+                      "startTime": "2026-11-16T16:53:41.707Z",
                       "annotations": [
                         {
                           "type": "type",
@@ -883,7 +883,7 @@
                       "workerIndex": 2,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 10817,
+                      "duration": 10840,
                       "error": {
                         "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
                         "stack": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
@@ -892,7 +892,7 @@
                           "column": 16,
                           "line": 137
                         },
-                        "snippet": " \u001b[90m 135 |\u001b[39m               \u001b[33m.\u001b[39mconfigure({ soft\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\n \u001b[90m 136 |\u001b[39m               \u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m { message\u001b[33m:\u001b[39m \u001b[32m'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ'\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 137 |\u001b[39m               \u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n \u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m"
+                        "snippet": " \u001b[90m 135 |\u001b[39m               \u001b[33m.\u001b[39mconfigure({ soft\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\n \u001b[90m 136 |\u001b[39m               \u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m { message\u001b[33m:\u001b[39m \u001b[32m'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ'\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 137 |\u001b[39m               \u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.\u001b[39m\n \u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m p\u001b[33m.\u001b[39mscrollTableToEnd()\u001b[33m;\u001b[39m"
                       },
                       "errors": [
                         {
@@ -901,15 +901,15 @@
                             "column": 16,
                             "line": 137
                           },
-                          "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  135 |               .configure({ soft: true })\n  136 |               .poll(() => dialogs.length, { message: 'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ' })\n> 137 |               .toBeGreaterThan(0);\n      |                ^\n  138 |           }\n  139 |           // AP-03 số lượng: không có dòng mới.\n  140 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
+                          "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  135 |               .configure({ soft: true })\n  136 |               .poll(() => dialogs.length, { message: 'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ' })\n> 137 |               .toBeGreaterThan(0);\n      |                ^\n  138 |           }\n  139 |           // Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.\n  140 |           await p.scrollTableToEnd();\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
                         },
                         {
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
                             "column": 93,
-                            "line": 140
+                            "line": 142
                           },
-                          "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m8\u001b[39m\nReceived: \u001b[31m9\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 9 elements\u001b[22m\n\u001b[2m       - unexpected value \"9\"\u001b[22m\n\n\n  138 |           }\n  139 |           // AP-03 số lượng: không có dòng mới.\n> 140 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n      |                                                                                             ^\n  141 |         }\n  142 |       });\n  143 |     });\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:140:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
+                          "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m8\u001b[39m\nReceived: \u001b[31m9\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 9 elements\u001b[22m\n\u001b[2m       - unexpected value \"9\"\u001b[22m\n\n\n  140 |           await p.scrollTableToEnd();\n  141 |           // AP-03 số lượng: không có dòng mới.\n> 142 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n      |                                                                                             ^\n  143 |         }\n  144 |       });\n  145 |     });\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:142:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
                         }
                       ],
                       "stdout": [],
@@ -918,28 +918,28 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 389
+                          "duration": 385
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 220
+                          "duration": 214
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 9960,
+                          "duration": 9983,
                           "error": {
                             "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m8\u001b[39m\nReceived: \u001b[31m9\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 9 elements\u001b[22m\n\u001b[2m       - unexpected value \"9\"\u001b[22m\n",
-                            "stack": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m8\u001b[39m\nReceived: \u001b[31m9\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 9 elements\u001b[22m\n\u001b[2m       - unexpected value \"9\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:140:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
+                            "stack": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m8\u001b[39m\nReceived: \u001b[31m9\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 9 elements\u001b[22m\n\u001b[2m       - unexpected value \"9\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:142:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
                             "location": {
                               "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
                               "column": 93,
-                              "line": 140
+                              "line": 142
                             },
-                            "snippet": " \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 141 |\u001b[39m         }\n \u001b[90m 142 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 143 |\u001b[39m     })\u001b[33m;\u001b[39m"
+                            "snippet": " \u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m p\u001b[33m.\u001b[39mscrollTableToEnd()\u001b[33m;\u001b[39m\n \u001b[90m 141 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m         }\n \u001b[90m 144 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m     })\u001b[33m;\u001b[39m"
                           }
                         }
                       ],
-                      "startTime": "2026-11-16T16:23:59.512Z",
+                      "startTime": "2026-11-16T16:53:53.341Z",
                       "annotations": [
                         {
                           "type": "type",
@@ -1013,7 +1013,7 @@
                       "workerIndex": 3,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 10775,
+                      "duration": 10862,
                       "error": {
                         "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
                         "stack": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
@@ -1022,7 +1022,7 @@
                           "column": 16,
                           "line": 137
                         },
-                        "snippet": " \u001b[90m 135 |\u001b[39m               \u001b[33m.\u001b[39mconfigure({ soft\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\n \u001b[90m 136 |\u001b[39m               \u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m { message\u001b[33m:\u001b[39m \u001b[32m'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ'\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 137 |\u001b[39m               \u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n \u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m"
+                        "snippet": " \u001b[90m 135 |\u001b[39m               \u001b[33m.\u001b[39mconfigure({ soft\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\n \u001b[90m 136 |\u001b[39m               \u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m { message\u001b[33m:\u001b[39m \u001b[32m'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ'\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 137 |\u001b[39m               \u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.\u001b[39m\n \u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m p\u001b[33m.\u001b[39mscrollTableToEnd()\u001b[33m;\u001b[39m"
                       },
                       "errors": [
                         {
@@ -1031,15 +1031,15 @@
                             "column": 16,
                             "line": 137
                           },
-                          "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  135 |               .configure({ soft: true })\n  136 |               .poll(() => dialogs.length, { message: 'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ' })\n> 137 |               .toBeGreaterThan(0);\n      |                ^\n  138 |           }\n  139 |           // AP-03 số lượng: không có dòng mới.\n  140 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
+                          "message": "Error: Phải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\nPhải có thông báo lỗi khi dữ liệu mã không hợp lệ\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  135 |               .configure({ soft: true })\n  136 |               .poll(() => dialogs.length, { message: 'Phải có thông báo lỗi khi dữ liệu mã không hợp lệ' })\n> 137 |               .toBeGreaterThan(0);\n      |                ^\n  138 |           }\n  139 |           // Cuộn tới đáy bảng để nếu app đã lưu mã sai thì ảnh lúc fail thấy được dòng đó.\n  140 |           await p.scrollTableToEnd();\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:137:16\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
                         },
                         {
                           "location": {
                             "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
                             "column": 93,
-                            "line": 140
+                            "line": 142
                           },
-                          "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m9\u001b[39m\nReceived: \u001b[31m10\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 10 elements\u001b[22m\n\u001b[2m       - unexpected value \"10\"\u001b[22m\n\n\n  138 |           }\n  139 |           // AP-03 số lượng: không có dòng mới.\n> 140 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n      |                                                                                             ^\n  141 |         }\n  142 |       });\n  143 |     });\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:140:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
+                          "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m9\u001b[39m\nReceived: \u001b[31m10\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 10 elements\u001b[22m\n\u001b[2m       - unexpected value \"10\"\u001b[22m\n\n\n  140 |           await p.scrollTableToEnd();\n  141 |           // AP-03 số lượng: không có dòng mới.\n> 142 |           await expect(p.rows, 'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)').toHaveCount(rowsBefore);\n      |                                                                                             ^\n  143 |         }\n  144 |       });\n  145 |     });\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:142:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7"
                         }
                       ],
                       "stdout": [],
@@ -1048,28 +1048,28 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 395
+                          "duration": 392
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 191
+                          "duration": 214
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 9936,
+                          "duration": 10012,
                           "error": {
                             "message": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m9\u001b[39m\nReceived: \u001b[31m10\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 10 elements\u001b[22m\n\u001b[2m       - unexpected value \"10\"\u001b[22m\n",
-                            "stack": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m9\u001b[39m\nReceived: \u001b[31m10\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 10 elements\u001b[22m\n\u001b[2m       - unexpected value \"10\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:140:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
+                            "stack": "Error: Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('table').getByRole('row')\nExpected: \u001b[32m9\u001b[39m\nReceived: \u001b[31m10\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Không được tạo thêm mã (số dòng của bảng phải giữ nguyên) getByRole('table').getByRole('row') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table').getByRole('row')\u001b[22m\n\u001b[2m    14 × locator resolved to 10 elements\u001b[22m\n\u001b[2m       - unexpected value \"10\"\u001b[22m\n\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:142:93\n    at D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts:94:7",
                             "location": {
                               "file": "D:\\semester1-year4\\software_testing\\lab\\HW04\\eshop-sut-hw04\\hw04\\automation\\tests\\fr17.spec.ts",
                               "column": 93,
-                              "line": 140
+                              "line": 142
                             },
-                            "snippet": " \u001b[90m 138 |\u001b[39m           }\n \u001b[90m 139 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 141 |\u001b[39m         }\n \u001b[90m 142 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 143 |\u001b[39m     })\u001b[33m;\u001b[39m"
+                            "snippet": " \u001b[90m 140 |\u001b[39m           \u001b[36mawait\u001b[39m p\u001b[33m.\u001b[39mscrollTableToEnd()\u001b[33m;\u001b[39m\n \u001b[90m 141 |\u001b[39m           \u001b[90m// AP-03 số lượng: không có dòng mới.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m           \u001b[36mawait\u001b[39m expect(p\u001b[33m.\u001b[39mrows\u001b[33m,\u001b[39m \u001b[32m'Không được tạo thêm mã (số dòng của bảng phải giữ nguyên)'\u001b[39m)\u001b[33m.\u001b[39mtoHaveCount(rowsBefore)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m         }\n \u001b[90m 144 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m     })\u001b[33m;\u001b[39m"
                           }
                         }
                       ],
-                      "startTime": "2026-11-16T16:24:11.416Z",
+                      "startTime": "2026-11-16T16:54:05.325Z",
                       "annotations": [
                         {
                           "type": "type",
@@ -1134,7 +1134,7 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 865,
+                      "duration": 918,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -1142,18 +1142,18 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 416
+                          "duration": 394
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 201
+                          "duration": 230
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 42
+                          "duration": 59
                         }
                       ],
-                      "startTime": "2026-11-16T16:24:23.308Z",
+                      "startTime": "2026-11-16T16:54:17.267Z",
                       "annotations": [
                         {
                           "type": "type",
@@ -1211,7 +1211,7 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 942,
+                      "duration": 989,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -1223,14 +1223,14 @@
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 191
+                          "duration": 209
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 237
+                          "duration": 249
                         }
                       ],
-                      "startTime": "2026-11-16T16:24:24.375Z",
+                      "startTime": "2026-11-16T16:54:18.402Z",
                       "annotations": [
                         {
                           "type": "type",
@@ -1288,7 +1288,7 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 808,
+                      "duration": 968,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -1296,18 +1296,18 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 302
+                          "duration": 360
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 160
+                          "duration": 199
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 213
+                          "duration": 241
                         }
                       ],
-                      "startTime": "2026-11-16T16:24:25.331Z",
+                      "startTime": "2026-11-16T16:54:19.408Z",
                       "annotations": [
                         {
                           "type": "type",
@@ -1356,7 +1356,7 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 964,
+                      "duration": 962,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -1364,18 +1364,18 @@
                       "steps": [
                         {
                           "title": "Chuẩn bị",
-                          "duration": 375
+                          "duration": 381
                         },
                         {
                           "title": "Thực hiện",
-                          "duration": 189
+                          "duration": 192
                         },
                         {
                           "title": "Kiểm tra",
-                          "duration": 245
+                          "duration": 238
                         }
                       ],
-                      "startTime": "2026-11-16T16:24:26.156Z",
+                      "startTime": "2026-11-16T16:54:20.392Z",
                       "annotations": [
                         {
                           "type": "type",
@@ -1405,8 +1405,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-16T16:23:25.590Z",
-    "duration": 62997.129,
+    "startTime": "2026-11-16T16:53:19.111Z",
+    "duration": 63865.534999999996,
     "expected": 10,
     "skipped": 0,
     "unexpected": 4,
