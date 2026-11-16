@@ -21,7 +21,7 @@
     "type": "Negative",
     "title": "Mã không tồn tại (NOTEXIST)",
     "input": { "product": "Bàn phím cơ Keychron Q1", "code": "NOTEXIST" },
-    "expected": { "outcome": "rejected", "total": 4000000 }
+    "expected": { "outcome": "rejected", "total": 4000000, "reason": "không tồn tại" }
   },
   {
     "id": "FR09-AT-04",
@@ -53,7 +53,7 @@
     "type": "Negative",
     "title": "Mã hết hạn (EXPIRED)",
     "input": { "product": "Bàn phím cơ Keychron Q1", "code": "EXPIRED" },
-    "expected": { "outcome": "rejected", "total": 4000000 }
+    "expected": { "outcome": "rejected", "total": 4000000, "reason": "hết hạn" }
   },
   {
     "id": "FR09-AT-08",
@@ -61,7 +61,7 @@
     "type": "Negative",
     "title": "Chưa đăng nhập (Thoát khi đang ở Checkout)",
     "input": { "product": "Bàn phím cơ Keychron Q1", "code": "VIP100", "logoutBeforeApply": true },
-    "expected": { "outcome": "rejected", "total": 4000000 }
+    "expected": { "outcome": "rejected", "total": 4000000, "reason": "đăng nhập" }
   },
   {
     "id": "FR09-AT-09",
@@ -70,7 +70,7 @@
     "title": "Tổng 299.999 (dưới ngưỡng 300.000)",
     "note": "Tổng được nhập vào ô tổng tiền ở Checkout — ô này sửa được là bug FR-08 (ngoài phạm vi).",
     "input": { "product": "Bàn phím cơ Keychron Q1", "code": "VIP100", "total": 299999 },
-    "expected": { "outcome": "rejected", "total": 299999 }
+    "expected": { "outcome": "rejected", "total": 299999, "reason": "tối thiểu" }
   },
   {
     "id": "FR09-AT-10",
@@ -104,7 +104,7 @@
     "type": "Negative",
     "title": "Đã dùng VIP100 2 lần (đạt giới hạn)",
     "input": { "product": "Bàn phím cơ Keychron Q1", "code": "VIP100", "usage": { "couponId": 3, "times": 2 } },
-    "expected": { "outcome": "rejected", "total": 4000000 }
+    "expected": { "outcome": "rejected", "total": 4000000, "reason": "giới hạn" }
   },
   {
     "id": "FR09-AT-14",
@@ -112,7 +112,7 @@
     "type": "Negative",
     "title": "Đã dùng SAVE10 1 lần (giới hạn 1)",
     "input": { "product": "Bàn phím cơ Keychron Q1", "code": "SAVE10", "usage": { "couponId": 1, "times": 1 } },
-    "expected": { "outcome": "rejected", "total": 4000000 }
+    "expected": { "outcome": "rejected", "total": 4000000, "reason": "giới hạn" }
   },
   {
     "id": "FR09-AT-15",

@@ -17,6 +17,7 @@ type Expected = {
   total: number; // tổng trước khi áp mã (và tổng giữ nguyên khi bị từ chối)
   discount?: number | number[]; // mảng = chấp nhận nhiều cách làm tròn
   final?: number;
+  reason?: string; // từ khóa lý do từ chối theo điều kiện C1–C5 (quy ước của bài, đặc tả không quy định câu chữ)
 };
 
 const cases = loadCases<Input, Expected>('fr09');
@@ -90,8 +91,11 @@ test.describe('FR-09 Mã giảm giá', () => {
         }
 
         if (expected.outcome === 'rejected') {
-          // AP-03 hiển thị: thông báo lỗi, không có kết quả giảm giá.
-          await expect(co.couponError, 'Mã không hợp lệ phải hiện thông báo lỗi').toBeVisible();
+          // AP-03 hiển thị + nội dung: thông báo lỗi nêu đúng điều kiện bị vi phạm (tránh pass sai lý do).
+          await expect(co.couponError, `Mã phải bị từ chối vì "${expected.reason}"`).toBeVisible();
+          await expect(co.couponError, `Thông báo lỗi phải nêu lý do "${expected.reason}"`).toContainText(
+            new RegExp(expected.reason ?? '', 'i'),
+          );
           await expect(co.successMessage, 'Mã bị từ chối thì không được hiện kết quả giảm giá').toHaveCount(0);
         }
 
