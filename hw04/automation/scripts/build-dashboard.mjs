@@ -22,6 +22,34 @@ const stripAnsi = (s) => String(s ?? '').replace(/\u001b\[[0-9;]*m/g, '');
 const slug = (s) => s.replace(/[^a-zA-Z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80);
 const pct = (a, b) => (b ? Math.round((a / b) * 100) : 0);
 
+// Playwright HTML report keeps its data zipped inside index.html, so "Run by" is only visible once JS renders it.
+// Also write it as plain text in <title> and <meta>, using the metadata Playwright recorded for that run.
+function stampReport(htmlPath, meta, feature, browser) {
+  if (!fs.existsSync(htmlPath)) return;
+  const runBy = meta['Run by'] ?? STUDENT_ID;
+  const runAt = meta['Run at (ISO 8601)'] ?? '';
+  let html = fs.readFileSync(htmlPath, 'utf8');
+  html = html.replace(/<title>[^<]*<\/title>/, `<title>${esc(`Run by: ${runBy} | ${feature}-${browser} | ${runAt}`)}</title>`);
+  html = html.replace(/\s*<meta name="run-(by|at)"[^>]*>/g, '');
+  html = html.replace(
+    /<\/title>/,
+    `</title>\n    <meta name="run-by" content="${esc(runBy)}">\n    <meta name="run-at" content="${esc(runAt)}">`,
+  );
+  // Windows may briefly lock a file that was just written (antivirus / indexer): retry a few times.
+  for (let attempt = 1; ; attempt++) {
+    try {
+      fs.writeFileSync(htmlPath, html);
+      return;
+    } catch (err) {
+      if (attempt >= 10) {
+        console.warn(`Could not stamp ${htmlPath}: ${err.code} — close any open report and rerun build-dashboard.`);
+        return;
+      }
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 500);
+    }
+  }
+}
+
 // ---------- collect ----------
 function flattenSpecs(suite, parents = []) {
   const titles = suite.title && !suite.title.endsWith('.ts') ? [...parents, suite.title] : parents;
@@ -40,6 +68,7 @@ if (fs.existsSync(REPORTS)) {
       const jsonPath = path.join(fdir, `${browser}.json`);
       if (!fs.existsSync(jsonPath)) continue;
       const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+      stampReport(path.join(fdir, browser, 'index.html'), data.config?.metadata ?? {}, feature, browser);
       const tests = [];
       for (const top of data.suites ?? []) {
         for (const { spec, titlePath, file } of flattenSpecs(top)) {
