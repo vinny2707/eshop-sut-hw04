@@ -26,7 +26,7 @@ export class CheckoutPage {
     this.couponError = page.locator('p.text-red-600');
   }
 
-  // Sửa ô tổng tiền sẽ xóa mã đã áp → luôn gọi trước applyCode.
+  // Sửa ô tổng tiền sẽ xóa mã đã áp → luôn gọi trước apply().
   async setTotal(total: number) {
     await this.totalInput.fill(String(total));
   }
@@ -35,9 +35,8 @@ export class CheckoutPage {
     await this.codeInput.fill(code);
   }
 
-  // Chỉ bấm khi nút đang bật (mã rỗng → nút bị vô hiệu hóa).
-  async applyIfEnabled() {
-    if (await this.applyButton.isEnabled()) await this.applyButton.click();
+  async apply() {
+    await this.applyButton.click();
   }
 
   /** Đọc số tiền trong một dòng hiển thị; bỏ dấu phân cách theo locale, giữ dấu "-" của số âm. */

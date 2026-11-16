@@ -48,7 +48,11 @@ test.describe('FR-09 Mã giảm giá', () => {
           await expect(shop.loginLink, 'Đã thoát đăng nhập').toBeVisible();
         }
         await co.enterCode(input.code);
-        await co.applyIfEnabled();
+        if (input.code.trim() !== '') {
+          // Đã nhập mã thì nút phải bật; nếu không, fail ngay tại đây với đúng nguyên nhân.
+          await expect(co.applyButton, 'Đã nhập mã thì nút "Áp dụng" phải bật').toBeEnabled();
+          await co.apply();
+        }
       });
 
       await test.step('Kiểm tra', async () => {
