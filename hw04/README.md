@@ -8,7 +8,8 @@
 | Bug report | [bug_report.md](reports/bug_report.md) |
 | AI Audit Report | [AI_Audit_Report.md](reports/AI_Audit_Report.md) |
 | AI Critique | [AI_Critique.md](reports/AI_Critique.md) |
-| Agent Skills | _(điền sau khi có skill)_ |
+| Agent Skills | [`playwright-data-driven`](../.claude/skills/playwright-data-driven/SKILL.md), [`ai-audit`](../.claude/skills/ai-audit/SKILL.md) |
+| GitHub Issues | [vinny2707/eshop-sut-hw04/issues](https://github.com/vinny2707/eshop-sut-hw04/issues) |
 
 ## 1. Bảng tự đánh giá
 
@@ -23,30 +24,32 @@
 
 ## 2. Test summary
 
-Mỗi tính năng chạy trên 3 trình duyệt; một lượt chạy = một tính năng trên một trình duyệt, có HTML report riêng ghi "Run by: 23120409".
+Mỗi tính năng chạy trên 3 trình duyệt (Chromium / Firefox / WebKit); một lượt chạy = một tính năng trên một trình duyệt, có HTML report riêng ghi "Run by: 23120409" và ISO timestamp. Dashboard tổng: [automation/reports/index.html](automation/reports/index.html).
+
+_Số liệu cập nhật đến FR-01; FR-09, FR-17 chưa chạy._
 
 | Chỉ số | Giá trị |
 | :-- | :-- |
 | Số tính năng | 3 |
-| TC đã tự động hóa | |
-| TC đã chạy (tính trên mọi lượt chạy) | |
-| Pass | |
-| Fail | |
-| Số lượt chạy trình duyệt | 9 (3 tính năng × 3 trình duyệt) |
-| Số bug | |
+| TC đã tự động hóa | 15 (FR-01) |
+| TC đã chạy (tính trên mọi lượt chạy) | 45 (FR-01: 15 × 3) |
+| Pass | 18 |
+| Fail | 27 |
+| Số lượt chạy trình duyệt | 3 / 9 (3 tính năng × 3 trình duyệt) |
+| Số bug | 6 (FR-01) |
 
 | FR | Nền tảng | TC tự động hóa | Trình duyệt | Đã chạy | Pass | Fail | Bug | HTML report |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| FR-01 Registration | Web | | Chrome | | | | | |
-| | | | Edge | | | | | |
+| FR-01 Registration | Web | 15 | Chromium | 15 | 6 | 9 | 6 | [fr01/chromium](automation/reports/fr01/chromium/index.html) |
+| | | | Firefox | 15 | 6 | 9 | | [fr01/firefox](automation/reports/fr01/firefox/index.html) |
+| | | | WebKit | 15 | 6 | 9 | | [fr01/webkit](automation/reports/fr01/webkit/index.html) |
+| FR-09 Discount Coupons | Web | | Chromium | | | | | |
 | | | | Firefox | | | | | |
-| FR-09 Discount Coupons | Web | | Chrome | | | | | |
-| | | | Edge | | | | | |
+| | | | WebKit | | | | | |
+| FR-17 Coupon CRUD | Admin | | Chromium | | | | | |
 | | | | Firefox | | | | | |
-| FR-17 Coupon CRUD | Admin | | Chrome | | | | | |
-| | | | Edge | | | | | |
-| | | | Firefox | | | | | |
-| **Tổng** | **3 FR** | | **9 lượt** | | | | | |
+| | | | WebKit | | | | | |
+| **Tổng** | **3 FR** | 15 | **3 / 9 lượt** | 45 | 18 | 27 | 6 | |
 
 ## 3. Video demo
 
