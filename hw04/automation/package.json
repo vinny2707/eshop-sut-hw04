@@ -1,0 +1,21 @@
+{
+  "name": "eshop-hw04-automation",
+  "version": "1.0.0",
+  "description": "HW04 Playwright data-driven tests for EShop (23120409)",
+  "scripts": {
+    "test:all": "node scripts/run-all.mjs",
+    "test:fr01": "node scripts/run-all.mjs fr01",
+    "test:fr09": "node scripts/run-all.mjs fr09",
+    "test:fr17": "node scripts/run-all.mjs fr17",
+    "report": "playwright show-report",
+    "test": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6"
+  }
+}

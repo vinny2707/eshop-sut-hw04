@@ -1,0 +1,10 @@
+# Dependencies
+node_modules/
+
+# SUT database: reset by node backend/database.js before every test run
+backend/database.sqlite
+
+# Playwright scratch output (HTML reports in hw04/automation/reports/ ARE committed)
+hw04/automation/test-results/
+hw04/automation/playwright-report/
+hw04/automation/blob-report/
