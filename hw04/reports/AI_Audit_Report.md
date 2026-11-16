@@ -18,8 +18,8 @@ _Tài liệu được biên soạn lại từ Med Kharbach, PhD (2026) — Mẫu
 | **MSSV:**                            | 23120409          |
 | **Lớp / Khoá:**                      | CSC13003 - 23_3   |
 | **Mã bài tập (ví dụ HW#00, HW#02):** | HW#04             |
-| **Ngày làm bài:**                    |                   |
-| **Công cụ AI đã dùng:**              |                   |
+| **Ngày làm bài:**                    | 2026-11-16        |
+| **Công cụ AI đã dùng:**              | Claude Code (Opus 5.5) |
 | **Có sử dụng AI hay không:**         | [x] Có [ ] Không  |
 
 ## **2. Hướng dẫn (đọc trước khi điền)**
@@ -34,31 +34,52 @@ _Tài liệu được biên soạn lại từ Med Kharbach, PhD (2026) — Mẫu
 
 ## **3. Bảng Audit — 1 hàng / artifact**
 
-### AUDIT-01 — _(tính năng / skill)_ — _(bước)_
+### AUDIT-01 — Hạ tầng — Cấu hình Playwright
 
 | Mục | Nội dung |
 | :-- | :-- |
-| Công cụ AI | |
-| Thời gian | _YYYY-MM-DD HH:MM (UTC+7)_ |
-| Bước | |
-| Verdict | _VALID / INVALID / INCOMPLETE_ |
+| Công cụ AI | Claude Code (Opus 5.5) |
+| Thời gian | 2026-11-16 17:16 (UTC+7) |
+| Bước | Hạ tầng — Cấu hình Playwright đa trình duyệt và report |
+| Verdict | INCOMPLETE |
 
 **Prompt (nguyên văn):**
 
 ```text
+Mình nghĩ se viết skills bao gồm 1 skills viết audit report và skills playwright data driven luôn. Và dùng cho cả 3 feature luôn.  À và có dựng config cho cả cái playwright nữa
+---
+Chưa viết mình cần chốt với bạn rồi mới dựng chứ
+---
+1. chromium/firefox, webkit
+2. như ý đầu tôi không reset bằng tay
+3. để tự bật cho dễ kiểm soát
+4. Ổn bạn. cần thêm allure là gì. Chọn playwright thôi có đủ không
+---
+mình chia theo kiểu report/fr/nền tảng ấy. Ngoài ra báo cáo trực quan dễ nhìn tí. không cần quay video lại nếu fail đâu screen shot là được rồi. và thông báo lỗi.
+---
+không cần link issue đâu bạn. Chạy ra lỗi mới đăng lên đó mà
 ```
 
-**Output AI:**
+**Output AI (tóm tắt):**
 
--
+- Đề xuất thiết kế và hỏi chốt 4 điểm (trình duyệt, reset DB, bật server, vị trí / Allure) trước khi dựng; trả lời Playwright HTML reporter là đủ.
+- Dựng project Playwright 3 project Chromium / Firefox / WebKit; `webServer` tự bật backend + web + admin, backend khởi động mới mỗi lượt để reset DB; chạy tuần tự 1 worker; chỉ lưu screenshot khi fail.
+- HTML report theo `reports/<fr>/<browser>/`, tiêu đề `Run by: 23120409 | <fr>-<browser> | <ISO timestamp>`; script chạy 3 FR × 3 trình duyệt.
+- Dashboard tổng `reports/index.html`: thẻ số liệu, ma trận FR × trình duyệt, lỗi kèm thông báo và screenshot; bỏ link issue theo yêu cầu.
+- Bỏ theo dõi `backend/database.sqlite`, thêm `.gitignore`; kiểm chứng bằng smoke test pass trên 3 trình duyệt.
+- File: [`playwright.config.ts`](../automation/playwright.config.ts), [`run-all.mjs`](../automation/scripts/run-all.mjs), [`build-dashboard.mjs`](../automation/scripts/build-dashboard.mjs), [`env.ts`](../automation/helpers/env.ts)
 
-**Lý do verdict (dẫn chiếu slide / ISTQB / tài liệu Playwright):**
+**Lý do verdict:**
 
--
+- Đạt yêu cầu đề HW04 mục 6 Task 1: 3 trình duyệt, mỗi lượt chạy một HTML report hiển thị "Run by: 23120409" kèm ISO timestamp (Playwright docs — HTML reporter `title`, `metadata`).
+- Chưa dùng nguyên được: AI bắt đầu dựng khi thiết kế chưa chốt; bản đầu xếp report thành `reports/<fr>-<browser>`, giữ cả video và trace khi fail (nặng, không cần cho bug report), và dashboard có cột link GitHub issue dù issue chỉ được tạo sau khi chạy ra lỗi.
 
-**Bản sửa của sinh viên (tô sáng phần thay đổi):**
+**Bản sửa của sinh viên:**
 
--
+- Yêu cầu **chốt thiết kế trước rồi mới dựng**; chọn **Chromium / Firefox / WebKit**, **Playwright tự bật server**, **chỉ dùng Playwright HTML reporter (không Allure)**.
+- Đổi cấu trúc report thành **`reports/<fr>/<browser>/`** và yêu cầu thêm **báo cáo tổng trực quan** (dashboard).
+- **Tắt video và trace**, khi fail chỉ giữ **screenshot + thông báo lỗi**.
+- **Bỏ link GitHub issue** khỏi dashboard.
 
 ---
 
@@ -90,7 +111,7 @@ I use AI tools for the following tasks,
 
 | # | Công cụ AI | Thời gian (UTC+7) | Nhiệm vụ | Prompt & output |
 | :-- | :-- | :-- | :-- | :-- |
-| 1 | | | | |
+| 1 | Claude Code (Opus 5.5) | 2026-11-16 18:16 | Hạ tầng — Cấu hình Playwright đa trình duyệt và report | Xem AUDIT-01 |
 
 ## **Chữ ký**
 
