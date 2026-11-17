@@ -51,7 +51,36 @@ Mỗi tính năng chạy trên 3 trình duyệt (Chromium / Firefox / WebKit); m
 
 ## 3. Video demo
 
-Video Demo Task 2 (YouTube, unlisted):
+Video Demo Task 2 (YouTube, unlisted): https://youtu.be/eE0kpkKA-4I
 
-Video Demo Agent Skill (YouTube, unlisted):
+Video Demo Agent Skill (YouTube, unlisted): https://youtu.be/yFEQoz_JxI0
+
+## 4. Cấu trúc bài nộp
+
+```
+hw04/
+├── README.md                     Bảng tự đánh giá, test summary, link video, cấu trúc bài nộp (file này)
+├── git_log.txt                   Git commit log (text)
+├── reports/                      Tài liệu nộp (Markdown + PDF)
+│   ├── 23120409_HW04_Report.md / .pdf   Báo cáo chính: môi trường, thiết kế automation, 3 FR, tổng hợp, checklist
+│   ├── bug_report.md             12 bug (BUG-FR01-01…06, FR09-01…03, FR17-01…03) kèm ảnh GitHub Issue
+│   ├── AI_Audit_Report.md / .pdf AUDIT-01…16: prompt nguyên văn, output tóm tắt, verdict, bản sửa
+│   └── AI_Critique.md / .pdf     Khai báo sử dụng AI và AI Critique
+├── automation/                   Bộ test Playwright (TypeScript)
+│   ├── package.json              Lệnh chạy: npm run test:fr01 | test:fr09 | test:fr17 | test:all
+│   ├── playwright.config.ts      3 project Chromium / Firefox / WebKit, tự bật SUT, "Run by: 23120409" trên report
+│   ├── data/                     Dữ liệu test tách riêng: fr01.json, fr09.json, fr17.json
+│   ├── tests/                    Spec data-driven: fr01.spec.ts, fr09.spec.ts, fr17.spec.ts
+│   ├── pages/                    Page Object: RegisterPage, ShopPage, CheckoutPage, AdminCouponPage
+│   ├── helpers/                  env.ts (URL, MSSV, tài khoản seed), data.ts (loadCases), auth.ts (đăng nhập / user mới qua API)
+│   ├── scripts/                  run-all.mjs (chạy FR × trình duyệt), build-dashboard.mjs (dashboard + gắn "Run by")
+│   └── reports/                  9 HTML report: <fr>/<chromium|firefox|webkit>/index.html, kết quả JSON, ảnh lúc fail; dashboard index.html
+├── evidence/
+│   ├── github-issue/             Ảnh chụp 12 GitHub Issue (#1–#12)
+│   └── run-by/                   Ảnh chụp 9 HTML report có dòng "Run by: 23120409"
+├── skills/                       2 Agent Skill (bản sao của .claude/skills/ trong repo)
+│   ├── playwright-data-driven/   SKILL.md + templates/page.template.ts, spec.template.ts
+│   └── ai-audit/                 SKILL.md
+└── references/                   Đề bài HW04 (MD + PDF)
+```
 

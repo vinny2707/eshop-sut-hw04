@@ -30,16 +30,17 @@ Claude Code (ứng dụng desktop), model `claude-opus-5-5` (Opus 5.5), dùng k�
 
 ### **2. Giai đoạn nào của bài tập có dùng AI:**
 
-Tick tất cả: 
-[x] brainstorm 
-[x] outline 
-[x] viết nháp 
-[x] phản hồi 
-[x] sửa chữa 
-[x] code 
-[x] phân tích dữ liệu 
-[ ] thiết kế đồ hoạ 
-[x] khác (ghi rõ): chạy test đa trình duyệt, đăng GitHub Issue, chụp evidence, ghi AI Audit.
+Tick tất cả:
+
+- [x] brainstorm
+- [x] outline
+- [x] viết nháp
+- [x] phản hồi
+- [x] sửa chữa
+- [x] code
+- [x] phân tích dữ liệu
+- [ ] thiết kế đồ hoạ
+- [x] khác (ghi rõ): đăng GitHub Issue, chụp evidence, ghi AI Audit.
 
 ## **3. AI Critique**
 
